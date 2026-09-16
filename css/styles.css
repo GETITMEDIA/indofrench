@@ -2077,6 +2077,55 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+.why-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.why-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-card .icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: #eefdf2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.why-card .icon-circle img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.why-card h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1c407c;
+  margin: 0 0 16px 0;
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
 /* Responsive */
 @media (max-width: 1200px) {
   .locate-grid {
@@ -2092,6 +2141,9 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: span 2;
     grid-row: span 1;
     min-height: 250px;
+  }
+  .why-icons-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
