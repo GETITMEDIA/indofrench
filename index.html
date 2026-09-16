@@ -196,6 +196,178 @@
     .section-tag.light {
       color: #4ADE80 !important;
     }
+
+    /* Good Mattress Section ("A Good Mattress") */
+    .good-mattress-tag {
+      color: #1c7a01 !important;
+      font-size: 1.18rem !important;
+      font-weight: 700 !important;
+      margin-bottom: 14px !important;
+      display: inline-block !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+
+    .good-mattress-title {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: clamp(2rem, 2.6vw, 2.45rem) !important;
+      font-weight: 800 !important;
+      color: #000000 !important;
+      line-height: 1.24 !important;
+      margin-bottom: 20px !important;
+      letter-spacing: -0.025em !important;
+    }
+
+    .good-mattress-desc {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 0.98rem !important;
+      color: #475569 !important;
+      line-height: 1.72 !important;
+      margin-bottom: 30px !important;
+    }
+
+    .good-mattress-points {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 18px 24px !important;
+      margin-bottom: 36px !important;
+    }
+
+    .point-item {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 1.08rem !important;
+      font-weight: 700 !important;
+      letter-spacing: -0.01em !important;
+    }
+
+    .point-item.point-blue {
+      color: #1c407c !important;
+    }
+
+    .point-item.point-dark {
+      color: #0f172a !important;
+    }
+
+    .btn-enquire-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background-color: #1c7a01 !important;
+      color: #FFFFFF !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 1.02rem !important;
+      font-weight: 700 !important;
+      padding: 13px 40px !important;
+      border-radius: 9999px !important;
+      text-decoration: none !important;
+      box-shadow: 0 4px 14px rgba(28, 122, 1, 0.3) !important;
+      transition: all 0.25s ease !important;
+    }
+
+    .btn-enquire-pill:hover {
+      background-color: #156201 !important;
+      transform: translateY(-2px) !important;
+      color: #FFFFFF !important;
+    }
+
+    .good-mattress-gallery {
+      position: relative !important;
+      width: 100% !important;
+      max-width: 580px !important;
+      height: 490px !important;
+      margin-left: auto !important;
+    }
+
+    .good-mattress-gallery .img-card {
+      overflow: hidden !important;
+      background: #FFFFFF !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+
+    .good-mattress-gallery .img-card:hover {
+      transform: translateY(-3px) !important;
+    }
+
+    .good-mattress-gallery .img-card img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+    }
+
+    /* 1. Tall Bed on Right */
+    .good-mattress-gallery .card-tall {
+      position: absolute !important;
+      right: 0 !important;
+      top: 10px !important;
+      width: 54% !important;
+      height: 470px !important;
+      border-radius: 18px !important;
+      border: 4px solid #FFFFFF !important;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12) !important;
+      z-index: 1 !important;
+    }
+
+    /* 2. Woman Sleeping Top-Left */
+    .good-mattress-gallery .card-top {
+      position: absolute !important;
+      left: 0 !important;
+      top: 0 !important;
+      width: 48% !important;
+      height: 225px !important;
+      border-radius: 16px !important;
+      border: 4px solid #FFFFFF !important;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1) !important;
+      z-index: 2 !important;
+    }
+
+    /* 3. Woman Sleeping Bottom-Left - Overlapping on top of Tall Bed */
+    .good-mattress-gallery .card-bottom {
+      position: absolute !important;
+      left: 15px !important;
+      bottom: 0 !important;
+      width: 55% !important;
+      height: 235px !important;
+      border-radius: 18px !important;
+      border: 4px solid #FFFFFF !important;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.18) !important;
+      z-index: 5 !important;
+    }
+
+    @media (max-width: 991px) {
+      .good-mattress-gallery {
+        margin: 0 auto !important;
+        max-width: 500px !important;
+        height: 440px !important;
+      }
+      .good-mattress-gallery .card-tall {
+        height: 420px !important;
+      }
+      .good-mattress-gallery .card-top {
+        height: 200px !important;
+      }
+      .good-mattress-gallery .card-bottom {
+        height: 210px !important;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .good-mattress-gallery {
+        height: 330px !important;
+      }
+      .good-mattress-gallery .card-tall {
+        height: 320px !important;
+        width: 56% !important;
+      }
+      .good-mattress-gallery .card-top {
+        height: 150px !important;
+        width: 50% !important;
+      }
+      .good-mattress-gallery .card-bottom {
+        height: 155px !important;
+        width: 56% !important;
+        left: 8px !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -608,72 +780,44 @@
     </div>
   </section>
 
-  <!-- ================= MATTRESS BENEFITS SECTION ================= -->
+  <!-- ================= MATTRESS BENEFITS SECTION ("A Good Mattress") ================= -->
   <section class="benefits-section" id="mattress-benefits">
     <div class="container">
       <div class="benefits-grid">
+        
+        <!-- Left Column: Typography & 4 Points matching Reference Image -->
         <div class="benefits-text">
-          <span class="section-tag">A Good Mattress</span>
-          <h2>Do you find yourself tired and exhausted, lying in the bed, and still being unable to sleep?</h2>
-          <p>
+          <span class="good-mattress-tag">A Good Mattress</span>
+          <h2 class="good-mattress-title">Do you find yourself tired and exhausted, lying in the bed, and still being unable to sleep?</h2>
+          <p class="good-mattress-desc">
             It is often because of your mattress. A good quality mattress is key to a good night’s sleep. The right type of mattress provides good comfort and support for your body, ensures good spine alignment, and a good blood circulation. A bad mattress in contrary often leads to a poor posture and can lead to back-aches or even soreness. Select from a wide variety of Indofrench mattresses available online.
           </p>
 
-          <div class="benefits-numbered-list">
-            <div class="benefit-num-card">
-              <div class="b-num">1</div>
-              <div>
-                <h4>Strengthens Your Heart</h4>
-                <p>Relieves cardiovascular tension by supporting smooth blood circulation.</p>
-              </div>
-            </div>
-
-            <div class="benefit-num-card">
-              <div class="b-num">2</div>
-              <div>
-                <h4>Regulates Your Blood Sugar</h4>
-                <p>Promotes restorative non-REM sleep essential for glucose regulation.</p>
-              </div>
-            </div>
-
-            <div class="benefit-num-card">
-              <div class="b-num">3</div>
-              <div>
-                <h4>Reduces Your Stress Levels</h4>
-                <p>Relieves muscular pressure points and decreases nocturnal stress.</p>
-              </div>
-            </div>
-
-            <div class="benefit-num-card">
-              <div class="b-num">4</div>
-              <div>
-                <h4>Decreases Inflammation</h4>
-                <p>Maintains natural spinal alignment to alleviate chronic aches.</p>
-              </div>
-            </div>
+          <div class="good-mattress-points">
+            <div class="point-item point-blue">1. Strengthens Your Heart</div>
+            <div class="point-item point-dark">2. Regulates Your Blood Sugar</div>
+            <div class="point-item point-dark">3. Reduces Your Stress Levels</div>
+            <div class="point-item point-blue">4. Decreases Inflammation</div>
           </div>
 
           <div>
-            <a href="#contact" class="btn btn-green">
-              Enquire Now <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            <a href="#contact" class="btn-enquire-pill">Enquire now</a>
           </div>
         </div>
 
-        <div class="benefits-collage-grid">
-          <div class="collage-item">
-            <img src="assets/sleep-wellness.jpg" alt="Peaceful sleep posture on natural latex mattress">
+        <!-- Right Column: 3-Image Overlapping Gallery Matching Reference Layout -->
+        <div class="good-mattress-gallery">
+          <div class="img-card card-tall">
+            <img src="assets/good-bed-hd.jpg" alt="Indofrench luxury bedroom with natural latex mattress">
           </div>
-          <div class="collage-item">
-            <img src="assets/hero-mattress.jpg" alt="Master bedroom with Indofrench mattress">
+          <div class="img-card card-top">
+            <img src="assets/good-sleep-top.jpg" alt="Woman sleeping peacefully on natural latex pillow">
           </div>
-          <div class="collage-item">
-            <img src="assets/pincore-detail.jpg" alt="Pincore latex foam air circulation holes">
-          </div>
-          <div class="collage-item">
-            <img src="assets/happy-customer.jpg" alt="Comfortable resting on natural latex bed">
+          <div class="img-card card-bottom">
+            <img src="assets/good-sleep-bottom.jpg" alt="Comfortable sleep posture on Indofrench orthopedic mattress">
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -821,74 +965,65 @@
     </div>
   </section>
 
-  <!-- ================= STORE LOCATOR ================= -->
-  <section class="store-locator-section" id="stores">
+  <!-- ================= LOCATE US SECTION ================= -->
+  <section class="locate-section" id="locate-us">
     <div class="container">
-      <div class="locator-wrapper">
-        <div class="locator-green-box">
-          <div>
-            <span class="section-tag light">Locate us</span>
-            <h2>Find our Store near your Home</h2>
-            <p>
-              Finding a store near you is the first step towards a rejuvenating night's sleep.
-            </p>
-          </div>
-          <div style="margin-top: 32px;">
-            <a href="#contact" class="btn btn-outline-white">
-              Locate a Store <i class="fa-solid fa-location-arrow"></i>
-            </a>
+      <div class="locate-grid">
+        <!-- Main Green Card -->
+        <div class="locate-main-card">
+          <span class="locate-tag">LOCATE US</span>
+          <h2 class="locate-title">Find our Store<br>near your Home</h2>
+          <p class="locate-desc">Finding a store near you is the first<br>step towards a rejuvenating<br>night's sleep.</p>
+          <a href="#contact" class="btn btn-locate">Locate a Store <i class="fa-solid fa-location-arrow" style="margin-left: 8px;"></i></a>
+        </div>
+        
+        <!-- City Cards -->
+        <div class="locate-city-card">
+          <img src="assets/city-chennai.jpg" alt="Chennai">
+          <div class="city-info">
+            <h3 class="city-name">Chennai</h3>
+            <span class="store-count">4 Stores</span>
           </div>
         </div>
-
-        <div class="locator-cities-grid">
-          <!-- Chennai -->
-          <div class="city-card">
-            <img src="assets/city-chennai.jpg" alt="Chennai Indo French Stores">
-            <div class="city-card-overlay">
-              <h3>Chennai</h3>
-              <span>4 Stores</span>
-            </div>
+        <div class="locate-city-card">
+          <img src="assets/city-mumbai.jpg" alt="Mumbai">
+          <div class="city-info">
+            <h3 class="city-name">Mumbai</h3>
+            <span class="store-count">10 Stores</span>
           </div>
-
-          <!-- Mumbai -->
-          <div class="city-card">
-            <img src="assets/city-mumbai.jpg" alt="Mumbai Indo French Stores">
-            <div class="city-card-overlay">
-              <h3>Mumbai</h3>
-              <span>10 Stores</span>
-            </div>
+        </div>
+        <div class="locate-city-card">
+          <img src="assets/city-cochin.jpg" alt="Cochin">
+          <div class="city-info">
+            <h3 class="city-name">Cochin</h3>
+            <span class="store-count">5 Stores</span>
           </div>
-
-          <!-- Cochin -->
-          <div class="city-card">
-            <img src="assets/city-chennai.jpg" alt="Cochin Indo French Stores">
-            <div class="city-card-overlay">
-              <h3>Cochin</h3>
-              <span>5 Stores</span>
-            </div>
+        </div>
+        <div class="locate-city-card">
+          <img src="assets/city-puducherry.jpg" alt="Puducherry">
+          <div class="city-info">
+            <h3 class="city-name">Puducherry</h3>
+            <span class="store-count">2 Stores</span>
           </div>
-
-          <!-- Coimbatore -->
-          <div class="city-card">
-            <img src="assets/city-chennai.jpg" alt="Coimbatore Indo French Stores">
-            <div class="city-card-overlay">
-              <h3>Coimbatore</h3>
-              <span>3 Stores</span>
-            </div>
+        </div>
+        <div class="locate-city-card">
+          <img src="assets/city-coimbatore.jpg" alt="Coimbatore">
+          <div class="city-info">
+            <h3 class="city-name">Coimbatore</h3>
+            <span class="store-count">3 Stores</span>
           </div>
-
-          <!-- Bengaluru -->
-          <div class="city-card">
-            <img src="assets/city-bengaluru.jpg" alt="Bengaluru Indo French Stores">
-            <div class="city-card-overlay">
-              <h3>Bengaluru</h3>
-              <span>8 Stores</span>
-            </div>
+        </div>
+        <div class="locate-city-card">
+          <img src="assets/city-bengaluru.jpg" alt="Bengaluru">
+          <div class="city-info">
+            <h3 class="city-name">Bengaluru</h3>
+            <span class="store-count">8 Stores</span>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- ================= WORK PROCESS & CONTACT / ENQUIRY FORM ================= -->
   <section class="process-contact-section" id="contact">
@@ -1081,6 +1216,8 @@
       </div>
     </div>
   </section>
+
+
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
