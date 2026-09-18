@@ -3,29 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mattresses Collection | INDOFRENCH Sleep Products — 100% Natural Latex</title>
-  <meta name="description" content="Browse Indofrench's collection of 100% Natural Latex Pincore Mattresses including Single, Diwan, Double, Queen, King, and Custom Sizes. Eco-friendly & orthopedic support.">
+  <title>Natural Latex Pillows Collection | INDOFRENCH Sleep Products</title>
+  <meta name="description" content="Explore Indofrench's 100% Organic Natural Latex Pincore Pillows including Heavenly Hug, Luxe Dream, Bliss Siesta, Bolster, and Contour Pillows for spinal alignment.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=20260918_15">
+  <link rel="stylesheet" href="css/styles.css?v=20260918_16">
 
   <style>
-    /* Mattress Collection Grid Custom Styles */
-    .mattress-hero-section {
+    .pillow-hero-section {
       background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
       padding: 60px 0 40px;
       text-align: center;
       border-bottom: 1px solid #e2e8f0;
     }
-    .mattress-hero-subtitle {
+    .pillow-hero-subtitle {
       color: #1c7a01;
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 700;
@@ -35,14 +30,14 @@
       margin-bottom: 12px;
       display: inline-block;
     }
-    .mattress-hero-title {
+    .pillow-hero-title {
       font-family: 'Outfit', sans-serif;
       font-size: 2.8rem;
       font-weight: 800;
       color: #1c407c;
       margin-bottom: 16px;
     }
-    .mattress-hero-desc {
+    .pillow-hero-desc {
       font-family: 'Plus Jakarta Sans', sans-serif;
       color: #475569;
       font-size: 1.1rem;
@@ -51,28 +46,28 @@
       line-height: 1.6;
     }
 
-    .mattress-grid-wrap {
+    .pillow-grid-wrap {
       padding: 60px 0 100px;
       background-color: #ffffff;
     }
-    .mattress-grid {
+    .pillow-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 32px;
     }
     @media (max-width: 991px) {
-      .mattress-grid {
+      .pillow-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
       }
     }
     @media (max-width: 640px) {
-      .mattress-grid {
+      .pillow-grid {
         grid-template-columns: 1fr;
       }
     }
 
-    .mattress-card {
+    .pillow-card {
       background: #ffffff;
       border-radius: 20px;
       border: 1px solid #e2e8f0;
@@ -82,29 +77,29 @@
       flex-direction: column;
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .mattress-card:hover {
+    .pillow-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 40px rgba(28, 64, 124, 0.14);
       border-color: #cbd5e1;
     }
 
-    .mattress-card-img-wrap {
+    .pillow-card-img-wrap {
       position: relative;
-      height: 260px;
+      height: 250px;
       overflow: hidden;
       background: #f1f5f9;
     }
-    .mattress-card-img-wrap img {
+    .pillow-card-img-wrap img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .mattress-card:hover .mattress-card-img-wrap img {
+    .pillow-card:hover .pillow-card-img-wrap img {
       transform: scale(1.06);
     }
 
-    .mattress-badge {
+    .pillow-badge {
       position: absolute;
       top: 16px;
       left: 16px;
@@ -120,20 +115,20 @@
       letter-spacing: 1px;
     }
 
-    .mattress-card-body {
+    .pillow-card-body {
       padding: 28px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
-    .mattress-card-title {
+    .pillow-card-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.5rem;
+      font-size: 1.45rem;
       font-weight: 700;
       color: #1c407c;
       margin: 0 0 12px 0;
     }
-    .mattress-card-text {
+    .pillow-card-text {
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.95rem;
       color: #64748b;
@@ -141,16 +136,16 @@
       margin-bottom: 24px;
       flex-grow: 1;
     }
-    .mattress-card-footer {
+    .pillow-card-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-top: 1px solid #f1f5f9;
       padding-top: 20px;
     }
-    .mattress-price-tag {
+    .pillow-price-tag {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       font-weight: 800;
       color: #1c7a01;
     }
@@ -216,8 +211,8 @@
             Products <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
           </a>
           <div class="dropdown-menu">
-            <a href="mattresses.html" class="dropdown-link" style="color: #1c7a01; font-weight: 700;">Mattress</a>
-            <a href="pillows.html" class="dropdown-link">Pillows</a>
+            <a href="mattresses.html" class="dropdown-link">Mattress</a>
+            <a href="pillows.html" class="dropdown-link" style="color: #1c7a01; font-weight: 700;">Pillows</a>
             <a href="products.html#cushions" class="dropdown-link">Cushions</a>
             <a href="products.html#mattress-topper" class="dropdown-link">Mattress Topper</a>
           </div>
@@ -241,111 +236,95 @@
   </header>
 
   <!-- ================= HERO SECTION ================= -->
-  <section class="mattress-hero-section">
+  <section class="pillow-hero-section">
     <div class="container">
-      <span class="mattress-hero-subtitle">Embrace Comfort, Dream Deeply</span>
-      <h1 class="mattress-hero-title">Browse Premium Mattress Collections</h1>
-      <p class="mattress-hero-desc">Experience 100% Organic Natural Latex pincore mattresses engineered for optimal spinal alignment, temperature regulation, and orthopedic comfort.</p>
+      <span class="pillow-hero-subtitle">Pure Latex Ergonomics, Restful Sleep</span>
+      <h1 class="pillow-hero-title">Browse Premium Latex Pillows</h1>
+      <p class="pillow-hero-desc">Discover 100% Organic Natural Latex pincore pillows specifically engineered for cervical spine alignment, neck pain relief, and natural temperature ventilation.</p>
     </div>
   </section>
 
-  <!-- ================= MATTRESSES COLLECTION GRID ================= -->
-  <section class="mattress-grid-wrap">
+  <!-- ================= PILLOWS COLLECTION GRID ================= -->
+  <section class="pillow-grid-wrap">
     <div class="container">
-      <div class="mattress-grid">
+      <div class="pillow-grid">
 
-        <!-- 1. Single Size Mattress -->
-        <article class="mattress-card">
-          <div class="mattress-card-img-wrap">
-            <span class="mattress-badge">100% Natural Latex</span>
-            <img src="assets/download_from_wix/1 (6).webp" alt="Single Size Natural Latex Mattress">
+        <!-- 1. Heavenly Hug Pillow -->
+        <article class="pillow-card">
+          <div class="pillow-card-img-wrap">
+            <span class="pillow-badge">Spine Support</span>
+            <img src="assets/download_from_wix/1 (7).webp" alt="Heavenly Hug Natural Latex Pillow">
           </div>
-          <div class="mattress-card-body">
-            <h2 class="mattress-card-title">Single Size Mattress</h2>
-            <p class="mattress-card-text">Perfect compact comfort for single beds, kids' rooms, and guest spaces. Features breathable pincore air vents and ergonomic pressure relief.</p>
-            <div class="mattress-card-footer">
-              <span class="mattress-price-tag">From ₹ 12,500</span>
-              <a href="singlesize-mattress.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="pillow-card-body">
+            <h2 class="pillow-card-title">Heavenly Hug Pillow</h2>
+            <p class="pillow-card-text">Specifically crafted to alleviate neck pain and stiffness by ensuring proper spine alignment through Dunlop pincore technology.</p>
+            <div class="pillow-card-footer">
+              <span class="pillow-price-tag">From ₹ 1,950</span>
+              <a href="hevanly-hug-pillow.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </article>
 
-        <!-- 2. Diwan Size Mattress -->
-        <article class="mattress-card">
-          <div class="mattress-card-img-wrap">
-            <span class="mattress-badge">Organic Comfort</span>
-            <img src="assets/download_from_wix/2 (10).webp" alt="Diwan Size Natural Latex Mattress">
+        <!-- 2. Luxe Dream Pillow -->
+        <article class="pillow-card">
+          <div class="pillow-card-img-wrap">
+            <span class="pillow-badge">Plush Comfort</span>
+            <img src="assets/download_from_wix/3 (11).webp" alt="Luxe Dream Natural Latex Pillow">
           </div>
-          <div class="mattress-card-body">
-            <h2 class="mattress-card-title">Diwan Size Mattress</h2>
-            <p class="mattress-card-text">Specially tailored for classic Diwan daybeds. Offers zero-motion transfer, hypo-allergenic durability, and plush organic cotton cover.</p>
-            <div class="mattress-card-footer">
-              <span class="mattress-price-tag">From ₹ 16,430</span>
-              <a href="diwansize-mattress.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="pillow-card-body">
+            <h2 class="pillow-card-title">Luxe Dream Pillow</h2>
+            <p class="pillow-card-text">Ultra-plush natural latex pillow designed for cloud-like head support, continuous pincore airflow, and hypoallergenic dust-mite protection.</p>
+            <div class="pillow-card-footer">
+              <span class="pillow-price-tag">From ₹ 2,250</span>
+              <a href="luze-dream-pillows.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </article>
 
-        <!-- 3. King Size Mattress -->
-        <article class="mattress-card">
-          <div class="mattress-card-img-wrap">
-            <span class="mattress-badge">Royal Luxury</span>
-            <img src="assets/download_from_wix/regal-rest.webp" alt="King Size Natural Latex Mattress">
+        <!-- 3. Bliss Siesta Pillow -->
+        <article class="pillow-card">
+          <div class="pillow-card-img-wrap">
+            <span class="pillow-badge">Orthopedic</span>
+            <img src="assets/download_from_wix/2 (11).webp" alt="Bliss Siesta Natural Latex Pillow">
           </div>
-          <div class="mattress-card-body">
-            <h2 class="mattress-card-title">King Size Mattress</h2>
-            <p class="mattress-card-text">The ultimate master bedroom luxury. Expansive pincore latex design for maximum space, zero partner disturbance, and back pain relief.</p>
-            <div class="mattress-card-footer">
-              <span class="mattress-price-tag">From ₹ 28,900</span>
-              <a href="kingsize-mattress.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="pillow-card-body">
+            <h2 class="pillow-card-title">Bliss Siesta Pillow</h2>
+            <p class="pillow-card-text">Optimal medium firmness for side and back sleepers. Features organic cotton cover and thousands of micro-air channels.</p>
+            <div class="pillow-card-footer">
+              <span class="pillow-price-tag">From ₹ 2,100</span>
+              <a href="bliss-siesta-pillow.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </article>
 
-        <!-- 4. Customizable -->
-        <article class="mattress-card">
-          <div class="mattress-card-img-wrap">
-            <span class="mattress-badge">Custom Tailored</span>
-            <img src="assets/download_from_wix/4 (2).webp" alt="Customizable Natural Latex Mattress">
+        <!-- 4. Latex Bolster Pillow -->
+        <article class="pillow-card">
+          <div class="pillow-card-img-wrap">
+            <span class="pillow-badge">Body Support</span>
+            <img src="assets/download_from_wix/bolster1.webp" alt="Latex Bolster Pillow">
           </div>
-          <div class="mattress-card-body">
-            <h2 class="mattress-card-title">Customizable Mattress</h2>
-            <p class="mattress-card-text">Custom dimensions, thickness, and dual-firmness zones crafted to your precise bed frame dimensions and personal sleep preferences.</p>
-            <div class="mattress-card-footer">
-              <span class="mattress-price-tag">Custom Quote</span>
-              <a href="customsize-mattress.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="pillow-card-body">
+            <h2 class="pillow-card-title">Latex Bolster Pillow</h2>
+            <p class="pillow-card-text">Cylindrical pincore latex bolster for leg elevation, back alignment, and relaxed side-sleeping comfort.</p>
+            <div class="pillow-card-footer">
+              <span class="pillow-price-tag">From ₹ 2,600</span>
+              <a href="bolster-pillow.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </article>
 
-        <!-- 5. Double Size Mattress -->
-        <article class="mattress-card">
-          <div class="mattress-card-img-wrap">
-            <span class="mattress-badge">Popular Choice</span>
-            <img src="assets/download_from_wix/3 (10).webp" alt="Double Size Natural Latex Mattress">
+        <!-- 5. Contour Latex Pillow -->
+        <article class="pillow-card">
+          <div class="pillow-card-img-wrap">
+            <span class="pillow-badge">Cervical Care</span>
+            <img src="assets/download_from_wix/498-x480.webp" alt="Contour Latex Pillow">
           </div>
-          <div class="mattress-card-body">
-            <h2 class="mattress-card-title">Double Size Mattress</h2>
-            <p class="mattress-card-text">Ideal balance of roominess and compactness. Provides 3000+ pincore airflow channels and full spinal contouring.</p>
-            <div class="mattress-card-footer">
-              <span class="mattress-price-tag">From ₹ 21,200</span>
-              <a href="doublesize-mattress.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 6. Queen Size Mattress -->
-        <article class="mattress-card">
-          <div class="mattress-card-img-wrap">
-            <span class="mattress-badge">Bestseller</span>
-            <img src="assets/download_from_wix/7 (1).webp" alt="Queen Size Natural Latex Mattress">
-          </div>
-          <div class="mattress-card-body">
-            <h2 class="mattress-card-title">Queen Size Mattress</h2>
-            <p class="mattress-card-text">Generous dimensions for couples seeking peaceful sleep with premium natural rubber sap cushioning and dust-mite resistance.</p>
-            <div class="mattress-card-footer">
-              <span class="mattress-price-tag">From ₹ 24,800</span>
-              <a href="queensize-mattress.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="pillow-card-body">
+            <h2 class="pillow-card-title">Contour Latex Pillow</h2>
+            <p class="pillow-card-text">Ergonomic dual-wave contour shape tailored for shoulder and neck curve support, preventing stiffness and snoring.</p>
+            <div class="pillow-card-footer">
+              <span class="pillow-price-tag">From ₹ 2,450</span>
+              <a href="contour-pillow.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </article>
@@ -354,7 +333,7 @@
     </div>
   </section>
 
-    <!-- ================= FOOTER ================= -->
+  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="container">
       <div class="footer-main-grid">
@@ -424,7 +403,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/main.js"></script>
 </body>
 </html>
