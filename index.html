@@ -477,7 +477,7 @@
             <a href="mattresses.html" class="dropdown-link">Mattress</a>
             <a href="pillows.html" class="dropdown-link">Pillows</a>
             <a href="cushions.html" class="dropdown-link">Cushions</a>
-            <a href="products.html#mattress-topper" class="dropdown-link">Mattress Topper</a>
+            <a href="mattress-topper.html" class="dropdown-link">Mattress Topper</a>
           </div>
         </div>
 
@@ -1224,50 +1224,59 @@
           <span class="section-tag light">Get In Touch</span>
           <h2>Enquire for Custom Mattresses</h2>
 
-          <form id="contactEnquiryForm">
+          <form id="contactEnquiryForm" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label">First Name *</label>
+                <label class="form-label" for="firstName">First Name *</label>
                 <input type="text" class="form-input" id="firstName" placeholder="First Name" required>
+                <span class="field-error-msg" id="firstNameError"></span>
               </div>
               <div class="form-group">
-                <label class="form-label">Last Name *</label>
+                <label class="form-label" for="lastName">Last Name *</label>
                 <input type="text" class="form-input" id="lastName" placeholder="Last Name" required>
+                <span class="field-error-msg" id="lastNameError"></span>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label">Mobile *</label>
-                <input type="tel" class="form-input" id="mobile" placeholder="+91 Mobile Number" required>
+                <label class="form-label" for="mobile">Mobile *</label>
+                <div class="mobile-input-group" id="mobileInputGroup">
+                  <span class="mobile-prefix">+91</span>
+                  <input type="tel" class="form-input mobile-input" id="mobile" placeholder="Mobile Number" maxlength="10" inputmode="numeric" pattern="[0-9]*" required>
+                </div>
+                <span class="field-error-msg" id="mobileError"></span>
               </div>
               <div class="form-group">
-                <label class="form-label">Email *</label>
+                <label class="form-label" for="email">Email *</label>
                 <input type="email" class="form-input" id="email" placeholder="Email Address" required>
+                <span class="field-error-msg" id="emailError"></span>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label">City *</label>
+                <label class="form-label" for="city">City *</label>
                 <input type="text" class="form-input" id="city" placeholder="Your City" required>
+                <span class="field-error-msg" id="cityError"></span>
               </div>
               <div class="form-group">
-                <label class="form-label">State *</label>
+                <label class="form-label" for="state">State *</label>
                 <input type="text" class="form-input" id="state" placeholder="Your State" required>
+                <span class="field-error-msg" id="stateError"></span>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label">Product Selection *</label>
+              <label class="form-label" for="productSelect">Choose Product *</label>
               <select class="form-select" id="productSelect" required>
-                <option value="" disabled selected>Select a Product</option>
-                <option value="Latex Mattress">Latex Mattress (Custom Orthopedic)</option>
-                <option value="Latex Pillow">Latex Pillow ("Sleep on the Clouds")</option>
-                <option value="Latex Cushions">Latex Cushions</option>
-                <option value="Hospital Bed">Hospital Beds</option>
-                <option value="Hotel Bed">Hotel Beds</option>
+                <option value="" disabled selected style="color: #22c55e;">Choose one</option>
+                <option value="Mattress">Mattress</option>
+                <option value="Pillows">Pillows</option>
+                <option value="Cushions">Cushions</option>
+                <option value="Mattress Topper">Mattress Topper</option>
               </select>
+              <span class="field-error-msg" id="productSelectError"></span>
             </div>
 
             <div style="margin-top: 24px;">
@@ -1412,7 +1421,7 @@
           <ul class="footer-links-list">
             <li><a href="products.html#mattress">Mattress</a></li>
             <li><a href="pillows.html">Pillows</a></li>
-            <li><a href="products.html#mattress-topper">Mattress Topper</a></li>
+            <li><a href="mattress-topper.html">Mattress Topper</a></li>
             <li><a href="cushions.html">Cushions</a></li>
           </ul>
         </div>

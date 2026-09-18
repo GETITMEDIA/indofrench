@@ -3,169 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Natural Latex Pillows Collection | INDOFRENCH Sleep Products</title>
-  <meta name="description" content="Explore Indofrench's 100% Organic Natural Latex Pincore Pillows including Heavenly Hug, Luxe Dream, Bliss Siesta, Bolster, and Contour Pillows for spinal alignment.">
+  <title>Mattress Topper | Indofrench Natural Latex</title>
+  <meta name="description" content="Indofrench 100% Organic Natural Latex Mattress Toppers. Luxe 1 inch and 2 inch pincore latex toppers for superior sleep comfort and spinal alignment.">
   
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/styles.css?v=20260918_16">
+  <link rel="stylesheet" href="css/styles.css?v=20260918_20">
 
   <style>
-    .pillow-hero-section {
-      background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
-      padding: 60px 0 40px;
+    .cat-hero {
+      background: linear-gradient(135deg, #1c407c 0%, #153466 100%);
+      color: #ffffff;
+      padding: 70px 0 60px;
       text-align: center;
-      border-bottom: 1px solid #e2e8f0;
+      position: relative;
     }
-    .pillow-hero-subtitle {
-      color: #1c7a01;
+    .cat-hero-tag {
+      color: #22c55e;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 0.9rem;
       letter-spacing: 2px;
-      font-size: 0.85rem;
+      text-transform: uppercase;
       margin-bottom: 12px;
-      display: inline-block;
+      display: block;
     }
-    .pillow-hero-title {
+    .cat-hero-title {
       font-family: 'Outfit', sans-serif;
       font-size: 2.8rem;
       font-weight: 800;
-      color: #1c407c;
+      color: #ffffff !important;
       margin-bottom: 16px;
     }
-    .pillow-hero-desc {
+    .cat-hero-desc {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      color: #475569;
       font-size: 1.1rem;
-      max-width: 650px;
+      color: #cbd5e1 !important;
+      max-width: 680px;
       margin: 0 auto;
       line-height: 1.6;
     }
 
-    .pillow-grid-wrap {
-      padding: 60px 0 100px;
-      background-color: #ffffff;
+    .prod-grid-wrap {
+      padding: 80px 0 100px;
+      background: #f8fafc;
     }
-    .pillow-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
+    .products-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 36px;
     }
-    @media (max-width: 991px) {
-      .pillow-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-      }
-    }
-    @media (max-width: 640px) {
-      .pillow-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .pillow-card {
+    .product-card {
       background: #ffffff;
       border-radius: 20px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
       overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      width: 380px;
+      max-width: 100%;
     }
-    .pillow-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(28, 64, 124, 0.14);
-      border-color: #cbd5e1;
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(28, 64, 124, 0.12);
+      border-color: #22c55e;
     }
-
-    .pillow-card-img-wrap {
-      position: relative;
-      height: 250px;
+    .prod-img-box {
+      height: 260px;
       overflow: hidden;
+      position: relative;
       background: #f1f5f9;
     }
-    .pillow-card-img-wrap img {
+    .prod-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.5s ease;
     }
-    .pillow-card:hover .pillow-card-img-wrap img {
+    .product-card:hover .prod-img {
       transform: scale(1.06);
     }
-
-    .pillow-badge {
+    .prod-badge {
       position: absolute;
       top: 16px;
       left: 16px;
-      background: rgba(28, 122, 1, 0.9);
-      backdrop-filter: blur(4px);
+      background: #1c7a01;
       color: #ffffff;
-      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.75rem;
-      font-weight: 700;
+      font-weight: 800;
       padding: 6px 14px;
-      border-radius: 50px;
+      border-radius: 20px;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-
-    .pillow-card-body {
+    .prod-card-body {
       padding: 28px;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
+      flex: 1;
     }
-    .pillow-card-title {
+    .prod-title {
       font-family: 'Outfit', sans-serif;
       font-size: 1.45rem;
       font-weight: 700;
       color: #1c407c;
-      margin: 0 0 12px 0;
+      margin-bottom: 12px;
     }
-    .pillow-card-text {
+    .prod-desc {
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.95rem;
       color: #64748b;
       line-height: 1.6;
       margin-bottom: 24px;
-      flex-grow: 1;
+      flex: 1;
     }
-    .pillow-card-footer {
+    .prod-card-foot {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding-top: 16px;
       border-top: 1px solid #f1f5f9;
-      padding-top: 20px;
     }
-    .pillow-price-tag {
+    .prod-price {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: 800;
       color: #1c7a01;
     }
     .btn-more-details {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background-color: #1c407c;
+      background: #1c407c;
       color: #ffffff;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.92rem;
       font-weight: 700;
+      font-size: 0.9rem;
       padding: 10px 20px;
       border-radius: 8px;
       text-decoration: none;
       transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
     .btn-more-details:hover {
-      background-color: #153466;
-      transform: translateX(3px);
+      background: #1c7a01;
       color: #ffffff;
     }
   </style>
@@ -175,14 +160,6 @@
   <!-- ================= TOP ANNOUNCEMENT TICKER ================= -->
   <div class="topbar-ticker" id="topbarTicker">
     <div class="topbar-marquee-track" id="topbarTrack">
-      <div class="ticker-phrase">
-        <i class="fa-solid fa-bed"></i>
-        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
-      </div>
-      <div class="ticker-phrase">
-        <i class="fa-solid fa-bed"></i>
-        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
-      </div>
       <div class="ticker-phrase">
         <i class="fa-solid fa-bed"></i>
         <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
@@ -205,16 +182,15 @@
         <a href="index.html" class="nav-link">Home</a>
         <a href="aboutus.html" class="nav-link">About us</a>
 
-        <!-- Products Dropdown -->
         <div class="nav-item-dropdown">
           <a href="products.html" class="nav-link active-home">
             Products <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
           </a>
           <div class="dropdown-menu">
             <a href="mattresses.html" class="dropdown-link">Mattress</a>
-            <a href="pillows.html" class="dropdown-link" style="color: #1c7a01; font-weight: 700;">Pillows</a>
+            <a href="pillows.html" class="dropdown-link">Pillows</a>
             <a href="cushions.html" class="dropdown-link">Cushions</a>
-            <a href="mattress-topper.html" class="dropdown-link">Mattress Topper</a>
+            <a href="mattress-topper.html" class="dropdown-link" style="color: #1c7a01; font-weight: 700;">Mattress Topper</a>
           </div>
         </div>
 
@@ -235,99 +211,69 @@
     </div>
   </header>
 
-  <!-- ================= HERO SECTION ================= -->
-  <section class="pillow-hero-section">
+  <!-- ================= CATEGORY HERO ================= -->
+  <section class="cat-hero">
     <div class="container">
-      <span class="pillow-hero-subtitle">Pure Latex Ergonomics, Restful Sleep</span>
-      <h1 class="pillow-hero-title">Browse Premium Latex Pillows</h1>
-      <p class="pillow-hero-desc">Discover 100% Organic Natural Latex pincore pillows specifically engineered for cervical spine alignment, neck pain relief, and natural temperature ventilation.</p>
+      <span class="cat-hero-tag">Embrace Comfort, Dream Deeply</span>
+      <h1 class="cat-hero-title">Browse Premium Mattress Topper Collections</h1>
+      <p class="cat-hero-desc">
+        Upgrade your sleep quality instantly with our 100% organic natural pincore latex mattress toppers. Designed with Dunlop technology for pain relief and cloud-like relaxation.
+      </p>
     </div>
   </section>
 
-  <!-- ================= PILLOWS COLLECTION GRID ================= -->
-  <section class="pillow-grid-wrap">
+  <!-- ================= PRODUCTS GRID ================= -->
+  <section class="prod-grid-wrap">
     <div class="container">
-      <div class="pillow-grid">
+      <div class="products-grid">
 
-        <!-- 1. Heavenly Hug Pillow -->
-        <article class="pillow-card">
-          <div class="pillow-card-img-wrap">
-            <span class="pillow-badge">Spine Support</span>
-            <img src="assets/download_from_wix/1 (7).webp" alt="Heavenly Hug Natural Latex Pillow">
+        <!-- Product 1: Luxe Mattress Topper (1 inch) -->
+        <div class="product-card">
+          <div class="prod-img-box">
+            <span class="prod-badge">1 Inch Pincore</span>
+            <a href="luxe-mattress-topper-1-inch.html">
+              <img src="assets/download_from_wix/1 (8).webp" alt="Luxe Mattress Topper (1 inch)" class="prod-img">
+            </a>
           </div>
-          <div class="pillow-card-body">
-            <h2 class="pillow-card-title">Heavenly Hug Pillow</h2>
-            <p class="pillow-card-text">Specifically crafted to alleviate neck pain and stiffness by ensuring proper spine alignment through Dunlop pincore technology.</p>
-            <div class="pillow-card-footer">
-              <span class="pillow-price-tag">From ₹ 1,950</span>
-              <a href="hevanly-hug-pillow.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="prod-card-body">
+            <h2 class="prod-title">
+              <a href="luxe-mattress-topper-1-inch.html" style="color: inherit; text-decoration: none;">Luxe Mattress Topper (1 inch)</a>
+            </h2>
+            <p class="prod-desc">
+              Are you tired of restless nights and waking up with aches and pains? Look no further! Our 1-inch premium mattress topper is here to transform your sleeping routine with 3-time purification latex.
+            </p>
+            <div class="prod-card-foot">
+              <span class="prod-price">₹ 9,243/-</span>
+              <a href="luxe-mattress-topper-1-inch.html" class="btn-more-details">
+                More Details <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
-        </article>
+        </div>
 
-        <!-- 2. Luxe Dream Pillow -->
-        <article class="pillow-card">
-          <div class="pillow-card-img-wrap">
-            <span class="pillow-badge">Plush Comfort</span>
-            <img src="assets/download_from_wix/3 (11).webp" alt="Luxe Dream Natural Latex Pillow">
+        <!-- Product 2: Luxe Mattress Topper (2 inch) -->
+        <div class="product-card">
+          <div class="prod-img-box">
+            <span class="prod-badge">2 Inch Pincore</span>
+            <a href="luxe-mattress-topper-2-inch.html">
+              <img src="assets/download_from_wix/2 (12).webp" alt="Luxe Mattress Topper (2 inch)" class="prod-img">
+            </a>
           </div>
-          <div class="pillow-card-body">
-            <h2 class="pillow-card-title">Luxe Dream Pillow</h2>
-            <p class="pillow-card-text">Ultra-plush natural latex pillow designed for cloud-like head support, continuous pincore airflow, and hypoallergenic dust-mite protection.</p>
-            <div class="pillow-card-footer">
-              <span class="pillow-price-tag">From ₹ 2,250</span>
-              <a href="luze-dream-pillows.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="prod-card-body">
+            <h2 class="prod-title">
+              <a href="luxe-mattress-topper-2-inch.html" style="color: inherit; text-decoration: none;">Luxe Mattress Topper (2 inch)</a>
+            </h2>
+            <p class="prod-desc">
+              Tired of tossing and turning all night? Seeking a solution to improve your sleep quality? Invest in our 2-inch premium natural pincore latex topper for enhanced cushioning and spinal support.
+            </p>
+            <div class="prod-card-foot">
+              <span class="prod-price">₹ 14,742/-</span>
+              <a href="luxe-mattress-topper-2-inch.html" class="btn-more-details">
+                More Details <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
-        </article>
-
-        <!-- 3. Bliss Siesta Pillow -->
-        <article class="pillow-card">
-          <div class="pillow-card-img-wrap">
-            <span class="pillow-badge">Orthopedic</span>
-            <img src="assets/download_from_wix/2 (11).webp" alt="Bliss Siesta Natural Latex Pillow">
-          </div>
-          <div class="pillow-card-body">
-            <h2 class="pillow-card-title">Bliss Siesta Pillow</h2>
-            <p class="pillow-card-text">Optimal medium firmness for side and back sleepers. Features organic cotton cover and thousands of micro-air channels.</p>
-            <div class="pillow-card-footer">
-              <span class="pillow-price-tag">From ₹ 2,100</span>
-              <a href="bliss-siesta-pillow.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 4. Latex Bolster Pillow -->
-        <article class="pillow-card">
-          <div class="pillow-card-img-wrap">
-            <span class="pillow-badge">Body Support</span>
-            <img src="assets/download_from_wix/bolster1.webp" alt="Latex Bolster Pillow">
-          </div>
-          <div class="pillow-card-body">
-            <h2 class="pillow-card-title">Latex Bolster Pillow</h2>
-            <p class="pillow-card-text">Cylindrical pincore latex bolster for leg elevation, back alignment, and relaxed side-sleeping comfort.</p>
-            <div class="pillow-card-footer">
-              <span class="pillow-price-tag">From ₹ 2,600</span>
-              <a href="bolster-pillow.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 5. Contour Latex Pillow -->
-        <article class="pillow-card">
-          <div class="pillow-card-img-wrap">
-            <span class="pillow-badge">Cervical Care</span>
-            <img src="assets/download_from_wix/498-x480.webp" alt="Contour Latex Pillow">
-          </div>
-          <div class="pillow-card-body">
-            <h2 class="pillow-card-title">Contour Latex Pillow</h2>
-            <p class="pillow-card-text">Ergonomic dual-wave contour shape tailored for shoulder and neck curve support, preventing stiffness and snoring.</p>
-            <div class="pillow-card-footer">
-              <span class="pillow-price-tag">From ₹ 2,450</span>
-              <a href="contour-pillow.html" class="btn-more-details">More Details <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </article>
+        </div>
 
       </div>
     </div>

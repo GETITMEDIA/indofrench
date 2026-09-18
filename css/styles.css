@@ -1976,12 +1976,86 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-select option {
-  background: var(--brand-navy);
-  color: var(--white);
+  background: #ffffff;
+  color: #1c7a01;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+}
+
+.form-select option[disabled] {
+  color: #22c55e;
 }
 
 .form-input::placeholder, .form-textarea::placeholder {
   color: var(--slate-400);
+}
+
+/* Mobile Input Group (+91 Prefix) */
+.mobile-input-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.mobile-prefix {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: none;
+  border-top-left-radius: var(--radius-sm);
+  border-bottom-left-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #4ade80;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.mobile-input-group .mobile-input {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  flex: 1;
+}
+
+/* Form Validation Feedback */
+.field-error-msg {
+  display: none;
+  color: #ff6b6b;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-top: 6px;
+  line-height: 1.3;
+}
+
+.field-error-msg.visible {
+  display: block;
+}
+
+.form-input.is-invalid, .form-select.is-invalid {
+  border-color: #ff6b6b !important;
+  background: rgba(239, 68, 68, 0.15) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3) !important;
+}
+
+.form-input.is-valid, .form-select.is-valid {
+  border-color: #22c55e !important;
+}
+
+.mobile-input-group.is-invalid .mobile-prefix {
+  border-color: #ff6b6b !important;
+  background: rgba(239, 68, 68, 0.2) !important;
+  color: #ff6b6b !important;
+}
+
+.mobile-input-group.is-invalid .mobile-input {
+  border-color: #ff6b6b !important;
+  background: rgba(239, 68, 68, 0.15) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3) !important;
 }
 
 /* ===================================================================

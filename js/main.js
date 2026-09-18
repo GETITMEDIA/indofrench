@@ -66,15 +66,241 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Contact / Enquiry Form
+  // 4. Contact / Enquiry Form Validation Engine
   const enquiryForm = document.getElementById('contactEnquiryForm');
+  const mobileInput = document.getElementById('mobile');
+  const mobileInputGroup = document.getElementById('mobileInputGroup');
+
+  function showError(inputEl, errorEl, message, groupEl = null) {
+    if (inputEl) {
+      inputEl.classList.add('is-invalid');
+      inputEl.classList.remove('is-valid');
+    }
+    if (groupEl) groupEl.classList.add('is-invalid');
+    if (errorEl) {
+      errorEl.textContent = message;
+      errorEl.classList.add('visible');
+    }
+  }
+
+  function clearError(inputEl, errorEl, groupEl = null) {
+    if (inputEl) {
+      inputEl.classList.remove('is-invalid');
+      inputEl.classList.add('is-valid');
+    }
+    if (groupEl) {
+      groupEl.classList.remove('is-invalid');
+    }
+    if (errorEl) {
+      errorEl.textContent = '';
+      errorEl.classList.remove('visible');
+    }
+  }
+
+  function validateFirstName() {
+    const input = document.getElementById('firstName');
+    const error = document.getElementById('firstNameError');
+    if (!input) return true;
+    const val = input.value.trim();
+    if (!val) {
+      showError(input, error, 'First name is required');
+      return false;
+    } else if (val.length < 2) {
+      showError(input, error, 'First name must be at least 2 characters');
+      return false;
+    } else if (!/^[A-Za-z\s]+$/.test(val)) {
+      showError(input, error, 'First name must contain only letters');
+      return false;
+    } else {
+      clearError(input, error);
+      return true;
+    }
+  }
+
+  function validateLastName() {
+    const input = document.getElementById('lastName');
+    const error = document.getElementById('lastNameError');
+    if (!input) return true;
+    const val = input.value.trim();
+    if (!val) {
+      showError(input, error, 'Last name is required');
+      return false;
+    } else if (!/^[A-Za-z\s]+$/.test(val)) {
+      showError(input, error, 'Last name must contain only letters');
+      return false;
+    } else {
+      clearError(input, error);
+      return true;
+    }
+  }
+
+  function validateMobile() {
+    const input = document.getElementById('mobile');
+    const error = document.getElementById('mobileError');
+    const group = document.getElementById('mobileInputGroup');
+    if (!input) return true;
+    const val = input.value.trim();
+    if (!val) {
+      showError(input, error, 'Mobile number is required', group);
+      return false;
+    } else if (!/^\d{10}$/.test(val)) {
+      showError(input, error, `Mobile number must be exactly 10 digits (${val.length}/10 entered)`, group);
+      return false;
+    } else {
+      clearError(input, error, group);
+      return true;
+    }
+  }
+
+  function validateEmail() {
+    const input = document.getElementById('email');
+    const error = document.getElementById('emailError');
+    if (!input) return true;
+    const val = input.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!val) {
+      showError(input, error, 'Email address is required');
+      return false;
+    } else if (!emailRegex.test(val)) {
+      showError(input, error, 'Please enter a valid email address (e.g. name@example.com)');
+      return false;
+    } else {
+      clearError(input, error);
+      return true;
+    }
+  }
+
+  function validateCity() {
+    const input = document.getElementById('city');
+    const error = document.getElementById('cityError');
+    if (!input) return true;
+    const val = input.value.trim();
+    if (!val) {
+      showError(input, error, 'City is required');
+      return false;
+    } else if (val.length < 2) {
+      showError(input, error, 'Please enter a valid city name');
+      return false;
+    } else {
+      clearError(input, error);
+      return true;
+    }
+  }
+
+  function validateState() {
+    const input = document.getElementById('state');
+    const error = document.getElementById('stateError');
+    if (!input) return true;
+    const val = input.value.trim();
+    if (!val) {
+      showError(input, error, 'State is required');
+      return false;
+    } else if (val.length < 2) {
+      showError(input, error, 'Please enter a valid state name');
+      return false;
+    } else {
+      clearError(input, error);
+      return true;
+    }
+  }
+
+  function validateProductSelect() {
+    const input = document.getElementById('productSelect');
+    const error = document.getElementById('productSelectError');
+    if (!input) return true;
+    const val = input.value;
+    if (!val) {
+      showError(input, error, 'Please choose a product');
+      return false;
+    } else {
+      clearError(input, error);
+      return true;
+    }
+  }
+
+  // Mobile Input: Restrict to numbers only & max 10 digits
+  if (mobileInput) {
+    mobileInput.addEventListener('keydown', (e) => {
+      const allowedKeys = ['Backspace', 'Delete', 'Tab', 'Escape', 'Enter', 'ArrowLeft', 'ArrowRight', 'Home', 'End'];
+      if (allowedKeys.includes(e.key) || e.ctrlKey || e.metaKey || e.altKey) {
+        return;
+      }
+      if (!/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+
+    mobileInput.addEventListener('input', () => {
+      let val = mobileInput.value.replace(/\D/g, '');
+      if (val.length === 12 && val.startsWith('91')) {
+        val = val.slice(2);
+      }
+      if (val.length > 10) {
+        val = val.slice(0, 10);
+      }
+      mobileInput.value = val;
+      if (mobileInput.classList.contains('is-invalid') || val.length === 10) {
+        validateMobile();
+      }
+    });
+
+    mobileInput.addEventListener('blur', validateMobile);
+  }
+
+  // Bind live validation event listeners
+  const fieldValidationMap = {
+    'firstName': validateFirstName,
+    'lastName': validateLastName,
+    'email': validateEmail,
+    'city': validateCity,
+    'state': validateState
+  };
+
+  Object.keys(fieldValidationMap).forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('blur', fieldValidationMap[id]);
+      el.addEventListener('input', () => {
+        if (el.classList.contains('is-invalid')) {
+          fieldValidationMap[id]();
+        }
+      });
+    }
+  });
+
+  const productSelectEl = document.getElementById('productSelect');
+  if (productSelectEl) {
+    productSelectEl.addEventListener('change', validateProductSelect);
+    productSelectEl.addEventListener('blur', validateProductSelect);
+  }
+
   if (enquiryForm) {
     enquiryForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('firstName').value;
-      const product = document.getElementById('productSelect').value;
-      alert(`Thank you, ${name}! Your enquiry for ${product} has been received. An Indofrench sleep specialist will contact you shortly.`);
-      enquiryForm.reset();
+
+      const isFNValid = validateFirstName();
+      const isLNValid = validateLastName();
+      const isMobValid = validateMobile();
+      const isEmailValid = validateEmail();
+      const isCityValid = validateCity();
+      const isStateValid = validateState();
+      const isProdValid = validateProductSelect();
+
+      if (isFNValid && isLNValid && isMobValid && isEmailValid && isCityValid && isStateValid && isProdValid) {
+        const firstName = document.getElementById('firstName').value.trim();
+        const mobile = document.getElementById('mobile').value.trim();
+        const product = document.getElementById('productSelect').value;
+
+        alert(`Thank you, ${firstName}!\n\nYour enquiry for "${product}" has been received successfully.\nMobile: +91 ${mobile}\n\nOur Indofrench sleep specialist will contact you shortly.`);
+        enquiryForm.reset();
+        
+        document.querySelectorAll('#contactEnquiryForm .is-valid').forEach(el => el.classList.remove('is-valid'));
+      } else {
+        const firstInvalid = enquiryForm.querySelector('.is-invalid');
+        if (firstInvalid) {
+          firstInvalid.focus();
+        }
+      }
     });
   }
 
