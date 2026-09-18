@@ -412,4 +412,96 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start auto rotation
     startAutoPlay();
   }
+
+  // 9. Gallery Lightbox Modal Viewer Engine
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  let lightbox = document.getElementById('galleryLightbox');
+
+  if (galleryItems.length > 0) {
+    // If Lightbox HTML does not exist dynamically in page, build it on-the-fly!
+    if (!lightbox) {
+      lightbox = document.createElement('div');
+      lightbox.className = 'lightbox-modal';
+      lightbox.id = 'galleryLightbox';
+      lightbox.setAttribute('role', 'dialog');
+      lightbox.setAttribute('aria-modal', 'true');
+      lightbox.innerHTML = `
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close image view">&times;</button>
+        <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+          <img src="" alt="Indofrench Gallery View" id="lightboxImg">
+          <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+      `;
+      document.body.appendChild(lightbox);
+    }
+
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+
+    let currentIndex = 0;
+    const imagesList = [];
+
+    galleryItems.forEach((item, index) => {
+      const img = item.querySelector('img');
+      if (img) {
+        imagesList.push({
+          src: img.src,
+          alt: img.alt || `Indofrench Gallery Photo ${index + 1}`
+        });
+
+        item.addEventListener('click', () => {
+          openLightbox(index);
+        });
+      }
+    });
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightboxContent();
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function updateLightboxContent() {
+      if (imagesList[currentIndex]) {
+        lightboxImg.src = imagesList[currentIndex].src;
+        lightboxCaption.textContent = imagesList[currentIndex].alt;
+      }
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + imagesList.length) % imagesList.length;
+      updateLightboxContent();
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % imagesList.length;
+      updateLightboxContent();
+    }
+
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightboxPrev) lightboxPrev.addEventListener('click', prevImage);
+    if (lightboxNext) lightboxNext.addEventListener('click', nextImage);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') prevImage();
+      if (e.key === 'ArrowRight') nextImage();
+    });
+  }
 });
