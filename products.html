@@ -285,7 +285,7 @@
     }
     .card-overlay-box {
       position: absolute;
-      background-color: #1c407c;
+      background-color: #002b73;
       border-radius: 16px;
       padding: 24px 28px 20px;
       color: #ffffff;
@@ -296,10 +296,14 @@
       display: flex;
       flex-direction: column;
       z-index: 2;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
       transition: background-color 0.25s ease, transform 0.25s ease;
     }
     .popular-prod-card:hover .card-overlay-box {
       background-color: #16366b;
+      transform: translateY(-4px) !important;
     }
     .box-pos-left {
       bottom: 24px;

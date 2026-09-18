@@ -3739,7 +3739,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Staggered overlay blue cards */
 .card-overlay-box {
   position: absolute;
-  background-color: #1c407c;
+  background-color: #002b73;
   border-radius: 16px;
   padding: 24px 28px 20px;
   color: #ffffff;
@@ -3750,16 +3750,16 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   z-index: 2;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease;
 }
 
 .popular-prod-card:hover .card-overlay-box {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(-4px) !important;
   background-color: #16366b;
 }
 
