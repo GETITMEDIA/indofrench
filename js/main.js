@@ -98,7 +98,92 @@ document.addEventListener('DOMContentLoaded', () => {
   // Managed smoothly via hardware-accelerated CSS @keyframes tickerAutoScroll on #topbarTrack
   const marqueeTrack = document.getElementById('topbarTrack');
   if (marqueeTrack) {
-    // Ensure animation is active and never paused
     marqueeTrack.style.animationPlayState = 'running';
+  }
+
+  // 8. Hero 3-Slide Carousel Engine
+  const heroCarousel = document.getElementById('heroCarousel');
+  if (heroCarousel) {
+    const slides = heroCarousel.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.carousel-dot-btn');
+    const prevBtn = document.getElementById('heroPrevBtn');
+    const nextBtn = document.getElementById('heroNextBtn');
+    let currentSlide = 0;
+    let autoPlayTimer = null;
+
+    function goToSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      currentSlide = index;
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentSlide);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
+      });
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      autoPlayTimer = setInterval(() => {
+        goToSlide(currentSlide + 1);
+      }, 4000);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        goToSlide(currentSlide - 1);
+        startAutoPlay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        goToSlide(currentSlide + 1);
+        startAutoPlay();
+      });
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        goToSlide(i);
+        startAutoPlay();
+      });
+    });
+
+    heroCarousel.addEventListener('mouseenter', stopAutoPlay);
+    heroCarousel.addEventListener('mouseleave', startAutoPlay);
+
+    // Mobile touch swipe support
+    let touchStartX = 0;
+    heroCarousel.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoPlay();
+    }, { passive: true });
+
+    heroCarousel.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) {
+          goToSlide(currentSlide + 1);
+        } else {
+          goToSlide(currentSlide - 1);
+        }
+      }
+      startAutoPlay();
+    }, { passive: true });
+
+    // Start auto rotation
+    startAutoPlay();
   }
 });

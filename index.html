@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Stylesheet with Cache Buster -->
-  <link rel="stylesheet" href="css/styles.css?v=20260916_02">
+  <link rel="stylesheet" href="css/styles.css?v=20260918_10">
 
   <!-- CRITICAL INLINE STYLES FOR GUARANTEED RENDERING -->
   <style>
@@ -166,6 +166,48 @@
       background-color: #156201 !important;
       transform: translateY(-1px) !important;
       color: #FFFFFF !important;
+    }
+
+    @media (max-width: 991px) {
+      .header-inner {
+        height: 70px !important;
+        padding: 0 16px !important;
+      }
+      .hamburger-btn {
+        display: flex !important;
+      }
+      .nav-menu {
+        display: none !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: #FFFFFF !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 20px 24px !important;
+        gap: 16px !important;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+        border-bottom: 1px solid #E2E8F0 !important;
+        z-index: 1000 !important;
+      }
+      .nav-menu.open {
+        display: flex !important;
+      }
+      .btn-locate-store {
+        padding: 8px 14px !important;
+        font-size: 13px !important;
+      }
+      .btn-contact-header {
+        padding: 8px 14px !important;
+        font-size: 13px !important;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .btn-locate-store {
+        display: none !important;
+      }
     }
 
     /* Global button class overrides */
@@ -416,19 +458,9 @@
   <!-- ================= HEADER & NAVBAR ================= -->
   <header class="header">
     <div class="header-inner">
-      <!-- Indofrench Logo Matching Screenshot & indofrench.in -->
+      <!-- Indofrench Logo Matching Official Brand Asset -->
       <a href="#" class="brand-logo" aria-label="Indofrench Home">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 62" width="175" height="58" class="indofrench-svg-logo">
-          <!-- INDO -->
-          <text x="0" y="28" font-family="'Outfit', sans-serif" font-weight="900" font-size="32" fill="#1c407c" letter-spacing="0.5">INDO</text>
-          <!-- Green mattress/pillow contour mark -->
-          <rect x="88" y="9" width="38" height="9" rx="4.5" fill="#4ADE80" />
-          <rect x="82" y="21" width="50" height="7" rx="3.5" fill="#1c7a01" />
-          <!-- FRENCH -->
-          <text x="0" y="50" font-family="'Outfit', sans-serif" font-weight="900" font-size="25" fill="#1c407c" letter-spacing="1.2">FRENCH</text>
-          <!-- Tagline -->
-          <text x="1" y="60" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="7.2" fill="#1c407c" letter-spacing="1.6">NATURAL LATEX MATTRESS</text>
-        </svg>
+        <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" class="header-logo-img" style="height: 54px; width: auto; object-fit: contain; display: block;">
       </a>
 
       <!-- Main Navigation Menu -->
@@ -468,50 +500,274 @@
     </div>
   </header>
 
-  <!-- ================= HERO SECTION (MATCHING INDOFRENCH.IN) ================= -->
+  <!-- ================= HERO SECTION (CLEAN 50/50 SPLIT CAROUSEL) ================= -->
   <section class="hero-section" id="hero">
-    <img src="assets/hero-mattress.jpg" alt="Premium Latex Mattress for Every Home" class="hero-backdrop-img">
-    <div class="hero-overlay-gradient"></div>
-    <div class="container">
-      <div class="hero-main-grid">
-        
-        <!-- Left Hero Feature Card (As seen on indofrench.in) -->
-        <div class="hero-feature-box">
-          <span class="hero-feature-tag">Designed for Optimal Air Circulation</span>
-          <h1 class="hero-feature-title">More than 3000 pincore holes for air circulation in the mattress</h1>
-          <p class="hero-feature-desc">
-            Indofrench mattresses have been specifically designed to avoid back pain and virtually eliminate back stiffness. A truly special feature of the natural latex mattress is its open-ended cell structure, which provides superior ventilation.
-          </p>
-          <div>
-            <a href="#popular-products" class="btn btn-green">
-              Explore Now <i class="fa-solid fa-arrow-right"></i>
-            </a>
+    
+    <!-- Hero Carousel Wrapper with 3 Slides -->
+    <div class="hero-carousel-container" id="heroCarousel">
+      
+      <!-- SLIDE 1: Sleep Healthier, Live Brighter -->
+      <div class="hero-slide active" data-slide="0" style="background-image: url('assets/hero-nature-bg.jpg');">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-container">
+          <div class="hero-content-wrap">
+            <div class="hero-tag-row">
+              <span class="hero-tag-text">NATURAL LATEX MATTRESSES</span>
+              <span class="hero-tag-line"></span>
+            </div>
+
+            <h1 class="hero-main-title">
+              <span class="title-line-navy">Sleep Healthier</span>
+              <span class="title-line-green">Live Brighter</span>
+            </h1>
+
+            <p class="hero-main-desc">
+              Designed for superior air circulation, our natural latex mattresses keep you cool, comfortable and pain-free &mdash; night after night.
+            </p>
+
+            <div class="hero-features-strip">
+              <div class="hero-feat-item">
+                <div class="feat-icon-bubble">
+                  <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div class="feat-label">
+                  <span class="label-top">100%</span>
+                  <span class="label-bottom">Natural Latex</span>
+                </div>
+              </div>
+
+              <div class="hero-feat-item">
+                <div class="feat-icon-bubble">
+                  <i class="fa-solid fa-wind"></i>
+                </div>
+                <div class="feat-label">
+                  <span class="label-top">Enhanced</span>
+                  <span class="label-bottom">Air Circulation</span>
+                </div>
+              </div>
+
+              <div class="hero-feat-item">
+                <div class="feat-icon-bubble">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v20M8 5h8M7 9h10M8 13h8M7 17h10M8 21h8" />
+                  </svg>
+                </div>
+                <div class="feat-label">
+                  <span class="label-top">Better</span>
+                  <span class="label-bottom">Spinal Support</span>
+                </div>
+              </div>
+
+              <div class="hero-feat-item">
+                <div class="feat-icon-bubble">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
+                <div class="feat-label">
+                  <span class="label-top">Durable &amp;</span>
+                  <span class="label-bottom">Long Lasting</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-cta-row">
+              <a href="#popular-products" class="btn-hero-explore">
+                <span>Explore Our Mattresses</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#hero-video" class="btn-hero-watch">
+                <span class="watch-icon-circle"><i class="fa-solid fa-play"></i></span>
+                <span>Watch Our Story</span>
+              </a>
+            </div>
           </div>
         </div>
+      </div>
 
-        <!-- Hero Center-Bottom Strip (As seen on indofrench.in) -->
-        <div class="hero-bottom-strip">
-          <div class="hero-strip-text">
-            In them from the date of purchase, Indo French products are prepared with the world's most advanced technology vulcanisation and pincore foam prepared to form a uniform bubble distribution.
+      <!-- SLIDE 2: Ergonomic Spinal Support -->
+      <div class="hero-slide" data-slide="1" style="background-image: url('assets/hero-slide-2.jpg');">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-container">
+          <div class="hero-content-wrap">
+            <div class="hero-tag-row">
+              <span class="hero-tag-text">100% ORGANIC DUNLOP PROCESS</span>
+              <span class="hero-tag-line"></span>
+            </div>
+
+            <h2 class="hero-main-title">
+              <span class="title-line-navy">Ergonomic Spinal Support</span>
+              <span class="title-line-green">Wake Up Completely Pain-Free</span>
+            </h2>
+
+            <p class="hero-main-desc">
+              Engineered to adapt precisely to your body's natural curvature, relieving pressure points across your spine, neck, and hips for deeply restorative, healthy sleep.
+            </p>
+
+            <div class="hero-features-strip">
+              <div class="hero-feat-item">
+                <div class="feat-icon-bubble">
+                  <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+                <div class="feat-label">
+                  <span class="label-top">Orthopedic</span>
+                  <span class="label-bottom">Body Contouring</span>
+                </div>
+              </div>
+
+              <div class="hero-feat-item">
+                <div class="feat-icon-bubble">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="feat-label">
+                  <span class="label-top">Zero Pain</span>
+                  <span class="label-bottom">Pressure Relief</span>
+                </div>
+              </div>
+
+              <div class="hero-feat-item">
+                <div class="feat-icon-bubble">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v20M8 5h8M7 9h10M8 13h8M7 17h10M8 21h8" />
+                  </svg>
+                </div>
+                <div class="feat-label">
+                  <span class="label-top">Spinal</span>
+                  <span class="label-bottom">Alignment</span>
+                </div>
+              </div>
+
+              <div class="hero-feat-item">
+                <div class="feat-icon-bubble">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="7"/>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                  </svg>
+                </div>
+                <div class="feat-label">
+                  <span class="label-top">Certified</span>
+                  <span class="label-bottom">Dunlop Foam</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-cta-row">
+              <a href="#popular-products" class="btn-hero-explore">
+                <span>View Orthopedic Mattresses</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#hero-video" class="btn-hero-watch">
+                <span class="watch-icon-circle"><i class="fa-solid fa-play"></i></span>
+                <span>Watch Our Story</span>
+              </a>
+            </div>
           </div>
-          <a href="#about" class="btn btn-green btn-sm" style="flex-shrink: 0;">
-            Explore Now <i class="fa-solid fa-arrow-right"></i>
-          </a>
         </div>
-
       </div>
+
+      <!-- SLIDE 3: Pure Natural Latex Comfort -->
+      <div class="hero-slide" data-slide="2" style="background-image: url('assets/hero-slide-3.jpg');">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-container">
+          <div class="hero-content-wrap">
+            <div class="hero-tag-row">
+              <span class="hero-tag-text">CRAFTED IN INDIA SINCE 1979</span>
+              <span class="hero-tag-line"></span>
+            </div>
+
+            <h2 class="hero-main-title">
+              <span class="title-line-navy">Pure Natural Latex Comfort</span>
+              <span class="title-line-green">Guaranteed For 10+ Years</span>
+            </h2>
+
+            <p class="hero-main-desc">
+              Naturally hypoallergenic, dust-mite resistant, and zero chemical toxicity. Stay cool in hot summers and cozy in winter with open-cell natural rubber pin-core ventilation.
+            </p>
+
+            <div class="hero-features-strip">
+              <div class="hero-feat-item">
+                <div class="feat-icon-bubble">
+                  <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div class="feat-label">
+                  <span class="label-top">Chemical-Free</span>
+                  <span class="label-bottom">100% Organic</span>
+                </div>
+              </div>
+
+              <div class="hero-feat-item">
+                <div class="feat-icon-bubble">
+                  <i class="fa-solid fa-snowflake"></i>
+                </div>
+                <div class="feat-label">
+                  <span class="label-top">Cooling</span>
+                  <span class="label-bottom">Thermo-Balance</span>
+                </div>
+              </div>
+
+              <div class="hero-feat-item">
+                <div class="feat-icon-bubble">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
+                <div class="feat-label">
+                  <span class="label-top">Hypoallergenic</span>
+                  <span class="label-bottom">Dust-Mite Free</span>
+                </div>
+              </div>
+
+              <div class="hero-feat-item">
+                <div class="feat-icon-bubble">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div class="feat-label">
+                  <span class="label-top">Since 1979</span>
+                  <span class="label-bottom">Trusted Heritage</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-cta-row">
+              <a href="#popular-products" class="btn-hero-explore">
+                <span>Shop Natural Mattresses</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#hero-video" class="btn-hero-watch">
+                <span class="watch-icon-circle"><i class="fa-solid fa-play"></i></span>
+                <span>Watch Our Story</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Hero Floating Pill (Bottom Right, as seen on indofrench.in) -->
-    <div class="hero-floating-pill">
-      <div class="pill-bed-icon">
-        <i class="fa-solid fa-bed" style="color: #ffffff; font-size: 1.1rem;"></i>
-      </div>
-      <div class="pill-info-block">
-        <strong style="color: #4ADE80; font-size: 0.76rem; letter-spacing: 0.8px; text-transform: uppercase;">A Word About Natural Mattress</strong>
-        <span style="color: #ffffff; font-size: 0.86rem; font-weight: 600;">From India's heart, Indofrench's art, Mattresses made and delivered.</span>
-      </div>
+    <!-- Carousel Controls: Left & Right Arrows -->
+    <button class="hero-arrow-btn hero-arrow-prev" id="heroPrevBtn" aria-label="Previous Slide">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="hero-arrow-btn hero-arrow-next" id="heroNextBtn" aria-label="Next Slide">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- 3 Clickable Slide Indicators -->
+    <div class="hero-carousel-pagination" id="heroPagination" aria-label="Carousel pagination">
+      <button class="carousel-dot-btn active" data-index="0" aria-label="Slide 1">
+        <span class="dot-fill"></span>
+      </button>
+      <button class="carousel-dot-btn" data-index="1" aria-label="Slide 2">
+        <span class="dot-fill"></span>
+      </button>
+      <button class="carousel-dot-btn" data-index="2" aria-label="Slide 3">
+        <span class="dot-fill"></span>
+      </button>
     </div>
+
   </section>
 
   <!-- ================= VIDEO SHOWCASE SECTION ================= -->
@@ -873,35 +1129,35 @@
         
         <!-- City Cards -->
         <div class="locate-city-card">
-          <img src="assets/city-chennai.jpg" alt="Chennai">
+          <img src="assets/city-chennai.png" alt="Chennai">
           <div class="city-info">
             <h3 class="city-name">Chennai</h3>
             <span class="store-count">4 Stores</span>
           </div>
         </div>
         <div class="locate-city-card">
-          <img src="assets/city-mumbai.jpg" alt="Mumbai">
+          <img src="assets/city-mumbai.png" alt="Mumbai">
           <div class="city-info">
             <h3 class="city-name">Mumbai</h3>
             <span class="store-count">10 Stores</span>
           </div>
         </div>
         <div class="locate-city-card">
-          <img src="assets/city-cochin.jpg" alt="Cochin">
+          <img src="assets/city-cochin.png" alt="Cochin">
           <div class="city-info">
             <h3 class="city-name">Cochin</h3>
             <span class="store-count">5 Stores</span>
           </div>
         </div>
         <div class="locate-city-card">
-          <img src="assets/city-puducherry.jpg" alt="Puducherry">
+          <img src="assets/city-puducherry.png" alt="Puducherry">
           <div class="city-info">
             <h3 class="city-name">Puducherry</h3>
             <span class="store-count">2 Stores</span>
           </div>
         </div>
         <div class="locate-city-card">
-          <img src="assets/city-coimbatore.jpg" alt="Coimbatore">
+          <img src="assets/city-coimbatore.png" alt="Coimbatore">
           <div class="city-info">
             <h3 class="city-name">Coimbatore</h3>
             <span class="store-count">3 Stores</span>
@@ -1119,14 +1375,10 @@
       <div class="footer-main-grid">
         <!-- Col 1: Company Information -->
         <div>
-          <div class="brand-logo" style="margin-bottom: 16px;">
-            <div class="logo-graphic">
-              <i class="fa-solid fa-leaf logo-leaf-icon"></i>
-            </div>
-            <div class="logo-text-wrap">
-              <div class="logo-main">INDO<span class="accent">FRENCH</span></div>
-              <div class="logo-sub">Natural Latex Foam • Since 1979</div>
-            </div>
+          <div class="footer-brand-logo" style="margin-bottom: 20px;">
+            <a href="#" aria-label="Indofrench Home">
+              <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 52px; width: auto; object-fit: contain; display: block;">
+            </a>
           </div>
           <p style="font-size: 0.9rem; line-height: 1.65; color: var(--slate-600); margin-bottom: 16px;">
             India's most trusted natural latex mattress manufacturer. Crafting eco-friendly, orthopedic pincore sleep products since 1979.
@@ -1266,6 +1518,6 @@
   </a>
 
   <!-- Script -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20260918_10"></script>
 </body>
 </html>
