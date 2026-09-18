@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locate a Store | Indofrench Natural Latex Showrooms & Dealers</title>
+  <meta name="description" content="Locate an authorized Indofrench 100% Natural Latex Mattress store near you across Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, Telangana, Maharashtra, Puducherry, and New Delhi.">
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet with Cache Buster -->
+  <link rel="stylesheet" href="css/styles.css?v=20260918_19">
+
+  <style>
+    :root {
+      --brand-navy: #002b73;
+      --brand-green: #1c7a01;
+    }
+
+    /* Top Marquee Ticker Bar */
+    .topbar-ticker {
+      background-color: #002b73 !important;
+      color: #FFFFFF !important;
+      height: 42px !important;
+      overflow: hidden !important;
+      position: relative !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      align-items: center !important;
+      width: 100% !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .topbar-marquee-track {
+      display: inline-flex !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      gap: 36px !important;
+      width: max-content !important;
+      will-change: transform !important;
+      animation: tickerAutoScroll 30s linear infinite !important;
+    }
+
+    @keyframes tickerAutoScroll {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    .ticker-phrase {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 14px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      color: #FFFFFF !important;
+      letter-spacing: 0.3px !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* Header & Nav */
+    .header {
+      background: #FFFFFF !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      position: sticky !important;
+      top: 0 !important;
+      left: 0 !important;
+      z-index: 999 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      height: 84px !important;
+      max-width: 1320px !important;
+      margin: 0 auto !important;
+      padding: 0 24px !important;
+    }
+
+    .nav-menu {
+      display: flex !important;
+      align-items: center !important;
+      gap: 32px !important;
+    }
+
+    .nav-link {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      color: #1c407c !important;
+      text-decoration: none !important;
+      padding: 6px 0 !important;
+      transition: color 0.2s ease !important;
+    }
+
+    .nav-link:hover {
+      color: #1c7a01 !important;
+    }
+
+    /* Hero Banner Header */
+    .dealers-hero-wrap {
+      background: linear-gradient(rgba(0, 43, 115, 0.72), rgba(0, 43, 115, 0.72)), url('assets/download_from_wix/the-stylish-composition-at-living-room-interior-2022-12-07-04-27-48-utc.jpg') center/cover no-repeat;
+      color: #FFFFFF;
+      padding: 64px 24px;
+      text-align: center;
+    }
+
+    .dealers-hero-tag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #1c7a01;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 0.4px;
+    }
+
+    .dealers-hero-wrap h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+      font-weight: 800;
+      margin: 0;
+      color: #FFFFFF;
+    }
+
+    /* Main Container */
+    .dealers-main-container {
+      max-width: 1200px;
+      margin: 50px auto 90px;
+      padding: 0 24px;
+    }
+
+    .state-section-block {
+      margin-bottom: 54px;
+    }
+
+    .state-header-wrap {
+      position: relative;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .state-title-blue {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #002b73;
+      margin: 0;
+    }
+
+    .state-title-green {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1c7a01;
+      margin: 0;
+    }
+
+    /* Top Search Box attached to state header */
+    .search-input-box {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      padding: 7px 14px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .search-input-box input {
+      border: none;
+      outline: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      color: #334155;
+      width: 130px;
+    }
+
+    .search-input-box i {
+      color: #94A3B8;
+      font-size: 14px;
+    }
+
+    /* City Card Grids */
+    .grid-4-col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .grid-2-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .grid-1-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .city-card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+    }
+
+    .city-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0, 43, 115, 0.14);
+    }
+
+    .city-card-img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .grid-1-col .city-card-img {
+      height: 250px;
+    }
+
+    .city-card:hover .city-card-img {
+      transform: scale(1.03);
+    }
+
+    .city-bar-green {
+      background-color: #1c7a01;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 10px 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .city-bar-blue {
+      background-color: #002b73;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 10px 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    @media (max-width: 992px) {
+      .grid-4-col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid-4-col, .grid-2-col {
+        grid-template-columns: 1fr;
+      }
+
+      .search-input-box {
+        position: static;
+        transform: none;
+        margin: 14px auto 0;
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= TOP ANNOUNCEMENT TICKER ================= -->
+  <div class="topbar-ticker" id="topbarTicker">
+    <div class="topbar-marquee-track" id="topbarTrack">
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER & NAVBAR ================= -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Indofrench Home">
+        <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 54px; width: auto; object-fit: contain; display: block;">
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aboutus.html" class="nav-link">About us</a>
+        
+        <!-- Products Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link">
+            Products <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="mattresses.html" class="dropdown-link">Mattress</a>
+            <a href="pillows.html" class="dropdown-link">Pillows</a>
+            <a href="cushions.html" class="dropdown-link">Cushions</a>
+            <a href="mattress-topper.html" class="dropdown-link">Mattress Topper</a>
+          </div>
+        </div>
+
+        <!-- Why Indofrench Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="advantages.html" class="nav-link">
+            Why Indofrench <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="advantages.html" class="dropdown-link">Advantages</a>
+            <a href="testimonials.html" class="dropdown-link">Review</a>
+          </div>
+        </div>
+
+        <a href="blog.html" class="nav-link">Blogs</a>
+
+        <!-- Support Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="guarantee-registration.html" class="nav-link">
+            Support <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="guarantee-registration.html" class="dropdown-link">Guarantee Registration</a>
+            <a href="dealer-registration.html" class="dropdown-link">Become a dealer</a>
+            <a href="contact-us.html" class="dropdown-link">Contact US</a>
+            <a href="faqs.html" class="dropdown-link">FAQS</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="dealers.html" class="btn-locate-store" style="background-color: #002b73 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
+        <a href="contact-us.html" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="dealers-hero-wrap">
+    <div class="dealers-hero-tag">Locate a Store</div>
+    <h1>Find a Dealer Near You</h1>
+  </section>
+
+  <!-- ================= LOCATE A STORE GRID ================= -->
+  <main class="dealers-main-container">
+
+    <!-- 1. TAMIL NADU -->
+    <div class="state-section-block">
+      <div class="state-header-wrap">
+        <h2 class="state-title-blue">Tamil Nadu</h2>
+        <div class="search-input-box">
+          <input type="text" id="citySearchInput" placeholder="Search your city..." onkeyup="filterDealerCities()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+
+      <div class="grid-4-col" id="dealerCitiesGrid">
+        <a href="contact-us.html?city=Chennai" class="city-card" data-city="chennai tamil nadu">
+          <img src="assets/download_from_wix/chennai.webp" alt="Chennai" class="city-card-img">
+          <div class="city-bar-green">Chennai</div>
+        </a>
+
+        <a href="contact-us.html?city=Dindigul" class="city-card" data-city="dindigul tamil nadu">
+          <img src="assets/download_from_wix/dindigul.webp" alt="Dindigul" class="city-card-img">
+          <div class="city-bar-green">Dindigul</div>
+        </a>
+
+        <a href="contact-us.html?city=Kallakurichi" class="city-card" data-city="kalla kuruchi kallakurichi tamil nadu">
+          <img src="assets/download_from_wix/kallakurichi.webp" alt="Kalla Kuruchi" class="city-card-img">
+          <div class="city-bar-green">Kalla Kuruchi</div>
+        </a>
+
+        <a href="contact-us.html?city=Kovilpatti" class="city-card" data-city="kovilpatti tamil nadu">
+          <img src="assets/download_from_wix/kovilpatti.webp" alt="Kovilpatti" class="city-card-img">
+          <div class="city-bar-green">Kovilpatti</div>
+        </a>
+
+        <a href="contact-us.html?city=Krishnagiri" class="city-card" data-city="krishnagiri tamil nadu">
+          <img src="assets/download_from_wix/krishnagiri.webp" alt="Krishnagiri" class="city-card-img">
+          <div class="city-bar-green">Krishnagiri</div>
+        </a>
+
+        <a href="contact-us.html?city=Madurai" class="city-card" data-city="madurai tamil nadu">
+          <img src="assets/download_from_wix/madurai.webp" alt="Madurai" class="city-card-img">
+          <div class="city-bar-green">Madurai</div>
+        </a>
+
+        <a href="contact-us.html?city=Mettur" class="city-card" data-city="mettur tamil nadu">
+          <img src="assets/download_from_wix/mettur.webp" alt="Mettur" class="city-card-img">
+          <div class="city-bar-green">Mettur</div>
+        </a>
+
+        <a href="contact-us.html?city=Salem" class="city-card" data-city="salem tamil nadu">
+          <img src="assets/download_from_wix/salem.webp" alt="Salem" class="city-card-img">
+          <div class="city-bar-green">Salem</div>
+        </a>
+
+        <a href="contact-us.html?city=Sivakasi" class="city-card" data-city="sivakasi tamil nadu">
+          <img src="assets/download_from_wix/sivakasi.webp" alt="Sivakasi" class="city-card-img">
+          <div class="city-bar-green">Sivakasi</div>
+        </a>
+
+        <a href="contact-us.html?city=Trichy" class="city-card" data-city="trichy tiruchirappalli tamil nadu">
+          <img src="assets/download_from_wix/trichy.webp" alt="Trichy" class="city-card-img">
+          <div class="city-bar-green">Trichy</div>
+        </a>
+
+        <a href="contact-us.html?city=Coimbatore" class="city-card" data-city="coimbatore tamil nadu">
+          <img src="assets/download_from_wix/coimbatore.webp" alt="Coimbatore" class="city-card-img">
+          <div class="city-bar-green">Coimbatore</div>
+        </a>
+
+        <a href="contact-us.html?city=Erode" class="city-card" data-city="erode tamil nadu">
+          <img src="assets/download_from_wix/alapuzha.webp" alt="Erode" class="city-card-img">
+          <div class="city-bar-green">Erode</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 2. KERALA -->
+    <div class="state-section-block">
+      <div class="state-header-wrap">
+        <h2 class="state-title-green">Kerala</h2>
+      </div>
+
+      <div class="grid-4-col">
+        <a href="contact-us.html?city=Alapuzha" class="city-card" data-city="alapuzha kerala">
+          <img src="assets/download_from_wix/alapuzha.webp" alt="Alapuzha" class="city-card-img">
+          <div class="city-bar-blue">Alapuzha</div>
+        </a>
+
+        <a href="contact-us.html?city=Angamali" class="city-card" data-city="angamali anagamali kerala">
+          <img src="assets/download_from_wix/angamali.webp" alt="Anagamali" class="city-card-img">
+          <div class="city-bar-blue">Anagamali</div>
+        </a>
+
+        <a href="contact-us.html?city=Changanassery" class="city-card" data-city="changanassery kerala">
+          <img src="assets/download_from_wix/changanassery.webp" alt="Changanassery" class="city-card-img">
+          <div class="city-bar-blue">Changanassery</div>
+        </a>
+
+        <a href="contact-us.html?city=Cochin" class="city-card" data-city="cochin kochi kerala">
+          <img src="assets/download_from_wix/kerala.webp" alt="Cochin" class="city-card-img">
+          <div class="city-bar-blue">Cochin</div>
+        </a>
+
+        <a href="contact-us.html?city=Palakad" class="city-card" data-city="palakad palakkad kerala">
+          <img src="assets/download_from_wix/palakad.webp" alt="Palakad" class="city-card-img">
+          <div class="city-bar-blue">Palakad</div>
+        </a>
+
+        <a href="contact-us.html?city=Thiruvalla" class="city-card" data-city="thiruvalla kerala">
+          <img src="assets/download_from_wix/thiruvalla.webp" alt="Thiruvalla" class="city-card-img">
+          <div class="city-bar-blue">Thiruvalla</div>
+        </a>
+
+        <a href="contact-us.html?city=Trivandrum" class="city-card" data-city="trivandrum thiruvananthapuram kerala">
+          <img src="assets/download_from_wix/trivandrum.webp" alt="Trivandrum" class="city-card-img">
+          <div class="city-bar-blue">Trivandrum</div>
+        </a>
+
+        <a href="contact-us.html?city=Kollam" class="city-card" data-city="kollam kerala">
+          <img src="assets/download_from_wix/kollam.webp" alt="Kollam" class="city-card-img">
+          <div class="city-bar-blue">Kollam</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 3. ANDHRA PRADESH -->
+    <div class="state-section-block">
+      <div class="state-header-wrap">
+        <h2 class="state-title-blue">ANDHRA PRADESH</h2>
+      </div>
+
+      <div class="grid-2-col">
+        <a href="contact-us.html?city=Guntur" class="city-card" data-city="guntur andhra pradesh">
+          <img src="assets/download_from_wix/guntur.webp" alt="Guntur" class="city-card-img">
+          <div class="city-bar-green">Guntur</div>
+        </a>
+
+        <a href="contact-us.html?city=Kavali" class="city-card" data-city="kavali andhra pradesh">
+          <img src="assets/download_from_wix/kavali.webp" alt="Kavali" class="city-card-img">
+          <div class="city-bar-green">Kavali</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 4. KARNATAKA -->
+    <div class="state-section-block">
+      <div class="state-header-wrap">
+        <h2 class="state-title-green">KARNATAKA</h2>
+      </div>
+
+      <div class="grid-2-col">
+        <a href="contact-us.html?city=Bengaluru" class="city-card" data-city="bangalore bengaluru karnataka">
+          <img src="assets/download_from_wix/Bangalore.webp" alt="Bengaluru" class="city-card-img">
+          <div class="city-bar-blue">Bengaluru</div>
+        </a>
+
+        <a href="contact-us.html?city=Mysore" class="city-card" data-city="mysore mysuru karnataka">
+          <img src="assets/download_from_wix/mysore.webp" alt="Mysore" class="city-card-img">
+          <div class="city-bar-blue">Mysore</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 5. TELANGANA -->
+    <div class="state-section-block">
+      <div class="state-header-wrap">
+        <h2 class="state-title-blue">Telangana</h2>
+      </div>
+
+      <div class="grid-1-col">
+        <a href="contact-us.html?city=Hyderabad" class="city-card" data-city="hyderabad telangana">
+          <img src="assets/download_from_wix/hyderabad.webp" alt="Hyderabad" class="city-card-img">
+          <div class="city-bar-green">Hyderabad</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 6. MAHARASHTRA -->
+    <div class="state-section-block">
+      <div class="state-header-wrap">
+        <h2 class="state-title-green">Maharashtra</h2>
+      </div>
+
+      <div class="grid-1-col">
+        <a href="contact-us.html?city=Mumbai" class="city-card" data-city="mumbai maharashtra">
+          <img src="assets/download_from_wix/mumbai-banner.webp" alt="Mumbai" class="city-card-img">
+          <div class="city-bar-blue">Mumbai</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 7. PUDUCHERRY -->
+    <div class="state-section-block">
+      <div class="state-header-wrap">
+        <h2 class="state-title-blue">Puducherry</h2>
+      </div>
+
+      <div class="grid-1-col">
+        <a href="contact-us.html?city=Pondicherry" class="city-card" data-city="pondicherry puducherry">
+          <img src="assets/download_from_wix/pondy.webp" alt="Puducherry" class="city-card-img">
+          <div class="city-bar-green">Puducherry</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 8. NEW DELHI -->
+    <div class="state-section-block">
+      <div class="state-header-wrap">
+        <h2 class="state-title-green">NEW DELHI</h2>
+      </div>
+
+      <div class="grid-1-col">
+        <a href="contact-us.html?city=NewDelhi" class="city-card" data-city="new delhi delhi">
+          <img src="assets/download_from_wix/delhi.webp" alt="New Delhi" class="city-card-img">
+          <div class="city-bar-blue">New Delhi</div>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <!-- Col 1: Logo + Head Office -->
+        <div class="footer-office-col">
+          <div class="footer-brand-logo" style="margin-bottom: 24px;">
+            <a href="index.html" aria-label="Indofrench Home">
+              <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 66px; width: auto; object-fit: contain; display: block;">
+            </a>
+          </div>
+          <p class="footer-office-label">Head office:</p>
+          <p class="footer-office-company">IF Agrotech Pvt, Ltd.</p>
+          <p class="footer-office-since">Since 1979.</p>
+          <p class="footer-office-line">PIPDIC Industrial Estate ,</p>
+          <p class="footer-office-line">Mettupalayam, Puducherry-605009.</p>
+          <p class="footer-office-line">Toll- Free : <a href="tel:+91636980612">+91 636980612</a></p>
+          <p class="footer-office-label">Working hours:</p>
+          <p class="footer-office-line">Mon to Saturday : 9:00 a.m. - 7: 00 p.m.</p>
+        </div>
+
+        <!-- Col 2: Main Pages -->
+        <div>
+          <h4 class="footer-col-title">Main Pages</h4>
+          <ul class="footer-links-list">
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="advantages.html">Advantages</a></li>
+            <li><a href="contact-us.html">Contact US</a></li>
+            <li><a href="dealer-registration.html">Become a dealer</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Products -->
+        <div>
+          <h4 class="footer-col-title">Products</h4>
+          <ul class="footer-links-list">
+            <li><a href="mattresses.html">Mattress</a></li>
+            <li><a href="pillows.html">Pillows</a></li>
+            <li><a href="mattress-topper.html">Mattress Topper</a></li>
+            <li><a href="cushions.html">Cushions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Useful Links -->
+        <div>
+          <h4 class="footer-col-title">Useful Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="guarantee-registration.html">Guarantee Registration</a></li>
+            <li><a href="index.html#privacy">Privacy Policy</a></li>
+            <li><a href="index.html#return">Return Policy</a></li>
+            <li><a href="index.html#terms">Terms and Condition</a></li>
+            <li><a href="index.html#care">Product Care guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Support -->
+        <div>
+          <h4 class="footer-col-title">Support</h4>
+          <ul class="footer-links-list">
+            <li><a href="dealers.html" style="color: #1c7a01; font-weight: 600;">Locate a Store</a></li>
+            <li><a href="testimonials.html">Review</a></li>
+            <li><a href="faqs.html">FAQS</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919840012345?text=Hello%20Indofrench!%20I%20am%20looking%20for%20a%20store%20near%20me." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with Indofrench on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Wix Accessibility Floating Button -->
+  <a href="#accessibility" class="wix-accessibility-float" aria-label="Accessibility options" style="position: fixed; right: 16px; top: 40%; transform: translateY(-50%); width: 42px; height: 42px; background-color: #8C52FF; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(140, 82, 255, 0.4); z-index: 9999; text-decoration: none; font-size: 20px;">
+    <i class="fa-solid fa-wheelchair"></i>
+  </a>
+
+  <!-- Live Filter Script -->
+  <script>
+    function filterDealerCities() {
+      const input = document.getElementById('citySearchInput').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.city-card');
+      const blocks = document.querySelectorAll('.state-section-block');
+
+      cards.forEach(card => {
+        const cityData = card.getAttribute('data-city') || '';
+        if (cityData.includes(input)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      blocks.forEach(block => {
+        const visibleCards = block.querySelectorAll('.city-card[style="display: flex;"]');
+        if (input !== '' && visibleCards.length === 0) {
+          block.style.display = 'none';
+        } else {
+          block.style.display = 'block';
+        }
+      });
+    }
+  </script>
+
+  <!-- Script -->
+  <script src="js/main.js?v=20260918_12"></script>
+</body>
+</html>
