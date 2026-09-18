@@ -3721,3 +3721,9 @@ h1, h2, h3, h4, h5, h6 {
 .footer-office-col p { font-size: 0.9rem; line-height: 1.55; }
 .footer-office-company { font-size: 1.02rem !important; margin-bottom: 8px !important; }
 .footer-office-label { margin-top: 12px !important; font-size: 0.9rem; }
+
+/* ===== MATTRESSES CATEGORY & DETAIL PAGES ===== */
+.active-home {
+  color: #1c7a01 !important;
+  font-weight: 700 !important;
+}
