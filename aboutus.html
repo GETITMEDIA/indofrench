@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | INDOFRENCH Sleep Products — 100% Natural Latex Since 1979</title>
+  <meta name="description" content="Indofrench strives to deliver bedding products specially handcrafted to impart a pleasant feeling of rest for every age group. 100% Natural Latex Mattresses, Made in India since 1979.">
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet with Cache Buster -->
+  <link rel="stylesheet" href="css/styles.css?v=20260918_18">
+
+  <!-- CRITICAL INLINE STYLES FOR GUARANTEED RENDERING -->
+  <style>
+    /* Exact Brand Color Definitions */
+    :root {
+      --brand-navy: #1c407c;
+      --brand-green: #1c7a01;
+      --brand-green-bright: #1c7a01;
+      --brand-royal-blue: #002b73;
+      --brand-navy-dark: #002b73;
+    }
+
+    /* Top Ticker Marquee Bar */
+    .topbar-ticker {
+      background-color: #002b73 !important;
+      color: #FFFFFF !important;
+      height: 42px !important;
+      overflow: hidden !important;
+      position: relative !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      align-items: center !important;
+      width: 100% !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .topbar-marquee-track {
+      display: inline-flex !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      gap: 36px !important;
+      width: max-content !important;
+      will-change: transform !important;
+      animation: tickerAutoScroll 30s linear infinite !important;
+    }
+
+    @keyframes tickerAutoScroll {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    .ticker-phrase {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 14px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      color: #FFFFFF !important;
+      letter-spacing: 0.3px !important;
+      flex-shrink: 0 !important;
+    }
+
+    .ticker-phrase i.fa-bed {
+      font-size: 16px !important;
+      color: #FFFFFF !important;
+    }
+
+    /* Navbar & Buttons */
+    .header {
+      background: #FFFFFF !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      position: sticky !important;
+      top: 0 !important;
+      left: 0 !important;
+      z-index: 999 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      height: 84px !important;
+      max-width: 1320px !important;
+      margin: 0 auto !important;
+      padding: 0 24px !important;
+    }
+
+    .nav-menu {
+      display: flex !important;
+      align-items: center !important;
+      gap: 32px !important;
+    }
+
+    .nav-link {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      color: #1c407c !important;
+      text-decoration: none !important;
+      padding: 6px 0 !important;
+      transition: color 0.2s ease !important;
+    }
+
+    .nav-link.active-about {
+      color: #1c7a01 !important;
+    }
+
+    .nav-link:hover {
+      color: #1c7a01 !important;
+    }
+
+    /* Button Colors from Screenshot & indofrench.in */
+    .btn-locate-store {
+      background-color: #1c407c !important;
+      color: #FFFFFF !important;
+      padding: 10px 24px !important;
+      border-radius: 6px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      box-shadow: 0 2px 6px rgba(28, 64, 124, 0.25) !important;
+      transition: background-color 0.2s ease, transform 0.15s ease !important;
+    }
+
+    .btn-locate-store:hover {
+      background-color: #153466 !important;
+      transform: translateY(-1px) !important;
+      color: #FFFFFF !important;
+    }
+
+    .btn-contact-header {
+      background-color: #1c7a01 !important;
+      color: #FFFFFF !important;
+      padding: 10px 24px !important;
+      border-radius: 6px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      box-shadow: 0 2px 6px rgba(28, 122, 1, 0.25) !important;
+      transition: background-color 0.2s ease, transform 0.15s ease !important;
+    }
+
+    .btn-contact-header:hover {
+      background-color: #156201 !important;
+      transform: translateY(-1px) !important;
+      color: #FFFFFF !important;
+    }
+
+    @media (max-width: 991px) {
+      .header-inner {
+        height: 70px !important;
+        padding: 0 16px !important;
+      }
+      .hamburger-btn {
+        display: flex !important;
+      }
+      .nav-menu {
+        display: none !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: #FFFFFF !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 20px 24px !important;
+        gap: 16px !important;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+        border-bottom: 1px solid #E2E8F0 !important;
+        z-index: 1000 !important;
+      }
+      .nav-menu.open {
+        display: flex !important;
+      }
+      .btn-locate-store {
+        padding: 8px 14px !important;
+        font-size: 13px !important;
+      }
+      .btn-contact-header {
+        padding: 8px 14px !important;
+        font-size: 13px !important;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .btn-locate-store {
+        display: none !important;
+      }
+    }
+
+    /* Global button class overrides */
+    .btn-green {
+      background-color: #1c7a01 !important;
+      color: #FFFFFF !important;
+    }
+
+    .btn-green:hover {
+      background-color: #156201 !important;
+      color: #FFFFFF !important;
+    }
+
+    .btn-navy {
+      background-color: #1c407c !important;
+      color: #FFFFFF !important;
+    }
+
+    .btn-navy:hover {
+      background-color: #153466 !important;
+      color: #FFFFFF !important;
+    }
+
+    .section-tag {
+      color: #1c7a01 !important;
+    }
+
+    .section-tag.light {
+      color: #4ADE80 !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= TOP ANNOUNCEMENT TICKER ================= -->
+  <div class="topbar-ticker" id="topbarTicker">
+    <div class="topbar-marquee-track" id="topbarTrack">
+      <!-- First Half (4 items) -->
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+
+      <!-- Second Duplicate Half for 100% Seamless Infinite CSS Loop (4 items) -->
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER & NAVBAR ================= -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Indofrench Logo Matching Official Brand Asset -->
+      <a href="index.html" class="brand-logo" aria-label="Indofrench Home">
+        <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" class="header-logo-img" style="height: 54px; width: auto; object-fit: contain; display: block;">
+      </a>
+
+      <!-- Main Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aboutus.html" class="nav-link active-about">About us</a>
+        
+        <!-- Products Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link">
+            Products <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="products.html#mattress" class="dropdown-link">Mattress</a>
+            <a href="products.html#pillows" class="dropdown-link">Pillows</a>
+            <a href="products.html#cushions" class="dropdown-link">Cushions</a>
+            <a href="products.html#mattress-topper" class="dropdown-link">Mattress Topper</a>
+          </div>
+        </div>
+
+        <a href="index.html#why-choose-us" class="nav-link">Why Indofrench</a>
+        <a href="index.html#blogs" class="nav-link">Blogs</a>
+        <a href="index.html#faq" class="nav-link">Support</a>
+      </nav>
+
+      <!-- Header Action Buttons with Exact Live Brand Colors -->
+      <div class="header-actions">
+        <a href="index.html#stores" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
+        <a href="index.html#contact" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ================= SECTION A: PAGE HERO ================= -->
+  <section class="about-hero" id="about-hero">
+    <div class="about-hero-overlay"></div>
+    <div class="container about-hero-content">
+      <nav class="about-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="breadcrumb-current">About Us</span>
+      </nav>
+      <h1 class="about-hero-title">About Us</h1>
+      <p class="about-hero-subtitle">Crafting 100% Natural Latex Sleep Solutions Since 1979 — Made in India with Love, Science & Sustainability.</p>
+    </div>
+  </section>
+
+
+  <!-- ================= SECTION B: UNLOCKING THE POTENTIAL ================= -->
+  <section class="about-section about-unlock" id="about-unlock">
+    <div class="container">
+      <div class="about-unlock-grid">
+        <!-- Left: Text Content -->
+        <div class="about-unlock-text">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title">Unlocking The Potential Of Your Space</h2>
+          <p class="about-unlock-desc">
+            The mattress most consumers use are made of carcinogenic chemicals, the likes of which are memory foam, bonded foam, spring mattress, and HR foam mattress. These mattresses lose their shape, and in turn, fail to provide proper spinal alignment with time.
+          </p>
+          <div class="about-unlock-points">
+            <div class="about-unlock-point">
+              <div class="about-point-icon"><i class="fa-solid fa-shirt"></i></div>
+              <div>
+                <h4>Breathable Sleepwear</h4>
+                <p>Explore breathable, luxurious sleepwear for cozy, comfortable nights of relaxation.</p>
+              </div>
+            </div>
+            <div class="about-unlock-point">
+              <div class="about-point-icon"><i class="fa-solid fa-layer-group"></i></div>
+              <div>
+                <h4>Mattress Toppers</h4>
+                <p>Extend mattress life and elevate comfort with luxurious mattress toppers.</p>
+              </div>
+            </div>
+            <div class="about-unlock-point">
+              <div class="about-point-icon"><i class="fa-solid fa-leaf"></i></div>
+              <div>
+                <h4>100% Natural Latex</h4>
+                <p>Sleep soundly knowing you've chosen natural latex mattresses from Indofrench.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: 3-Image Collage -->
+        <div class="about-unlock-collage">
+          <div class="collage-img collage-img-1">
+            <img src="assets/hero-mattress.jpg" alt="Natural Latex Mattress" loading="lazy">
+          </div>
+          <div class="collage-img collage-img-2">
+            <img src="assets/good-bed-hd.jpg" alt="Premium Bedding" loading="lazy">
+          </div>
+          <div class="collage-img collage-img-3">
+            <img src="assets/pillow-showcase.jpg" alt="Latex Pillows" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= SECTION C: WHY CHOOSE US ================= -->
+  <section class="about-section about-why" id="about-why">
+    <div class="container">
+      <div class="about-why-grid">
+        <!-- Left: Images -->
+        <div class="about-why-images">
+          <div class="about-why-img-main">
+            <img src="assets/sleep-wellness.jpg" alt="Sleep Wellness" loading="lazy">
+          </div>
+          <div class="about-why-img-badge">
+            <img src="assets/100_percent_natural.png" alt="100% Natural" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Right: Text -->
+        <div class="about-why-text">
+          <span class="section-tag">Why Choose Us?</span>
+          <h2 class="section-title">Explore the Science Behind a Good Night's Sleep</h2>
+          <p class="about-why-desc">
+            The mattress most consumers use are made of carcinogenic chemicals, the likes of which are memory foam, bonded foam, spring mattress, and HR foam mattress. These mattresses lose their shape, and in turn, fail to provide proper spinal alignment with time. Since we live a very sedentary life, good night's sleep is even more important for proper functioning of overall health. Life is enough to keep us awake all night, and therefore, a mattress is just not required to add to the problem.
+          </p>
+          <div class="about-why-ctas">
+            <a href="#" class="btn btn-green">
+              <i class="fa-solid fa-file-pdf"></i> E-Brochure
+            </a>
+            <a href="#" class="btn btn-navy">
+              <i class="fa-solid fa-book-open"></i> E-Catalogue
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= SECTION D: OUR MOTIVE / OUR VISION ================= -->
+  <section class="about-section about-motive-vision" id="about-motive">
+    <div class="container">
+      <div class="about-mv-header">
+        <span class="section-tag">What Drives Us</span>
+        <h2 class="section-title">Our Purpose & Vision</h2>
+      </div>
+      <div class="about-mv-grid">
+        <!-- Motive Card -->
+        <div class="about-mv-card about-mv-motive">
+          <div class="about-mv-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <h3>Our Motive</h3>
+          <p>
+            Indofrench strives to deliver bedding products specially handcrafted to impart a pleasant feeling of rest for every age group. All mattresses at Indofrench are designed in a way that it suits you through all weathers and all seasons. You won't have to face the additional problem of sweating and sleeping hot which disrupts your sleep. We aim to wake you up to a better morning, and a delightful mood.
+          </p>
+          <div class="about-mv-highlights">
+            <div class="about-mv-highlight">
+              <i class="fa-solid fa-temperature-half"></i>
+              <span>Weather Adaptability</span>
+            </div>
+            <div class="about-mv-highlight">
+              <i class="fa-solid fa-snowflake"></i>
+              <span>Temperature Regulation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision Card -->
+        <div class="about-mv-card about-mv-vision">
+          <div class="about-mv-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Our Vision</h3>
+          <ul class="about-vision-list">
+            <li>
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Provide <strong>100% natural and pure latex</strong> bedding products, with no infusion of chemicals and thereby, it's totally safe to use.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Design mattresses and pillows to lull you to a dreamy slumber, by making sure that your <strong>spine and neck receives optimum support</strong>.</span>
+            </li>
+          </ul>
+          <div class="about-mv-badges">
+            <img src="assets/make in india.png" alt="Make in India" loading="lazy">
+            <img src="assets/100_percent_natural.png" alt="100% Natural Latex" loading="lazy">
+            <img src="assets/10 years guarantee.png" alt="10 Year Guarantee" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= SECTION E: STATS STRIP ================= -->
+  <section class="about-stats" id="about-stats">
+    <div class="container">
+      <div class="about-stats-grid">
+        <div class="about-stat-item">
+          <div class="about-stat-number" data-target="30">0</div>
+          <div class="about-stat-suffix">+</div>
+          <div class="about-stat-label">Years of Foundation</div>
+        </div>
+        <div class="about-stat-item">
+          <div class="about-stat-number" data-target="100">0</div>
+          <div class="about-stat-suffix">+</div>
+          <div class="about-stat-label">Skilled Team</div>
+        </div>
+        <div class="about-stat-item">
+          <div class="about-stat-number" data-target="10">0</div>
+          <div class="about-stat-suffix">Lakh+</div>
+          <div class="about-stat-label">Happy Customers</div>
+        </div>
+        <div class="about-stat-item">
+          <div class="about-stat-number" data-target="90">0</div>
+          <div class="about-stat-suffix">+</div>
+          <div class="about-stat-label">Monthly Orders</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= SECTION F: TESTIMONIALS ================= -->
+  <section class="about-section about-testimonials" id="about-testimonials">
+    <div class="container">
+      <div class="about-testimonials-header">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-subtitle">Real stories from real sleepers — hear why thousands trust Indofrench.</p>
+      </div>
+
+      <div class="about-testimonials-slider" id="testimonialSlider">
+        <div class="about-testimonials-track" id="testimonialTrack">
+
+          <!-- Testimonial 1 -->
+          <div class="about-testimonial-card">
+            <div class="about-testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="about-testimonial-quote">"Ordered a custom-size mattress for our oddly shaped guest room. Indofrench delivered it within a week — perfect fit, incredible comfort."</p>
+            <div class="about-testimonial-author">
+              <div class="about-testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+              <div>
+                <h4>Girish Kadam</h4>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="about-testimonial-card">
+            <div class="about-testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+            </div>
+            <p class="about-testimonial-quote">"Decent mattress for the price. Service was quick, but I expected a bit more firmness for an orthopaedic model."</p>
+            <div class="about-testimonial-author">
+              <div class="about-testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+              <div>
+                <h4>Rebaka Srinu</h4>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="about-testimonial-card">
+            <div class="about-testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+            </div>
+            <p class="about-testimonial-quote">"Fair price for genuine natural latex. My back pain has reduced significantly. The quality rivals big-name brands at half the cost."</p>
+            <div class="about-testimonial-author">
+              <div class="about-testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+              <div>
+                <h4>Krish Trivedi</h4>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="about-testimonial-card">
+            <div class="about-testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="about-testimonial-quote">"Switched from coir to Indofrench latex and the difference is night and day. Cool, supportive and absolutely no sagging even after a year."</p>
+            <div class="about-testimonial-author">
+              <div class="about-testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+              <div>
+                <h4>Kalyani Rawat</h4>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="about-testimonial-card">
+            <div class="about-testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="about-testimonial-quote">"We bought Indofrench mattresses for our entire farmhouse — 8 beds. The 10-year piece-to-piece replacement guarantee gave us total peace of mind."</p>
+            <div class="about-testimonial-author">
+              <div class="about-testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+              <div>
+                <h4>Farm House</h4>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="about-testimonial-card">
+            <div class="about-testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+            </div>
+            <p class="about-testimonial-quote">"Truly better than the big brands. The natural latex quality is unmatched and the delivery was surprisingly fast across state borders."</p>
+            <div class="about-testimonial-author">
+              <div class="about-testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+              <div>
+                <h4>Benjamin Alexander</h4>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 7 -->
+          <div class="about-testimonial-card">
+            <div class="about-testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="about-testimonial-quote">"My family has been using Indofrench for over 15 years now. The mattress still feels brand new — expect easily 15 to 20 years of life."</p>
+            <div class="about-testimonial-author">
+              <div class="about-testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+              <div>
+                <h4>Suresh Bharath B</h4>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 8 -->
+          <div class="about-testimonial-card">
+            <div class="about-testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="about-testimonial-quote">"Excellent natural latex quality and the staff helped us choose the perfect density. Sleeping cool even in Chennai summer — highly recommended!"</p>
+            <div class="about-testimonial-author">
+              <div class="about-testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+              <div>
+                <h4>Siva Shankari B</h4>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 9 -->
+          <div class="about-testimonial-card">
+            <div class="about-testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="about-testimonial-quote">"Switched from a spring mattress to Indofrench pure latex. My chronic back pain is gone. Worth every rupee — fast service and fair pricing."</p>
+            <div class="about-testimonial-author">
+              <div class="about-testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+              <div>
+                <h4>Anthoni Muthu G</h4>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slider Nav -->
+        <div class="about-testimonial-nav">
+          <button class="about-testimonial-prev" id="testimonialPrev" aria-label="Previous testimonials">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="about-testimonial-next" id="testimonialNext" aria-label="Next testimonials">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= SECTION G: IN HOUSE MANUFACTURE ================= -->
+  <section class="about-section about-manufacture" id="about-manufacture">
+    <div class="container">
+      <div class="about-manufacture-grid">
+        <!-- Left: Text -->
+        <div class="about-manufacture-text">
+          <span class="section-tag">Made In India</span>
+          <h2 class="section-title">In House Manufacture</h2>
+          <p class="about-manufacture-desc">
+            We take immense pride in crafting premium-quality mattresses right here in India. Unlike other mattress brands that rely on outsourcing or overseas manufacturing, we prioritize local production to ensure the highest standards of quality, sustainability, and craftsmanship.
+          </p>
+          <p class="about-manufacture-desc" style="margin-top: 16px;">
+            Our commitment to in-house manufacturing guarantees direct quality oversight at every stage — from raw material sourcing to finished product delivery — ensuring our customers receive nothing but the best.
+          </p>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="about-manufacture-img">
+          <img src="assets/dunlop-process.jpg" alt="Dunlop Process - In-House Manufacturing" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Quality Assurance Sub-Block -->
+      <div class="about-qa-block">
+        <div class="about-qa-content">
+          <div class="about-qa-icon"><i class="fa-solid fa-shield-check"></i></div>
+          <div>
+            <h3>Quality Assurance at Every Step</h3>
+            <p>
+              Our in-house manufacturing process ensures meticulous oversight from raw material sourcing to final production, guaranteeing the highest quality mattresses crafted with precision and care. We select only the highest quality materials, including <strong>natural latex, organic latex, and eco-friendly foams</strong>, to create mattresses that promote health, comfort, and sustainability.
+            </p>
+          </div>
+        </div>
+        <div class="about-qa-image">
+          <img src="assets/pincore-detail.jpg" alt="Pincore Latex Detail" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= SECTION H: CLOSING CTA ================= -->
+  <section class="about-cta-band" id="about-cta">
+    <div class="container">
+      <div class="about-cta-inner">
+        <div class="about-cta-text">
+          <h2>Experience 100% Natural Latex Sleep</h2>
+          <p>Discover the Indofrench difference — handcrafted comfort, backed by a 10-year guarantee.</p>
+        </div>
+        <div class="about-cta-buttons">
+          <a href="index.html#contact" class="btn btn-green">
+            <i class="fa-solid fa-envelope"></i> Contact Us
+          </a>
+          <a href="index.html#stores" class="btn btn-outline-white">
+            <i class="fa-solid fa-location-dot"></i> Locate a Store
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <!-- Col 1: Logo + Head Office -->
+        <div class="footer-office-col">
+          <div class="footer-brand-logo" style="margin-bottom: 24px;">
+            <a href="index.html" aria-label="Indofrench Home">
+              <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 66px; width: auto; object-fit: contain; display: block;">
+            </a>
+          </div>
+          <p class="footer-office-label">Head office:</p>
+          <p class="footer-office-company">IF Agrotech Pvt, Ltd.</p>
+          <p class="footer-office-since">Since 1979.</p>
+          <p class="footer-office-line">PIPDIC Industrial Estate ,</p>
+          <p class="footer-office-line">Mettupalayam, Puducherry-605009.</p>
+          <p class="footer-office-line">Toll- Free : <a href="tel:+91636980612">+91 636980612</a></p>
+          <p class="footer-office-label">Working hours:</p>
+          <p class="footer-office-line">Mon to Saturday : 9:00 a.m. - 7: 00 p.m.</p>
+        </div>
+
+        <!-- Col 2: Main Pages -->
+        <div>
+          <h4 class="footer-col-title">Main Pages</h4>
+          <ul class="footer-links-list">
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="index.html#why-choose-us">Advantages</a></li>
+            <li><a href="index.html#contact">Contact US</a></li>
+            <li><a href="index.html#contact">Become a dealer</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Products -->
+        <div>
+          <h4 class="footer-col-title">Products</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html#mattress">Mattress</a></li>
+            <li><a href="products.html#pillows">Pillows</a></li>
+            <li><a href="products.html#mattress-topper">Mattress Topper</a></li>
+            <li><a href="products.html#cushions">Cushions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Useful Links -->
+        <div>
+          <h4 class="footer-col-title">Useful Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#guarantee">Guarantee Registration</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Terms and Condition</a></li>
+            <li><a href="#">Product Care guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Support -->
+        <div>
+          <h4 class="footer-col-title">Support</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#stores">Locate a Store</a></li>
+            <li><a href="index.html#reviews">Review</a></li>
+            <li><a href="index.html#faq">FAQS</a></li>
+            <li><a href="index.html#blogs">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <a href="https://wa.me/919840012345?text=Hello%20Indofrench!%20I%20am%20interested%20in%20your%20100%%20Natural%20Latex%20Mattress." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with Indofrench on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Script -->
+  <script src="js/main.js?v=20260918_12"></script>
+
+  <!-- About Us Page Scripts: Counter Animation + Testimonial Slider -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // ===== COUNTER ANIMATION (IntersectionObserver) =====
+    const statNumbers = document.querySelectorAll('.about-stat-number');
+
+    if (statNumbers.length > 0) {
+      const animateCounter = (el) => {
+        const target = parseInt(el.getAttribute('data-target'), 10);
+        const duration = 2000;
+        const startTime = performance.now();
+
+        const step = (currentTime) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease-out cubic
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(eased * target);
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = target;
+          }
+        };
+        requestAnimationFrame(step);
+      };
+
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const nums = entry.target.querySelectorAll('.about-stat-number');
+            nums.forEach(n => animateCounter(n));
+            statsObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      const statsSection = document.getElementById('about-stats');
+      if (statsSection) {
+        statsObserver.observe(statsSection);
+      }
+    }
+
+    // ===== TESTIMONIAL SLIDER =====
+    const track = document.getElementById('testimonialTrack');
+    const prevBtn = document.getElementById('testimonialPrev');
+    const nextBtn = document.getElementById('testimonialNext');
+
+    if (track && prevBtn && nextBtn) {
+      let currentIndex = 0;
+
+      const getVisibleCount = () => {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 768) return 2;
+        return 1;
+      };
+
+      const getCardWidth = () => {
+        const card = track.querySelector('.about-testimonial-card');
+        if (!card) return 380;
+        const style = window.getComputedStyle(card);
+        return card.offsetWidth + parseInt(style.marginRight || 0, 10);
+      };
+
+      const updateSlider = () => {
+        const cardWidth = getCardWidth();
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      };
+
+      const getMaxIndex = () => {
+        const cards = track.querySelectorAll('.about-testimonial-card');
+        return Math.max(0, cards.length - getVisibleCount());
+      };
+
+      nextBtn.addEventListener('click', () => {
+        currentIndex = Math.min(currentIndex + 1, getMaxIndex());
+        updateSlider();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        currentIndex = Math.max(currentIndex - 1, 0);
+        updateSlider();
+      });
+
+      // Auto-play slider
+      let autoPlay = setInterval(() => {
+        if (currentIndex >= getMaxIndex()) {
+          currentIndex = 0;
+        } else {
+          currentIndex++;
+        }
+        updateSlider();
+      }, 4500);
+
+      // Pause on hover
+      track.closest('.about-testimonials-slider').addEventListener('mouseenter', () => clearInterval(autoPlay));
+      track.closest('.about-testimonials-slider').addEventListener('mouseleave', () => {
+        autoPlay = setInterval(() => {
+          if (currentIndex >= getMaxIndex()) {
+            currentIndex = 0;
+          } else {
+            currentIndex++;
+          }
+          updateSlider();
+        }, 4500);
+      });
+
+      // Recalculate on resize
+      window.addEventListener('resize', () => {
+        currentIndex = Math.min(currentIndex, getMaxIndex());
+        updateSlider();
+      });
+    }
+
+  });
+  </script>
+</body>
+</html>
