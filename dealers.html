@@ -161,82 +161,53 @@
       margin: 0;
     }
 
-    /* Top Search Box attached to state header */
-    .search-input-box {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid #CBD5E1;
-      border-radius: 8px;
-      padding: 7px 14px;
-      background: #FFFFFF;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-    }
-
-    .search-input-box input {
-      border: none;
-      outline: none;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px;
-      color: #334155;
-      width: 130px;
-    }
-
-    .search-input-box i {
-      color: #94A3B8;
-      font-size: 14px;
-    }
-
     /* City Card Grids */
-    .grid-4-col {
+    .grid-3-col {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
     }
 
     .grid-2-col {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
+      gap: 30px;
     }
 
     .grid-1-col {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 22px;
+      gap: 30px;
     }
 
     .city-card {
       background: #FFFFFF;
-      border-radius: 12px;
+      border-radius: 18px;
       overflow: hidden;
       text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex !important;
+      flex-direction: column !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
       cursor: pointer;
     }
 
     .city-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(0, 43, 115, 0.14);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(0, 43, 115, 0.18);
     }
 
     .city-card-img {
       width: 100%;
-      height: 170px;
+      height: 260px;
       object-fit: cover;
       display: block;
       transition: transform 0.4s ease;
+      border-radius: 18px 18px 0 0;
     }
 
     .grid-1-col .city-card-img {
-      height: 250px;
+      height: 320px;
     }
 
     .city-card:hover .city-card-img {
@@ -244,35 +215,45 @@
     }
 
     .city-bar-green {
-      background-color: #1c7a01;
-      color: #FFFFFF;
-      text-align: center;
-      padding: 10px 14px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: 0.2px;
+      background-color: #1c7a01 !important;
+      color: #FFFFFF !important;
+      text-align: center !important;
+      padding: 16px 20px !important;
+      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 22px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.3px !important;
+      display: block !important;
+      width: 100% !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+      border-radius: 0 0 18px 18px !important;
     }
 
     .city-bar-blue {
-      background-color: #002b73;
-      color: #FFFFFF;
-      text-align: center;
-      padding: 10px 14px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: 0.2px;
+      background-color: #002b73 !important;
+      color: #FFFFFF !important;
+      text-align: center !important;
+      padding: 16px 20px !important;
+      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 22px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.3px !important;
+      display: block !important;
+      width: 100% !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+      border-radius: 0 0 18px 18px !important;
     }
 
     @media (max-width: 992px) {
-      .grid-4-col {
+      .grid-3-col {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 640px) {
-      .grid-4-col, .grid-2-col {
+      .grid-3-col, .grid-2-col {
         grid-template-columns: 1fr;
       }
 
@@ -387,13 +368,9 @@
     <div class="state-section-block">
       <div class="state-header-wrap">
         <h2 class="state-title-blue">Tamil Nadu</h2>
-        <div class="search-input-box">
-          <input type="text" id="citySearchInput" placeholder="Search your city..." onkeyup="filterDealerCities()">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
       </div>
 
-      <div class="grid-4-col" id="dealerCitiesGrid">
+      <div class="grid-3-col" id="dealerCitiesGrid">
         <a href="contact-us.html?city=Chennai" class="city-card" data-city="chennai tamil nadu">
           <img src="assets/download_from_wix/chennai.webp" alt="Chennai" class="city-card-img">
           <div class="city-bar-green">Chennai</div>
@@ -462,7 +439,7 @@
         <h2 class="state-title-green">Kerala</h2>
       </div>
 
-      <div class="grid-4-col">
+      <div class="grid-3-col">
         <a href="contact-us.html?city=Alapuzha" class="city-card" data-city="alapuzha kerala">
           <img src="assets/download_from_wix/alapuzha.webp" alt="Alapuzha" class="city-card-img">
           <div class="city-bar-blue">Alapuzha</div>
