@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions (FAQS) | Indofrench Natural Latex</title>
+  <meta name="description" content="Frequently Asked Questions about Indofrench 100% Natural Latex Mattresses, Pillows, Dunlop process, density, and 10-year guarantee.">
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet with Cache Buster -->
+  <link rel="stylesheet" href="css/styles.css?v=20260918_18">
+
+  <style>
+    :root {
+      --brand-navy: #002b73;
+      --brand-green: #1c7a01;
+    }
+
+    /* Top Marquee Ticker Bar */
+    .topbar-ticker {
+      background-color: #002b73 !important;
+      color: #FFFFFF !important;
+      height: 42px !important;
+      overflow: hidden !important;
+      position: relative !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      align-items: center !important;
+      width: 100% !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .topbar-marquee-track {
+      display: inline-flex !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      gap: 36px !important;
+      width: max-content !important;
+      will-change: transform !important;
+      animation: tickerAutoScroll 30s linear infinite !important;
+    }
+
+    @keyframes tickerAutoScroll {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    .ticker-phrase {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 14px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      color: #FFFFFF !important;
+      letter-spacing: 0.3px !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* Header & Nav */
+    .header {
+      background: #FFFFFF !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      position: sticky !important;
+      top: 0 !important;
+      left: 0 !important;
+      z-index: 999 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      height: 84px !important;
+      max-width: 1320px !important;
+      margin: 0 auto !important;
+      padding: 0 24px !important;
+    }
+
+    .nav-menu {
+      display: flex !important;
+      align-items: center !important;
+      gap: 32px !important;
+    }
+
+    .nav-link {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      color: #1c407c !important;
+      text-decoration: none !important;
+      padding: 6px 0 !important;
+      transition: color 0.2s ease !important;
+    }
+
+    .nav-link:hover {
+      color: #1c7a01 !important;
+    }
+
+    /* Hero Banner */
+    .faqs-hero-banner {
+      background: linear-gradient(rgba(0, 43, 115, 0.65), rgba(0, 43, 115, 0.65)), url('assets/good-bed-hd.jpg') center/cover no-repeat;
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .faqs-hero-banner h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+    }
+
+    /* Accordion Container */
+    .faqs-page-wrap {
+      max-width: 900px;
+      margin: 60px auto 100px;
+      padding: 0 24px;
+    }
+
+    .faqs-main-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #000000;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .faq-accordion-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item-card {
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .faq-item-header {
+      background: #002b73;
+      color: #FFFFFF;
+      padding: 16px 24px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.2s ease;
+    }
+
+    .faq-item-header:hover {
+      background: #153466;
+    }
+
+    .faq-item-header i {
+      font-size: 0.9rem;
+      transition: transform 0.25s ease;
+    }
+
+    .faq-item-card.active .faq-item-header i {
+      transform: rotate(180deg);
+    }
+
+    .faq-item-body {
+      background: #EAEFF6;
+      color: #334155;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.96rem;
+      line-height: 1.65;
+      padding: 24px;
+      display: none;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+
+    .faq-item-card.active .faq-item-body {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= TOP ANNOUNCEMENT TICKER ================= -->
+  <div class="topbar-ticker" id="topbarTicker">
+    <div class="topbar-marquee-track" id="topbarTrack">
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER & NAVBAR ================= -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Indofrench Home">
+        <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 54px; width: auto; object-fit: contain; display: block;">
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aboutus.html" class="nav-link">About us</a>
+        
+        <!-- Products Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link">
+            Products <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="mattresses.html" class="dropdown-link">Mattress</a>
+            <a href="pillows.html" class="dropdown-link">Pillows</a>
+            <a href="cushions.html" class="dropdown-link">Cushions</a>
+            <a href="mattress-topper.html" class="dropdown-link">Mattress Topper</a>
+          </div>
+        </div>
+
+        <!-- Why Indofrench Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="advantages.html" class="nav-link">
+            Why Indofrench <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="advantages.html" class="dropdown-link">Advantages</a>
+            <a href="testimonials.html" class="dropdown-link">Review</a>
+          </div>
+        </div>
+
+        <a href="index.html#blogs" class="nav-link">Blogs</a>
+
+        <!-- Support Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="guarantee-registration.html" class="nav-link active" style="color: #1c7a01;">
+            Support <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="guarantee-registration.html" class="dropdown-link">Guarantee Registration</a>
+            <a href="dealer-registration.html" class="dropdown-link">Become a dealer</a>
+            <a href="contact-us.html" class="dropdown-link">Contact US</a>
+            <a href="faqs.html" class="dropdown-link" style="color: #1c7a01; font-weight: 700;">FAQS</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="index.html#stores" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
+        <a href="contact-us.html" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO BANNER ================= -->
+  <section class="faqs-hero-banner">
+    <h1>FAQS</h1>
+  </section>
+
+  <!-- ================= FAQS ACCORDION SECTION ================= -->
+  <section class="faqs-page-wrap">
+    <h2 class="faqs-main-title">General FAQS</h2>
+
+    <div class="faq-accordion-list">
+      
+      <!-- 1: Density (Active by default) -->
+      <div class="faq-item-card active">
+        <div class="faq-item-header">
+          <span>What is the density?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-item-body">
+          The density varies according to the size and thickness. However we have soft, medium, hard and extra hard.
+        </div>
+      </div>
+
+      <!-- 2: 100% natural rubber -->
+      <div class="faq-item-card">
+        <div class="faq-item-header">
+          <span>Is it 100% natural rubber latex?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-item-body">
+          Yes, Indofrench mattresses are manufactured using 100% pure organic rubber latex without any synthetic fillers, PU foam, or toxic chemicals.
+        </div>
+      </div>
+
+      <!-- 3: Latex Sourced -->
+      <div class="faq-item-card">
+        <div class="faq-item-header">
+          <span>Where is the latex sourced from?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-item-body">
+          Our natural rubber sap is harvested directly from sustainable rubber tree plantations in Kerala and South India.
+        </div>
+      </div>
+
+      <!-- 4: Prices in Kochi -->
+      <div class="faq-item-card">
+        <div class="faq-item-header">
+          <span>Are the prices same in all stores in Kochi?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-item-body">
+          Yes, uniform factory-recommended standard pricing applies across all authorized Indofrench showrooms and dealer partners.
+        </div>
+      </div>
+
+      <!-- 5: Dunlop Technology -->
+      <div class="faq-item-card">
+        <div class="faq-item-header">
+          <span>What is Dunlop Technology?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-item-body">
+          Dunlop process involves liquid rubber sap whipped into foam, poured into pincore molds, and steam vulcanized to create a durable, breathable 7-zone supportive core.
+        </div>
+      </div>
+
+      <!-- 6: Zip Cover -->
+      <div class="faq-item-card">
+        <div class="faq-item-header">
+          <span>Does it have a zip cover?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-item-body">
+          Yes, all Indofrench mattresses come with a removable, washable organic cotton zippered inner and outer protective cover.
+        </div>
+      </div>
+
+      <!-- 7: Weight in Kg -->
+      <div class="faq-item-card">
+        <div class="faq-item-header">
+          <span>What is the weight in Kg?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-item-body">
+          The weight depends on mattress dimensions and thickness, ranging from approximately 18 kg for single size up to 50+ kg for king size mattresses.
+        </div>
+      </div>
+
+      <!-- 8: Free pillows -->
+      <div class="faq-item-card">
+        <div class="faq-item-header">
+          <span>Are two latex pillows free with the mattress?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-item-body">
+          Yes, complimentary 100% natural latex pillows are included with selected queen and king size mattress purchases.
+        </div>
+      </div>
+
+      <!-- 9: Max weight of persons -->
+      <div class="faq-item-card">
+        <div class="faq-item-header">
+          <span>What is the maximum weight of persons who can sleep on it?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-item-body">
+          Indofrench mattresses are engineered for high resilience and can comfortably support individuals weighing up to 150 kg+ without permanent sagging.
+        </div>
+      </div>
+
+      <!-- 10: Two persons 75 kg -->
+      <div class="faq-item-card">
+        <div class="faq-item-header">
+          <span>Can two persons of 75 kg weight sleep?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-item-body">
+          Yes, absolutely. The open pincore structure provides point elasticity and motion isolation for both sleepers.
+        </div>
+      </div>
+
+      <!-- 11: How many years guarantee -->
+      <div class="faq-item-card">
+        <div class="faq-item-header">
+          <span>How many years guarantee?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-item-body">
+          Indofrench offers an unmatched 10-Year full piece-to-piece replacement guarantee against manufacturing or indentation defects.
+        </div>
+      </div>
+
+      <!-- 12: Guarantee valid if shifted -->
+      <div class="faq-item-card">
+        <div class="faq-item-header">
+          <span>If I buy in Kochi, will the guarantee be valid at Chennai if I shift there?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-item-body">
+          Yes, your 10-Year guarantee is registered online and valid across all cities and states in India.
+        </div>
+      </div>
+
+      <!-- 13: Maximum life -->
+      <div class="faq-item-card">
+        <div class="faq-item-header">
+          <span>How long can it be used- maximum life?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-item-body">
+          Because natural rubber does not degrade like synthetic foam, an Indofrench natural latex mattress lasts between 15 to 25 years with optimal comfort.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand Info -->
+        <div>
+          <div class="footer-logo">
+            <a href="index.html" aria-label="Indofrench Home">
+              <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 66px; width: auto; object-fit: contain; display: block;">
+            </a>
+          </div>
+          <p class="footer-office-label">Head office:</p>
+          <p class="footer-office-company">IF Agrotech Pvt, Ltd.</p>
+          <p class="footer-office-since">Since 1979.</p>
+          <p class="footer-office-line">PIPDIC Industrial Estate ,</p>
+          <p class="footer-office-line">Mettupalayam, Puducherry-605009.</p>
+          <p class="footer-office-line">Toll- Free : <a href="tel:+91636980612">+91 636980612</a></p>
+          <p class="footer-office-label">Working hours:</p>
+          <p class="footer-office-line">Mon to Saturday : 9:00 a.m. - 7: 00 p.m.</p>
+        </div>
+
+        <!-- Col 2: Main Pages -->
+        <div>
+          <h4 class="footer-col-title">Main Pages</h4>
+          <ul class="footer-links-list">
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="advantages.html">Advantages</a></li>
+            <li><a href="contact-us.html">Contact US</a></li>
+            <li><a href="dealer-registration.html">Become a dealer</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Products -->
+        <div>
+          <h4 class="footer-col-title">Products</h4>
+          <ul class="footer-links-list">
+            <li><a href="mattresses.html">Mattress</a></li>
+            <li><a href="pillows.html">Pillows</a></li>
+            <li><a href="mattress-topper.html">Mattress Topper</a></li>
+            <li><a href="cushions.html">Cushions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Useful Links -->
+        <div>
+          <h4 class="footer-col-title">Useful Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="guarantee-registration.html">Guarantee Registration</a></li>
+            <li><a href="index.html#privacy">Privacy Policy</a></li>
+            <li><a href="index.html#return">Return Policy</a></li>
+            <li><a href="index.html#terms">Terms and Condition</a></li>
+            <li><a href="index.html#care">Product Care guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Support -->
+        <div>
+          <h4 class="footer-col-title">Support</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#stores">Locate a Store</a></li>
+            <li><a href="testimonials.html">Review</a></li>
+            <li><a href="faqs.html" style="color: #1c7a01; font-weight: 600;">FAQS</a></li>
+            <li><a href="index.html#blogs">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919840012345?text=Hello%20Indofrench!%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with Indofrench on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Script for Accordion toggle -->
+  <script>
+    document.querySelectorAll('.faq-item-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const card = header.parentElement;
+        const isActive = card.classList.contains('active');
+        
+        // Close all cards
+        document.querySelectorAll('.faq-item-card').forEach(c => c.classList.remove('active'));
+        
+        // Toggle clicked card
+        if (!isActive) {
+          card.classList.add('active');
+        }
+      });
+    });
+  </script>
+  <script src="js/main.js?v=20260918_12"></script>
+</body>
+</html>
