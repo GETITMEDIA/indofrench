@@ -2505,3 +2505,43 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: span 1;
   }
 }
+
+/* ===== Also available in — Myden ===== */
+.also-available-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.also-available-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #111;
+}
+
+.myden-logo {
+  width: 180px;
+  height: auto;
+  display: block;
+  transform-origin: center;
+  animation: mydenPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes mydenPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+  .also-available-in { gap: 12px; margin-top: 22px; }
+  .also-available-text { font-size: 1.1rem; }
+  .myden-logo { width: 130px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .myden-logo { animation: none; }
+}
