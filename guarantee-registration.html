@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guarantee Registration | Indofrench Natural Latex</title>
+  <meta name="description" content="Register your Indofrench 100% Natural Latex mattress, pillow, or cushion guarantee online.">
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet with Cache Buster -->
+  <link rel="stylesheet" href="css/styles.css?v=20260918_18">
+
+  <style>
+    :root {
+      --brand-navy: #002b73;
+      --brand-green: #1c7a01;
+    }
+
+    /* Top Marquee Ticker Bar */
+    .topbar-ticker {
+      background-color: #002b73 !important;
+      color: #FFFFFF !important;
+      height: 42px !important;
+      overflow: hidden !important;
+      position: relative !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      align-items: center !important;
+      width: 100% !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .topbar-marquee-track {
+      display: inline-flex !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      gap: 36px !important;
+      width: max-content !important;
+      will-change: transform !important;
+      animation: tickerAutoScroll 30s linear infinite !important;
+    }
+
+    @keyframes tickerAutoScroll {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    .ticker-phrase {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 14px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      color: #FFFFFF !important;
+      letter-spacing: 0.3px !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* Header & Nav */
+    .header {
+      background: #FFFFFF !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      position: sticky !important;
+      top: 0 !important;
+      left: 0 !important;
+      z-index: 999 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      height: 84px !important;
+      max-width: 1320px !important;
+      margin: 0 auto !important;
+      padding: 0 24px !important;
+    }
+
+    .nav-menu {
+      display: flex !important;
+      align-items: center !important;
+      gap: 32px !important;
+    }
+
+    .nav-link {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      color: #1c407c !important;
+      text-decoration: none !important;
+      padding: 6px 0 !important;
+      transition: color 0.2s ease !important;
+    }
+
+    .nav-link:hover {
+      color: #1c7a01 !important;
+    }
+
+    /* Form Container Layout */
+    .guarantee-page-wrap {
+      position: relative;
+      background: #FFFFFF;
+      padding: 60px 24px 80px;
+      overflow: hidden;
+    }
+
+    /* Falling Leaves Background */
+    .leaf-bg-left {
+      position: absolute;
+      top: 40px;
+      left: -20px;
+      width: 240px;
+      height: auto;
+      opacity: 0.85;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .leaf-bg-right {
+      position: absolute;
+      top: 40px;
+      right: -20px;
+      width: 240px;
+      height: auto;
+      opacity: 0.85;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @media (max-width: 991px) {
+      .leaf-bg-left, .leaf-bg-right {
+        display: none;
+      }
+    }
+
+    .guarantee-form-container {
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-main-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #000000;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .page-sub-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #1e293b;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .page-sub-title strong {
+      font-weight: 800;
+      color: #000000;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .form-row-2 {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .form-group-field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group-field label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #1c407c;
+      margin-bottom: 8px;
+    }
+
+    .form-group-field input,
+    .form-group-field select {
+      width: 100%;
+      height: 48px;
+      padding: 0 16px;
+      border: 1.5px solid #002b73;
+      border-radius: 8px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      color: #0f172a;
+      background: #FFFFFF;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group-field input:focus,
+    .form-group-field select:focus {
+      border-color: #1c7a01;
+    }
+
+    .phone-input-wrap {
+      display: flex;
+      align-items: center;
+      border: 1.5px solid #002b73;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #FFFFFF;
+      height: 48px;
+    }
+
+    .phone-flag-select {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 12px;
+      border-right: 1px solid #CBD5E1;
+      background: #F8FAFC;
+      font-size: 0.9rem;
+      color: #334155;
+      height: 100%;
+    }
+
+    .phone-input-wrap input {
+      border: none !important;
+      border-radius: 0 !important;
+      height: 100% !important;
+    }
+
+    .upload-btn-navy {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #002b73;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border-radius: 24px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      border: none;
+      height: 44px;
+      width: fit-content;
+      transition: background 0.2s;
+    }
+
+    .upload-btn-navy:hover {
+      background: #153466;
+    }
+
+    .terms-check-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 28px 0;
+    }
+
+    .terms-check-row input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #1c7a01;
+      cursor: pointer;
+    }
+
+    .terms-check-row label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.92rem;
+      color: #334155;
+    }
+
+    .terms-check-row label a {
+      color: #1c407c;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .btn-submit-green {
+      width: 100%;
+      background: #1c7a01;
+      color: #FFFFFF;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.15s ease;
+      box-shadow: 0 4px 12px rgba(28, 122, 1, 0.25);
+    }
+
+    .btn-submit-green:hover {
+      background: #156201;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= TOP ANNOUNCEMENT TICKER ================= -->
+  <div class="topbar-ticker" id="topbarTicker">
+    <div class="topbar-marquee-track" id="topbarTrack">
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER & NAVBAR ================= -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Indofrench Home">
+        <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 54px; width: auto; object-fit: contain; display: block;">
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aboutus.html" class="nav-link">About us</a>
+        
+        <!-- Products Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link">
+            Products <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="mattresses.html" class="dropdown-link">Mattress</a>
+            <a href="pillows.html" class="dropdown-link">Pillows</a>
+            <a href="cushions.html" class="dropdown-link">Cushions</a>
+            <a href="mattress-topper.html" class="dropdown-link">Mattress Topper</a>
+          </div>
+        </div>
+
+        <!-- Why Indofrench Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="advantages.html" class="nav-link">
+            Why Indofrench <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="advantages.html" class="dropdown-link">Advantages</a>
+            <a href="testimonials.html" class="dropdown-link">Review</a>
+          </div>
+        </div>
+
+        <a href="blog.html" class="nav-link">Blogs</a>
+
+        <!-- Support Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="guarantee-registration.html" class="nav-link active" style="color: #1c7a01;">
+            Support <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="guarantee-registration.html" class="dropdown-link" style="color: #1c7a01; font-weight: 700;">Guarantee Registration</a>
+            <a href="dealer-registration.html" class="dropdown-link">Become a dealer</a>
+            <a href="contact-us.html" class="dropdown-link">Contact US</a>
+            <a href="faqs.html" class="dropdown-link">FAQS</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="index.html#stores" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
+        <a href="contact-us.html" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= GUARANTEE FORM SECTION ================= -->
+  <section class="guarantee-page-wrap">
+    
+    <!-- Leaves Background Decors -->
+    <img src="assets/download_from_wix/leaves.png" alt="Leaves background decor" class="leaf-bg-left">
+    <img src="assets/download_from_wix/leaves flip.png" alt="Leaves background decor" class="leaf-bg-right">
+
+    <div class="guarantee-form-container">
+      <h1 class="page-main-title">Registration form for guarantee</h1>
+      <p class="page-sub-title">For any help during registering contact Toll Free Number: <strong>1800 258 2534</strong></p>
+
+      <form id="guaranteeForm" onsubmit="event.preventDefault(); alert('Thank you! Your Guarantee Registration has been submitted successfully.');">
+        
+        <!-- Row 1: First name, Last name -->
+        <div class="form-row-2">
+          <div class="form-group-field">
+            <label for="firstName">First name *</label>
+            <input type="text" id="firstName" required placeholder="Your First Name">
+          </div>
+          <div class="form-group-field">
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" placeholder="Last name">
+          </div>
+        </div>
+
+        <!-- Row 2: Mobile, Email -->
+        <div class="form-row-2">
+          <div class="form-group-field">
+            <label for="mobile">Mobile *</label>
+            <div class="phone-input-wrap">
+              <div class="phone-flag-select">
+                <span>🇮🇳</span> <i class="fa-solid fa-chevron-down" style="font-size: 0.65rem;"></i>
+              </div>
+              <input type="tel" id="mobile" required placeholder="Mobile Number with country code">
+            </div>
+          </div>
+          <div class="form-group-field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" required placeholder="Your email address">
+          </div>
+        </div>
+
+        <!-- Row 3: Product Name, Firmness -->
+        <div class="form-row-2">
+          <div class="form-group-field">
+            <label for="productName">Product Name *</label>
+            <select id="productName" required>
+              <option value="">Choose one</option>
+              <option value="Natural Latex Mattress">Natural Latex Mattress</option>
+              <option value="Natural Latex Pillow">Natural Latex Pillow</option>
+              <option value="Natural Latex Cushion">Natural Latex Cushion</option>
+              <option value="Natural Latex Mattress Topper">Natural Latex Mattress Topper</option>
+            </select>
+          </div>
+          <div class="form-group-field">
+            <label for="firmness">Firmness *</label>
+            <select id="firmness" required>
+              <option value="">Choose one</option>
+              <option value="Soft">Soft</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+              <option value="Extra Hard">Extra Hard</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Row 4: Purchase Date, Quantity -->
+        <div class="form-row-2">
+          <div class="form-group-field">
+            <label for="purchaseDate">Purchase Date *</label>
+            <input type="date" id="purchaseDate" required placeholder="Choose a date">
+          </div>
+          <div class="form-group-field">
+            <label for="quantity">Quantity *</label>
+            <input type="text" id="quantity" required placeholder="Quantity of Product">
+          </div>
+        </div>
+
+        <!-- Row 5: Dealer Name (Full Width) -->
+        <div class="form-group-field" style="margin-bottom: 24px;">
+          <label for="dealerName">Dealer Name *</label>
+          <input type="text" id="dealerName" required placeholder="Enter purchase dealer name">
+        </div>
+
+        <!-- Row 6: Dealer State, Purchase Bill Upload -->
+        <div class="form-row-2">
+          <div class="form-group-field">
+            <label for="dealerState">Dealer State *</label>
+            <select id="dealerState" required>
+              <option value="">Choose State / UT</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Puducherry">Puducherry</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group-field">
+            <label>Purchase Bill</label>
+            <div>
+              <label for="billUpload" class="upload-btn-navy">
+                <i class="fa-solid fa-plus"></i> Upload File
+              </label>
+              <input type="file" id="billUpload" accept="image/*,.pdf" style="display: none;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Terms Checkbox -->
+        <div class="terms-check-row">
+          <input type="checkbox" id="terms" required>
+          <label for="terms">I accept the <a href="index.html#terms">Terms and Conditions</a> *</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-submit-green">Submit Now</button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <!-- Col 1: Logo + Head Office -->
+        <div class="footer-office-col">
+          <div class="footer-brand-logo" style="margin-bottom: 24px;">
+            <a href="index.html" aria-label="Indofrench Home">
+              <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 66px; width: auto; object-fit: contain; display: block;">
+            </a>
+          </div>
+          <p class="footer-office-label">Head office:</p>
+          <p class="footer-office-company">IF Agrotech Pvt, Ltd.</p>
+          <p class="footer-office-since">Since 1979.</p>
+          <p class="footer-office-line">PIPDIC Industrial Estate ,</p>
+          <p class="footer-office-line">Mettupalayam, Puducherry-605009.</p>
+          <p class="footer-office-line">Toll- Free : <a href="tel:+91636980612">+91 636980612</a></p>
+          <p class="footer-office-label">Working hours:</p>
+          <p class="footer-office-line">Mon to Saturday : 9:00 a.m. - 7: 00 p.m.</p>
+        </div>
+
+        <!-- Col 2: Main Pages -->
+        <div>
+          <h4 class="footer-col-title">Main Pages</h4>
+          <ul class="footer-links-list">
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="advantages.html">Advantages</a></li>
+            <li><a href="contact-us.html">Contact US</a></li>
+            <li><a href="dealer-registration.html">Become a dealer</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Products -->
+        <div>
+          <h4 class="footer-col-title">Products</h4>
+          <ul class="footer-links-list">
+            <li><a href="mattresses.html">Mattress</a></li>
+            <li><a href="pillows.html">Pillows</a></li>
+            <li><a href="mattress-topper.html">Mattress Topper</a></li>
+            <li><a href="cushions.html">Cushions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Useful Links -->
+        <div>
+          <h4 class="footer-col-title">Useful Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="guarantee-registration.html" style="color: #1c7a01; font-weight: 600;">Guarantee Registration</a></li>
+            <li><a href="index.html#privacy">Privacy Policy</a></li>
+            <li><a href="index.html#return">Return Policy</a></li>
+            <li><a href="index.html#terms">Terms and Condition</a></li>
+            <li><a href="index.html#care">Product Care guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Support -->
+        <div>
+          <h4 class="footer-col-title">Support</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#stores">Locate a Store</a></li>
+            <li><a href="testimonials.html">Review</a></li>
+            <li><a href="faqs.html">FAQS</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919840012345?text=Hello%20Indofrench!%20I%20want%20to%20register%20my%20guarantee." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with Indofrench on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Script -->
+  <script src="js/main.js?v=20260918_12"></script>
+</body>
+</html>

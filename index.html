@@ -476,20 +476,42 @@
           <div class="dropdown-menu">
             <a href="mattresses.html" class="dropdown-link">Mattress</a>
             <a href="pillows.html" class="dropdown-link">Pillows</a>
-            <a href="products.html#cushions" class="dropdown-link">Cushions</a>
-            <a href="products.html#mattress-topper" class="dropdown-link">Mattress Topper</a>
+            <a href="cushions.html" class="dropdown-link">Cushions</a>
+            <a href="mattress-topper.html" class="dropdown-link">Mattress Topper</a>
           </div>
         </div>
 
-        <a href="#why-choose-us" class="nav-link">Why Indofrench</a>
-        <a href="#blogs" class="nav-link">Blogs</a>
-        <a href="#faq" class="nav-link">Support</a>
+        <!-- Why Indofrench Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="advantages.html" class="nav-link">
+            Why Indofrench <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="advantages.html" class="dropdown-link">Advantages</a>
+            <a href="testimonials.html" class="dropdown-link">Review</a>
+          </div>
+        </div>
+
+        <a href="blog.html" class="nav-link">Blogs</a>
+
+        <!-- Support Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="guarantee-registration.html" class="nav-link">
+            Support <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="guarantee-registration.html" class="dropdown-link">Guarantee Registration</a>
+            <a href="dealer-registration.html" class="dropdown-link">Become a dealer</a>
+            <a href="contact-us.html" class="dropdown-link">Contact US</a>
+            <a href="faqs.html" class="dropdown-link">FAQS</a>
+          </div>
+        </div>
       </nav>
 
       <!-- Header Action Buttons with Exact Live Brand Colors -->
       <div class="header-actions">
         <a href="#stores" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
-        <a href="#contact" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
+        <a href="contact-us.html" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
           <span></span>
           <span></span>
@@ -860,7 +882,7 @@
           <p>
             Indo French offers high-quality hospital beds designed for comfort, safety, and long-term care. Perfect for hospitals and home use, our beds ensure smooth functionality and reliable support for patients.
           </p>
-          <a href="#contact" class="btn btn-green">
+          <a href="contact-us.html" class="btn btn-green">
             Explore Now <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
@@ -877,7 +899,7 @@
           <p>
             Indo French hotel beds bring a touch of luxury to every guest stay. Crafted for maximum comfort, elegance, and support throughout the night. Ideal choice for hotels that value quality and exceptional guest experience.
           </p>
-          <a href="#contact" class="btn btn-green">
+          <a href="contact-us.html" class="btn btn-green">
             Explore Now <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
@@ -953,7 +975,7 @@
           </div>
 
           <div>
-            <a href="#contact" class="btn-enquire-pill">Enquire now</a>
+            <a href="contact-us.html" class="btn-enquire-pill">Enquire now</a>
           </div>
         </div>
 
@@ -996,7 +1018,7 @@
               Experience the ultimate in sleep luxury with our Latex Mattress.
             </p>
             <div>
-              <a href="#contact" class="btn btn-green btn-sm">
+              <a href="mattresses.html" class="btn btn-green btn-sm">
                 Shop Now <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
@@ -1014,7 +1036,7 @@
               "Sleep on the Clouds" - Embrace Comfort with our Latex Pillow
             </p>
             <div>
-              <a href="#contact" class="btn btn-green btn-sm">
+              <a href="pillows.html" class="btn btn-green btn-sm">
                 Shop Now <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
@@ -1032,7 +1054,7 @@
               Float on comfort with our latex cushion - Where Support Meets luxury
             </p>
             <div>
-              <a href="#contact" class="btn btn-green btn-sm">
+              <a href="cushions.html" class="btn btn-green btn-sm">
                 Shop Now <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
@@ -1128,7 +1150,7 @@
           <span class="locate-tag">LOCATE US</span>
           <h2 class="locate-title">Find our Store<br>near your Home</h2>
           <p class="locate-desc">Finding a store near you is the first<br>step towards a rejuvenating<br>night's sleep.</p>
-          <a href="#contact" class="btn btn-locate">Locate a Store <i class="fa-solid fa-location-arrow" style="margin-left: 8px;"></i></a>
+          <a href="contact-us.html" class="btn btn-locate">Locate a Store <i class="fa-solid fa-location-arrow" style="margin-left: 8px;"></i></a>
         </div>
         
         <!-- City Cards -->
@@ -1224,50 +1246,59 @@
           <span class="section-tag light">Get In Touch</span>
           <h2>Enquire for Custom Mattresses</h2>
 
-          <form id="contactEnquiryForm">
+          <form id="contactEnquiryForm" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label">First Name *</label>
+                <label class="form-label" for="firstName">First Name *</label>
                 <input type="text" class="form-input" id="firstName" placeholder="First Name" required>
+                <span class="field-error-msg" id="firstNameError"></span>
               </div>
               <div class="form-group">
-                <label class="form-label">Last Name *</label>
+                <label class="form-label" for="lastName">Last Name *</label>
                 <input type="text" class="form-input" id="lastName" placeholder="Last Name" required>
+                <span class="field-error-msg" id="lastNameError"></span>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label">Mobile *</label>
-                <input type="tel" class="form-input" id="mobile" placeholder="+91 Mobile Number" required>
+                <label class="form-label" for="mobile">Mobile *</label>
+                <div class="mobile-input-group" id="mobileInputGroup">
+                  <span class="mobile-prefix">+91</span>
+                  <input type="tel" class="form-input mobile-input" id="mobile" placeholder="Mobile Number" maxlength="10" inputmode="numeric" pattern="[0-9]*" required>
+                </div>
+                <span class="field-error-msg" id="mobileError"></span>
               </div>
               <div class="form-group">
-                <label class="form-label">Email *</label>
+                <label class="form-label" for="email">Email *</label>
                 <input type="email" class="form-input" id="email" placeholder="Email Address" required>
+                <span class="field-error-msg" id="emailError"></span>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label">City *</label>
+                <label class="form-label" for="city">City *</label>
                 <input type="text" class="form-input" id="city" placeholder="Your City" required>
+                <span class="field-error-msg" id="cityError"></span>
               </div>
               <div class="form-group">
-                <label class="form-label">State *</label>
+                <label class="form-label" for="state">State *</label>
                 <input type="text" class="form-input" id="state" placeholder="Your State" required>
+                <span class="field-error-msg" id="stateError"></span>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label">Product Selection *</label>
+              <label class="form-label" for="productSelect">Choose Product *</label>
               <select class="form-select" id="productSelect" required>
-                <option value="" disabled selected>Select a Product</option>
-                <option value="Latex Mattress">Latex Mattress (Custom Orthopedic)</option>
-                <option value="Latex Pillow">Latex Pillow ("Sleep on the Clouds")</option>
-                <option value="Latex Cushions">Latex Cushions</option>
-                <option value="Hospital Bed">Hospital Beds</option>
-                <option value="Hotel Bed">Hotel Beds</option>
+                <option value="" disabled selected style="color: #22c55e;">Choose one</option>
+                <option value="Mattress">Mattress</option>
+                <option value="Pillows">Pillows</option>
+                <option value="Cushions">Cushions</option>
+                <option value="Mattress Topper">Mattress Topper</option>
               </select>
+              <span class="field-error-msg" id="productSelectError"></span>
             </div>
 
             <div style="margin-top: 24px;">
@@ -1362,7 +1393,7 @@
           </div>
 
           <div style="margin-top: 28px;">
-            <a href="#contact" class="btn btn-green">
+            <a href="contact-us.html" class="btn btn-green">
               Enquire Now <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
@@ -1374,13 +1405,13 @@
 
 
   <!-- ================= FOOTER ================= -->
-  <footer class="footer">
+    <footer class="footer">
     <div class="container">
       <div class="footer-main-grid">
         <!-- Col 1: Logo + Head Office -->
         <div class="footer-office-col">
           <div class="footer-brand-logo" style="margin-bottom: 24px;">
-            <a href="#" aria-label="Indofrench Home">
+            <a href="index.html" aria-label="Indofrench Home">
               <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 66px; width: auto; object-fit: contain; display: block;">
             </a>
           </div>
@@ -1400,9 +1431,9 @@
           <ul class="footer-links-list">
             <li><a href="aboutus.html">About us</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="#why-choose-us">Advantages</a></li>
-            <li><a href="#contact">Contact US</a></li>
-            <li><a href="#contact">Become a dealer</a></li>
+            <li><a href="advantages.html">Advantages</a></li>
+            <li><a href="contact-us.html">Contact US</a></li>
+            <li><a href="dealer-registration.html">Become a dealer</a></li>
           </ul>
         </div>
 
@@ -1410,10 +1441,10 @@
         <div>
           <h4 class="footer-col-title">Products</h4>
           <ul class="footer-links-list">
-            <li><a href="products.html#mattress">Mattress</a></li>
+            <li><a href="mattresses.html">Mattress</a></li>
             <li><a href="pillows.html">Pillows</a></li>
-            <li><a href="products.html#mattress-topper">Mattress Topper</a></li>
-            <li><a href="products.html#cushions">Cushions</a></li>
+            <li><a href="mattress-topper.html">Mattress Topper</a></li>
+            <li><a href="cushions.html">Cushions</a></li>
           </ul>
         </div>
 
@@ -1421,11 +1452,11 @@
         <div>
           <h4 class="footer-col-title">Useful Links</h4>
           <ul class="footer-links-list">
-            <li><a href="#guarantee">Guarantee Registration</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Return Policy</a></li>
-            <li><a href="#">Terms and Condition</a></li>
-            <li><a href="#">Product Care guide</a></li>
+            <li><a href="guarantee-registration.html">Guarantee Registration</a></li>
+            <li><a href="index.html#privacy">Privacy Policy</a></li>
+            <li><a href="index.html#return">Return Policy</a></li>
+            <li><a href="index.html#terms">Terms and Condition</a></li>
+            <li><a href="index.html#care">Product Care guide</a></li>
           </ul>
         </div>
 
@@ -1433,10 +1464,10 @@
         <div>
           <h4 class="footer-col-title">Support</h4>
           <ul class="footer-links-list">
-            <li><a href="#stores">Locate a Store</a></li>
-            <li><a href="#reviews">Review</a></li>
-            <li><a href="#faq">FAQS</a></li>
-            <li><a href="#blogs">Blog</a></li>
+            <li><a href="index.html#stores">Locate a Store</a></li>
+            <li><a href="testimonials.html">Review</a></li>
+            <li><a href="faqs.html">FAQS</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
       </div>

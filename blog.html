@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WHY DO LATEX MATTRESSES EMIT AN ALIEN ODOR? | Indofrench Blog</title>
+  <meta name="description" content="Learn why new natural latex mattresses emit a mild vanilla odor upon unpacking, how Dunlop vulcanization works, and simple non-toxic ways to air out your mattress.">
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet with Cache Buster -->
+  <link rel="stylesheet" href="css/styles.css?v=20260918_18">
+
+  <style>
+    :root {
+      --brand-navy: #002b73;
+      --brand-green: #1c7a01;
+    }
+
+    /* Top Marquee Ticker Bar */
+    .topbar-ticker {
+      background-color: #002b73 !important;
+      color: #FFFFFF !important;
+      height: 42px !important;
+      overflow: hidden !important;
+      position: relative !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      align-items: center !important;
+      width: 100% !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .topbar-marquee-track {
+      display: inline-flex !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      gap: 36px !important;
+      width: max-content !important;
+      will-change: transform !important;
+      animation: tickerAutoScroll 30s linear infinite !important;
+    }
+
+    @keyframes tickerAutoScroll {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    .ticker-phrase {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 14px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      color: #FFFFFF !important;
+      letter-spacing: 0.3px !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* Header & Nav */
+    .header {
+      background: #FFFFFF !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      position: sticky !important;
+      top: 0 !important;
+      left: 0 !important;
+      z-index: 999 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      height: 84px !important;
+      max-width: 1320px !important;
+      margin: 0 auto !important;
+      padding: 0 24px !important;
+    }
+
+    .nav-menu {
+      display: flex !important;
+      align-items: center !important;
+      gap: 32px !important;
+    }
+
+    .nav-link {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      color: #1c407c !important;
+      text-decoration: none !important;
+      padding: 6px 0 !important;
+      transition: color 0.2s ease !important;
+    }
+
+    .nav-link:hover {
+      color: #1c7a01 !important;
+    }
+
+    /* Clean Simple Article Wrapper */
+    .blog-article-wrapper {
+      max-width: 800px;
+      margin: 50px auto 80px;
+      padding: 0 24px;
+      background: #FFFFFF;
+    }
+
+    .blog-article-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      color: #000000;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .blog-article-date {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #64748B;
+      margin-bottom: 30px;
+    }
+
+    .blog-article-content {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.02rem;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    .blog-article-content p {
+      margin-bottom: 22px;
+    }
+
+    .blog-article-content h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #000000;
+      margin: 36px 0 14px;
+      line-height: 1.3;
+    }
+
+    .blog-article-content ul {
+      margin: 0 0 24px 22px;
+      padding: 0;
+    }
+
+    .blog-article-content li {
+      margin-bottom: 10px;
+      line-height: 1.7;
+    }
+
+    .blog-article-content strong {
+      color: #0f172a;
+    }
+
+    .blog-article-image {
+      width: 100%;
+      height: auto;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 28px 0;
+      display: block;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Article Stats Bar */
+    .blog-stats-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #E2E8F0;
+      padding-top: 18px;
+      margin-top: 40px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.88rem;
+      color: #64748B;
+    }
+
+    .blog-stats-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .blog-stats-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .blog-stats-right i {
+      color: #EF4444;
+    }
+
+    /* Comment Box */
+    .blog-comments-wrap {
+      margin-top: 40px;
+      border-top: 1px solid #E2E8F0;
+      padding-top: 28px;
+    }
+
+    .blog-comments-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 16px;
+    }
+
+    .blog-comment-input {
+      width: 100%;
+      min-height: 90px;
+      padding: 12px 16px;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.92rem;
+      color: #0f172a;
+      outline: none;
+      resize: vertical;
+      background: #FFFFFF;
+    }
+
+    .blog-comment-input:focus {
+      border-color: #002b73;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= TOP ANNOUNCEMENT TICKER ================= -->
+  <div class="topbar-ticker" id="topbarTicker">
+    <div class="topbar-marquee-track" id="topbarTrack">
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER & NAVBAR ================= -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Indofrench Home">
+        <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 54px; width: auto; object-fit: contain; display: block;">
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aboutus.html" class="nav-link">About us</a>
+        
+        <!-- Products Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="products.html" class="nav-link">
+            Products <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="mattresses.html" class="dropdown-link">Mattress</a>
+            <a href="pillows.html" class="dropdown-link">Pillows</a>
+            <a href="cushions.html" class="dropdown-link">Cushions</a>
+            <a href="mattress-topper.html" class="dropdown-link">Mattress Topper</a>
+          </div>
+        </div>
+
+        <!-- Why Indofrench Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="advantages.html" class="nav-link">
+            Why Indofrench <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="advantages.html" class="dropdown-link">Advantages</a>
+            <a href="testimonials.html" class="dropdown-link">Review</a>
+          </div>
+        </div>
+
+        <a href="blog.html" class="nav-link active" style="color: #1c7a01;">Blogs</a>
+
+        <!-- Support Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="guarantee-registration.html" class="nav-link">
+            Support <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="guarantee-registration.html" class="dropdown-link">Guarantee Registration</a>
+            <a href="dealer-registration.html" class="dropdown-link">Become a dealer</a>
+            <a href="contact-us.html" class="dropdown-link">Contact US</a>
+            <a href="faqs.html" class="dropdown-link">FAQS</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="index.html#stores" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
+        <a href="contact-us.html" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= CLEAN ARTICLE CONTENT ================= -->
+  <main class="blog-article-wrapper">
+    
+    <h1 class="blog-article-title">WHY DO LATEX MATTRESSES EMIT AN ALIEN ODOR?</h1>
+    <div class="blog-article-date">Added: May 24, 2024</div>
+
+    <div class="blog-article-content">
+      <p>If you’ve recently purchased a latex mattress, you might notice a faint odor upon receiving it. This scent will fade over time as the mattress is used, but if you're moving into a new home or are sensitive to smells, you might want to address it right away. Fortunately, there are a few simple ways to eliminate that new mattress odor.</p>
+
+      <p>Latex mattresses typically have a light vanilla scent, unlike the chemical odors from polyurethane and memory foam mattresses. The fresh scent of natural latex mattresses can take up to two months to completely fade because they are made with natural components that need time to off-gas from production and shipping. Allowing the mattress to breathe can speed up this process.</p>
+
+      <!-- Image 1 -->
+      <img src="assets/download_from_wix/1662731142835.jpg" alt="Natural Latex Mattress on wooden bed frame" class="blog-article-image">
+
+      <h3>What Causes the Smell in a Natural Latex Mattress?</h3>
+      <p>Latex mattresses are made from tree sap and are plant-based. They have a mild scent, similar to many natural products, which some find pleasant and others do not. The natural latex aroma is often described as vanilla, which is common among many plants and trees.</p>
+      <p>The manufacturing process of a latex mattress also contributes to its odor. Natural latex sap is whipped into a foam and poured into a mattress mold. This foam is then baked to create latex foam, a process called vulcanization, which cooks some proteins in the sap and produces a mild odor. These proteins are denatured in the process, which is why natural latex mattresses rarely cause allergic reactions.</p>
+
+      <h3>Why Do Newly Bought Latex Mattresses Smell Stronger?</h3>
+      <p>A new natural latex mattress smells stronger initially due to its packaging and shipping. After the mattress is made, it’s packaged and shipped quickly. Manufacturers usually don’t allow enough time for the mattress to air out, so the natural off-gassing process is delayed. This can make the smell seem stronger when first unpacked. However, once you unpack your mattress, letting it breathe will naturally and safely eliminate the scent.</p>
+
+      <!-- Image 2 -->
+      <img src="assets/download_from_wix/1662781415765.jpg" alt="Indofrench Natural Latex Mattress Bedroom" class="blog-article-image">
+
+      <h3>How to Reduce the Smell</h3>
+      <p>There are several ways to reduce the odor of your natural latex mattress, but it’s important to avoid damaging it:</p>
+      <ul>
+        <li><strong>Allow Time for the Mattress to Breathe:</strong> Letting your mattress air out is the safest way to reduce its smell. This natural process doesn’t involve harmful chemicals or artificial scents. To speed up airing out, unzip the mattress cover and open the windows during the day. Make sure no sunlight directly hits the exposed latex foam, as excessive sunlight can degrade it.</li>
+        <li><strong>Use a Mattress Protector:</strong> While airing out your mattress during the day, you can use an extra sheet at night to help mask the odor. This extra layer can help reduce the smell.</li>
+      </ul>
+
+      <h3>What About Synthetic Latex Mattresses?</h3>
+      <p>Contrary to some claims, the scent of natural latex foam is present in both natural and synthetic foams. The vulcanization process, which cooks the proteins in the sap, produces a mild odor. However, synthetic latex mattresses tend to smell stronger and less pleasant due to the volatile organic compounds (VOCs) from synthetic materials, which off-gas from the mattress and give off a chemical odor. VOCs can also be harmful to health, linked to respiratory issues according to the EPA.</p>
+
+      <h3>Is the Smell Toxic?</h3>
+      <p>The temporary odor of natural latex mattresses does not contain VOCs and is not toxic. Natural latex foam is made entirely from non-toxic rubber tree sap. The odors are non-toxic and are not due to VOC off-gassing, unlike some polyurethane foams and glues. You can rest assured that there are no harmful gases or odors in your home; it’s safe for the entire family.</p>
+
+      <!-- Image 3 -->
+      <img src="assets/download_from_wix/1662792458526.jpg" alt="Natural Latex Mattress on blue upholstered bed" class="blog-article-image">
+
+      <h3>The Smell Will Disappear</h3>
+      <p>It’s a common misconception that latex has a long-lasting, unpleasant odor. The temporary smell from natural latex foam is not harmful to your health or the environment. The odor should fade within about 30 days after unpacking your new mattress. For some, it might take a few months, indicating a more sensitive sense of smell. Using an extra sheet or a mattress protector can help in the meantime.</p>
+    </div>
+
+    <!-- Post Stats Bar -->
+    <div class="blog-stats-bar">
+      <div class="blog-stats-left">
+        <span>438 views</span>
+        <span>Comments</span>
+      </div>
+      <div class="blog-stats-right" onclick="toggleHeart(this)">
+        <span id="heartCount">0</span> <i class="fa-regular fa-heart" id="heartIcon"></i>
+      </div>
+    </div>
+
+    <!-- Comments Section -->
+    <div class="blog-comments-wrap">
+      <h4 class="blog-comments-title">Comments</h4>
+      <textarea class="blog-comment-input" placeholder="Write a comment..."></textarea>
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <!-- Col 1: Logo + Head Office -->
+        <div class="footer-office-col">
+          <div class="footer-brand-logo" style="margin-bottom: 24px;">
+            <a href="index.html" aria-label="Indofrench Home">
+              <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 66px; width: auto; object-fit: contain; display: block;">
+            </a>
+          </div>
+          <p class="footer-office-label">Head office:</p>
+          <p class="footer-office-company">IF Agrotech Pvt, Ltd.</p>
+          <p class="footer-office-since">Since 1979.</p>
+          <p class="footer-office-line">PIPDIC Industrial Estate ,</p>
+          <p class="footer-office-line">Mettupalayam, Puducherry-605009.</p>
+          <p class="footer-office-line">Toll- Free : <a href="tel:+91636980612">+91 636980612</a></p>
+          <p class="footer-office-label">Working hours:</p>
+          <p class="footer-office-line">Mon to Saturday : 9:00 a.m. - 7: 00 p.m.</p>
+        </div>
+
+        <!-- Col 2: Main Pages -->
+        <div>
+          <h4 class="footer-col-title">Main Pages</h4>
+          <ul class="footer-links-list">
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="advantages.html">Advantages</a></li>
+            <li><a href="contact-us.html">Contact US</a></li>
+            <li><a href="dealer-registration.html">Become a dealer</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Products -->
+        <div>
+          <h4 class="footer-col-title">Products</h4>
+          <ul class="footer-links-list">
+            <li><a href="mattresses.html">Mattress</a></li>
+            <li><a href="pillows.html">Pillows</a></li>
+            <li><a href="mattress-topper.html">Mattress Topper</a></li>
+            <li><a href="cushions.html">Cushions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Useful Links -->
+        <div>
+          <h4 class="footer-col-title">Useful Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="guarantee-registration.html">Guarantee Registration</a></li>
+            <li><a href="index.html#privacy">Privacy Policy</a></li>
+            <li><a href="index.html#return">Return Policy</a></li>
+            <li><a href="index.html#terms">Terms and Condition</a></li>
+            <li><a href="index.html#care">Product Care guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Support -->
+        <div>
+          <h4 class="footer-col-title">Support</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#stores">Locate a Store</a></li>
+            <li><a href="testimonials.html">Review</a></li>
+            <li><a href="faqs.html">FAQS</a></li>
+            <li><a href="blog.html" style="color: #1c7a01; font-weight: 600;">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919840012345?text=Hello%20Indofrench!%20I%20am%20reading%20your%20blog." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with Indofrench on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Simple Heart Toggle Script -->
+  <script>
+    let heartActive = false;
+    function toggleHeart(el) {
+      const icon = document.getElementById('heartIcon');
+      const count = document.getElementById('heartCount');
+      heartActive = !heartActive;
+      if (heartActive) {
+        icon.className = 'fa-solid fa-heart';
+        count.textContent = '1';
+      } else {
+        icon.className = 'fa-regular fa-heart';
+        count.textContent = '0';
+      }
+    }
+  </script>
+  <script src="js/main.js?v=20260918_12"></script>
+</body>
+</html>
