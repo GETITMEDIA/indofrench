@@ -413,17 +413,19 @@
       <h1 class="page-main-title">Registration form for guarantee</h1>
       <p class="page-sub-title">For any help during registering contact Toll Free Number: <strong>1800 258 2534</strong></p>
 
-      <form id="guaranteeForm" onsubmit="event.preventDefault(); alert('Thank you! Your Guarantee Registration has been submitted successfully.');">
+      <form id="guaranteeForm" novalidate>
         
         <!-- Row 1: First name, Last name -->
         <div class="form-row-2">
           <div class="form-group-field">
             <label for="firstName">First name *</label>
             <input type="text" id="firstName" required placeholder="Your First Name">
+            <span class="field-error-msg" id="firstNameError"></span>
           </div>
           <div class="form-group-field">
             <label for="lastName">Last name</label>
             <input type="text" id="lastName" placeholder="Last name">
+            <span class="field-error-msg" id="lastNameError"></span>
           </div>
         </div>
 
@@ -431,16 +433,18 @@
         <div class="form-row-2">
           <div class="form-group-field">
             <label for="mobile">Mobile *</label>
-            <div class="phone-input-wrap">
+            <div class="phone-input-wrap" id="mobileInputWrap">
               <div class="phone-flag-select">
-                <span>🇮🇳</span> <i class="fa-solid fa-chevron-down" style="font-size: 0.65rem;"></i>
+                <span>🇮🇳</span> <span class="phone-country-code">+91</span>
               </div>
-              <input type="tel" id="mobile" required placeholder="Mobile Number with country code">
+              <input type="tel" id="mobile" required placeholder="10 digit mobile number" maxlength="10" inputmode="numeric">
             </div>
+            <span class="field-error-msg" id="mobileError"></span>
           </div>
           <div class="form-group-field">
             <label for="email">Email *</label>
             <input type="email" id="email" required placeholder="Your email address">
+            <span class="field-error-msg" id="emailError"></span>
           </div>
         </div>
 
@@ -455,6 +459,7 @@
               <option value="Natural Latex Cushion">Natural Latex Cushion</option>
               <option value="Natural Latex Mattress Topper">Natural Latex Mattress Topper</option>
             </select>
+            <span class="field-error-msg" id="productNameError"></span>
           </div>
           <div class="form-group-field">
             <label for="firmness">Firmness *</label>
@@ -465,6 +470,7 @@
               <option value="Hard">Hard</option>
               <option value="Extra Hard">Extra Hard</option>
             </select>
+            <span class="field-error-msg" id="firmnessError"></span>
           </div>
         </div>
 
@@ -473,10 +479,12 @@
           <div class="form-group-field">
             <label for="purchaseDate">Purchase Date *</label>
             <input type="date" id="purchaseDate" required placeholder="Choose a date">
+            <span class="field-error-msg" id="purchaseDateError"></span>
           </div>
           <div class="form-group-field">
             <label for="quantity">Quantity *</label>
-            <input type="text" id="quantity" required placeholder="Quantity of Product">
+            <input type="text" id="quantity" required placeholder="Quantity of Product (e.g. 1)" maxlength="3" inputmode="numeric">
+            <span class="field-error-msg" id="quantityError"></span>
           </div>
         </div>
 
@@ -484,6 +492,7 @@
         <div class="form-group-field" style="margin-bottom: 24px;">
           <label for="dealerName">Dealer Name *</label>
           <input type="text" id="dealerName" required placeholder="Enter purchase dealer name">
+          <span class="field-error-msg" id="dealerNameError"></span>
         </div>
 
         <!-- Row 6: Dealer State, Purchase Bill Upload -->
@@ -502,23 +511,29 @@
               <option value="Delhi">Delhi</option>
               <option value="Other">Other</option>
             </select>
+            <span class="field-error-msg" id="dealerStateError"></span>
           </div>
 
           <div class="form-group-field">
             <label>Purchase Bill</label>
-            <div>
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
               <label for="billUpload" class="upload-btn-navy">
                 <i class="fa-solid fa-plus"></i> Upload File
               </label>
               <input type="file" id="billUpload" accept="image/*,.pdf" style="display: none;">
+              <span id="billFileName" class="file-name-tag" style="display: none;">No file selected</span>
             </div>
+            <span class="field-error-msg" id="billUploadError"></span>
           </div>
         </div>
 
         <!-- Terms Checkbox -->
-        <div class="terms-check-row">
-          <input type="checkbox" id="terms" required>
-          <label for="terms">I accept the <a href="index.html#terms">Terms and Conditions</a> *</label>
+        <div class="terms-check-row" style="flex-direction: column; align-items: flex-start; gap: 4px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I accept the <a href="index.html#terms">Terms and Conditions</a> *</label>
+          </div>
+          <span class="field-error-msg" id="termsError"></span>
         </div>
 
         <!-- Submit Button -->

@@ -436,9 +436,9 @@
               <label for="mobile">* Mobile</label>
               <div class="phone-input-wrap">
                 <div class="phone-flag-select">
-                  <span>🇮🇳</span> <i class="fa-solid fa-chevron-down" style="font-size: 0.65rem;"></i>
+                  <span>🇮🇳</span> <span class="phone-country-code">+91</span>
                 </div>
-                <input type="tel" id="mobile" required placeholder="Enter your mobile number">
+                <input type="tel" id="mobile" required placeholder="10 digit mobile number" maxlength="10" inputmode="numeric">
               </div>
             </div>
           </div>
@@ -493,11 +493,12 @@
 
           <div class="form-group-field">
             <label>* Bank Passbook or Cancelled cheque</label>
-            <div>
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
               <label for="chequeUpload" class="upload-btn-navy">
                 <i class="fa-solid fa-plus"></i> Upload File
               </label>
               <input type="file" id="chequeUpload" accept="image/*,.pdf" style="display: none;">
+              <span id="chequeFileName" class="file-name-tag" style="display: none;">No file selected</span>
             </div>
             <span class="sub-helper-text">The company name must be mentioned in the bank passbook or cancelled cheque</span>
           </div>

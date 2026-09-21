@@ -3928,10 +3928,84 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
 }
 
-/* ===== MATTRESSES CATEGORY & DETAIL PAGES ===== */
-.active-home {
-  color: #1c7a01 !important;
-  font-weight: 700 !important;
+
+/* ===== FORM VALIDATION & PHONE PREFIX STYLING ===== */
+.field-error-msg {
+  display: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #dc2626;
+  margin-top: 5px;
+  line-height: 1.35;
 }
+
+.field-error-msg.visible {
+  display: block;
+  animation: fieldErrorFadeIn 0.2s ease-in-out;
+}
+
+@keyframes fieldErrorFadeIn {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group-field input.is-invalid,
+.form-group-field select.is-invalid,
+.navy-field input.is-invalid,
+.navy-field select.is-invalid {
+  border-color: #dc2626 !important;
+  background-color: #fff5f5 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12) !important;
+}
+
+.form-group-field input.is-valid,
+.form-group-field select.is-valid,
+.navy-field input.is-valid,
+.navy-field select.is-valid {
+  border-color: #16a34a !important;
+  background-color: #f0fdf4 !important;
+}
+
+.phone-input-wrap.is-invalid,
+.navy-phone-wrap.is-invalid {
+  border-color: #dc2626 !important;
+  background-color: #fff5f5 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12) !important;
+}
+
+.phone-input-wrap.is-valid,
+.navy-phone-wrap.is-valid {
+  border-color: #16a34a !important;
+  background-color: #f0fdf4 !important;
+}
+
+.phone-country-code {
+  font-weight: 800;
+  color: #002b73;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.file-name-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #1c7a01;
+  background: #e6f7e8;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid #bbf7d0;
+  display: inline-block;
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contact-navy-card .field-error-msg {
+  color: #fca5a5 !important;
+}
+
 
 
