@@ -4196,16 +4196,20 @@ p { overflow-wrap: break-word; }
    =================================================================== */
 @media (max-width: 991px) {
   .header .nav-menu {
-    max-height: calc(100vh - 110px);
+    max-height: calc(100vh - 70px);
     overflow-y: auto;
     gap: 0 !important;
-    padding: 8px 20px 16px !important;
+    padding: 10px 20px 20px !important;
+    background: #ffffff !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18) !important;
   }
   .header .nav-menu > .nav-link,
   .header .nav-item-dropdown > .nav-link {
     width: 100%;
-    min-height: 44px;
     padding: 10px 0 !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #1c407c !important;
     border-bottom: 1px solid #f1f5f9;
   }
   .header .nav-item-dropdown { width: 100%; }
@@ -4218,14 +4222,18 @@ p { overflow-wrap: break-word; }
     border: none;
     min-width: 0 !important;
     width: 100% !important;
-    padding: 0 0 6px 14px;
+    padding: 4px 0 6px 14px;
+    background: transparent;
   }
   .header .dropdown-link {
     display: flex;
     align-items: center;
-    min-height: 44px;
-    padding: 8px 10px;
+    min-height: 32px;
+    padding: 5px 10px;
+    font-size: 0.88rem;
+    color: #475569;
     white-space: normal !important;
+    border-bottom: none;
   }
 }
 
@@ -4238,11 +4246,7 @@ p { overflow-wrap: break-word; }
   .header .header-inner { height: 64px !important; padding: 0 16px !important; }
   .header-logo-img { height: 42px !important; }
   .header .btn-locate-store { display: none !important; }
-  .header .btn-contact-header {
-    min-height: 40px;
-    padding: 8px 14px !important;
-    font-size: 0.85rem !important;
-  }
+  .header .btn-contact-header { display: none !important; }
 
   /* ---------- Section rhythm ---------- */
   .container { padding-left: 16px; padding-right: 16px; }
@@ -4521,7 +4525,7 @@ p { overflow-wrap: break-word; }
    VERY NARROW  (<= 360px)
    =================================================================== */
 @media (max-width: 360px) {
-  .header .btn-contact-header { padding: 8px 10px !important; font-size: 0.8rem !important; }
+  .header .btn-contact-header { display: none !important; }
   .header-logo-img { height: 38px !important; }
   .footer-main-grid { grid-template-columns: 1fr !important; }
   .hero-features-strip { grid-template-columns: 1fr; }
