@@ -18,7 +18,15 @@
   <style>
     :root {
       --brand-navy: #002b73;
+      --brand-navy-light: #1c407c;
       --brand-green: #1c7a01;
+      --brand-green-hover: #156201;
+      --slate-50: #f8fafc;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-600: #475569;
+      --slate-700: #334155;
+      --slate-800: #1e293b;
     }
 
     /* Top Marquee Ticker Bar */
@@ -103,313 +111,683 @@
       color: #1c7a01 !important;
     }
 
+    .header-actions {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+    }
+
+    .btn-locate-store {
+      background-color: #1c407c !important;
+      color: #FFFFFF !important;
+      padding: 10px 22px !important;
+      border-radius: 6px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 700 !important;
+      font-size: 15px !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(28, 64, 124, 0.2) !important;
+    }
+
+    .btn-locate-store:hover {
+      background-color: #002b73 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    .btn-contact-header {
+      background-color: #1c7a01 !important;
+      color: #FFFFFF !important;
+      padding: 10px 22px !important;
+      border-radius: 6px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 700 !important;
+      font-size: 15px !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(28, 122, 1, 0.2) !important;
+    }
+
+    .btn-contact-header:hover {
+      background-color: #156201 !important;
+      transform: translateY(-1px) !important;
+    }
+
     /* Hero Banner */
     .contact-hero-banner {
-      background: linear-gradient(rgba(0, 43, 115, 0.65), rgba(0, 43, 115, 0.65)), url('assets/good-bed-hd.jpg') center/cover no-repeat;
-      height: 240px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .contact-hero-banner h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 3rem;
-      font-weight: 800;
+      background: linear-gradient(135deg, #001944 0%, #002b73 55%, #1c407c 100%);
+      position: relative;
+      padding: 68px 24px 74px;
       color: #FFFFFF;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .contact-hero-banner::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: -10%;
+      width: 120%;
+      height: 180%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .contact-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #4ade80;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 800;
+      padding: 8px 20px;
+      border-radius: 50px;
+      margin-bottom: 20px;
       letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
 
-    /* Get in touch section */
-    .contact-main-wrap {
-      max-width: 1200px;
-      margin: 60px auto;
-      padding: 0 24px;
+    .contact-hero-title {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 3rem !important;
+      font-weight: 800 !important;
+      color: #FFFFFF !important;
+      margin-bottom: 16px !important;
+      letter-spacing: -0.5px !important;
+      line-height: 1.2 !important;
     }
 
-    .contact-grid {
+    .contact-hero-sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.1rem;
+      color: #e2e8f0;
+      max-width: 720px;
+      margin: 0 auto 28px;
+      line-height: 1.65;
+    }
+
+    .contact-hero-features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .feature-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.09);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .feature-pill i {
+      color: #4ade80;
+    }
+
+    /* Main Contact Section */
+    .contact-page-wrap {
+      background: #f8fafc;
+      padding: 60px 24px 90px;
+    }
+
+    .contact-grid-container {
+      max-width: 1240px;
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 44px;
       align-items: start;
     }
 
     @media (max-width: 991px) {
-      .contact-grid {
+      .contact-grid-container {
         grid-template-columns: 1fr;
       }
+      .contact-hero-title {
+        font-size: 2.2rem !important;
+      }
+    }
+
+    /* Left Side: Contact Information Cards */
+    .contact-left-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 36px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 30px rgba(0, 43, 115, 0.05);
     }
 
     .tag-green-small {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       font-weight: 800;
       color: #1c7a01;
       text-transform: uppercase;
       letter-spacing: 1px;
-      display: block;
+      display: inline-block;
       margin-bottom: 8px;
     }
 
     .contact-left-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #002b73;
-      line-height: 1.25;
-      margin-bottom: 36px;
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 2.2rem !important;
+      font-weight: 800 !important;
+      color: #002b73 !important;
+      line-height: 1.25 !important;
+      margin-bottom: 32px !important;
     }
 
-    .contact-info-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px 20px;
+    .contact-cards-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
     }
 
-    @media (max-width: 600px) {
-      .contact-info-list {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .info-item-block {
+    .info-card-item {
       display: flex;
       align-items: flex-start;
       gap: 16px;
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.25s ease;
     }
 
-    .info-icon-btn {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      background: #002b73;
-      color: #FFFFFF;
+    .info-card-item:hover {
+      background: #ffffff;
+      border-color: #1c7a01;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(28, 122, 1, 0.08);
+    }
+
+    .info-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #002b73 0%, #1c407c 100%);
+      color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 43, 115, 0.2);
+    }
+
+    .info-card-content h4 {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 1.05rem !important;
+      font-weight: 800 !important;
+      color: #0f172a !important;
+      margin-bottom: 4px !important;
+    }
+
+    .info-card-content p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.92rem;
+      color: #475569;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .info-card-content a {
+      color: #002b73;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .info-card-content a:hover {
+      color: #1c7a01;
+      text-decoration: underline;
+    }
+
+    .tollfree-highlight-card {
+      background: linear-gradient(135deg, #002b73 0%, #1c407c 100%);
+      border-radius: 16px;
+      padding: 22px 24px;
+      color: #ffffff;
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 8px 24px rgba(0, 43, 115, 0.18);
+      flex-wrap: wrap;
+    }
+
+    .tollfree-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .tollfree-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
       flex-shrink: 0;
     }
 
-    .info-item-content h4 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: #000000;
-      margin-bottom: 4px;
+    .tollfree-text h5 {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 1.05rem !important;
+      font-weight: 800 !important;
+      color: #FFFFFF !important;
+      margin-bottom: 2px !important;
     }
 
-    .info-item-content p {
+    .tollfree-text p {
+      font-size: 0.84rem !important;
+      color: #cbd5e1 !important;
+      margin: 0 !important;
+    }
+
+    .tollfree-call-btn {
+      background: #1c7a01;
+      color: #ffffff !important;
+      padding: 10px 20px;
+      border-radius: 30px;
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.92rem;
-      font-weight: 700;
-      color: #002b73;
-      line-height: 1.5;
-      margin: 0;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(28, 122, 1, 0.3);
     }
 
-    /* Right Navy Form Box */
-    .contact-navy-card {
-      background: #002b73;
-      border-radius: 16px;
-      padding: 36px 32px;
-      box-shadow: 0 12px 36px rgba(0, 43, 115, 0.2);
+    .tollfree-call-btn:hover {
+      background: #156201;
+      color: #ffffff !important;
+      transform: scale(1.03);
     }
 
-    .navy-form-grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
+    /* Right Side: Form Card */
+    .contact-form-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 44px 40px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 14px 45px rgba(0, 43, 115, 0.08);
+      position: relative;
     }
 
-    @media (max-width: 600px) {
-      .navy-form-grid-2 {
-        grid-template-columns: 1fr;
+    @media (max-width: 640px) {
+      .contact-form-card {
+        padding: 28px 20px;
       }
     }
 
-    .navy-field {
+    .contact-form-header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 2px dashed #e2e8f0;
+    }
+
+    .contact-header-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #002b73 0%, #1c7a01 100%);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      box-shadow: 0 6px 18px rgba(0, 43, 115, 0.2);
+    }
+
+    .contact-form-title {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 2.1rem !important;
+      font-weight: 800 !important;
+      color: #002b73 !important;
+      margin-bottom: 6px !important;
+    }
+
+    .contact-form-sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.93rem;
+      color: #64748b;
+      margin: 0;
+    }
+
+    /* Form Fields */
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .form-row-2 {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+    }
+
+    .form-group-field {
       display: flex;
       flex-direction: column;
       margin-bottom: 16px;
     }
 
-    .navy-field label {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 6px;
-    }
-
-    .navy-field input,
-    .navy-field select {
-      width: 100%;
-      height: 42px;
-      padding: 0 14px;
-      border: none;
-      border-radius: 6px;
+    .form-group-field label {
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.9rem;
+      font-weight: 700;
+      color: #002b73;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .form-group-field label i {
+      color: #1c7a01;
+      font-size: 0.85rem;
+    }
+
+    .required-star {
+      color: #dc2626;
+      font-weight: 800;
+      margin-left: 2px;
+    }
+
+    .input-with-icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .input-with-icon i.field-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #94a3b8;
+      font-size: 0.95rem;
+      pointer-events: none;
+      transition: color 0.2s;
+    }
+
+    .input-with-icon input,
+    .input-with-icon select {
+      padding-left: 44px !important;
+    }
+
+    .form-group-field input,
+    .form-group-field select {
+      width: 100%;
+      height: 48px;
+      padding: 0 16px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.93rem;
       color: #0f172a;
-      background: #FFFFFF;
+      background: #ffffff;
       outline: none;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
     }
 
-    .navy-phone-wrap {
+    .form-group-field input:focus,
+    .form-group-field select:focus {
+      border-color: #002b73;
+      box-shadow: 0 0 0 4px rgba(0, 43, 115, 0.1);
+    }
+
+    .input-with-icon input:focus ~ i.field-icon,
+    .input-with-icon select:focus ~ i.field-icon {
+      color: #002b73;
+    }
+
+    /* Mobile Phone Prefix Box */
+    .phone-input-wrap {
       display: flex;
       align-items: center;
-      background: #FFFFFF;
-      border-radius: 6px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
       overflow: hidden;
-      height: 42px;
+      background: #ffffff;
+      height: 48px;
+      transition: all 0.2s ease;
+      width: 100%;
     }
 
-    .navy-flag-tag {
+    .phone-input-wrap:focus-within {
+      border-color: #002b73;
+      box-shadow: 0 0 0 4px rgba(0, 43, 115, 0.1);
+    }
+
+    .phone-flag-select {
       display: flex;
       align-items: center;
-      gap: 4px;
-      padding: 0 10px;
-      background: #F1F5F9;
-      font-size: 0.8rem;
+      gap: 6px;
+      padding: 0 14px;
+      border-right: 1.5px solid #e2e8f0;
+      background: #f8fafc;
+      font-size: 0.9rem;
+      font-weight: 700;
       color: #334155;
       height: 100%;
-      border-right: 1px solid #CBD5E1;
+      flex-shrink: 0;
     }
 
-    .navy-phone-wrap input {
+    .phone-input-wrap input {
+      border: none !important;
       border-radius: 0 !important;
       height: 100% !important;
+      box-shadow: none !important;
+      padding-left: 14px !important;
+      font-weight: 600 !important;
     }
 
-    .navy-terms-check {
+    .terms-card-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 22px 0 26px;
+    }
+
+    .terms-check-row {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin: 20px 0;
+      gap: 10px;
     }
 
-    .navy-terms-check input[type="checkbox"] {
-      width: 16px;
-      height: 16px;
+    .terms-check-row input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
       accent-color: #1c7a01;
       cursor: pointer;
+      flex-shrink: 0;
     }
 
-    .navy-terms-check label {
+    .terms-check-row label {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.82rem;
-      color: #FFFFFF;
+      font-size: 0.88rem;
+      color: #334155;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 0;
     }
 
-    .navy-terms-check label a {
-      color: #4ADE80;
-      text-decoration: underline;
-    }
-
-    .btn-contact-submit {
+    .btn-submit-green {
       width: 100%;
       background: #1c7a01;
-      color: #FFFFFF;
+      color: #ffffff;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      padding: 12px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 15px 24px;
       border: none;
-      border-radius: 6px;
+      border-radius: 12px;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 18px rgba(28, 122, 1, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
 
-    .btn-contact-submit:hover {
-      background: #156201;
+    .btn-submit-green:hover {
+      background: #002b73;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(0, 43, 115, 0.32);
     }
 
-    /* Regional Enquiry Section */
-    .enquiry-section {
-      max-width: 1200px;
-      margin: 60px auto;
+    /* Regional State Enquiry Section */
+    .regional-enquiry-wrap {
+      max-width: 1240px;
+      margin: 60px auto 70px;
       padding: 0 24px;
     }
 
-    .enquiry-section-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: #1c7a01;
-      margin-bottom: 24px;
+    .section-header-center {
+      text-align: center;
+      margin-bottom: 36px;
     }
 
-    .enquiry-cards-grid {
+    .regional-title {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 2.2rem !important;
+      font-weight: 800 !important;
+      color: #002b73 !important;
+      margin-bottom: 8px !important;
+    }
+
+    .regional-sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1rem;
+      color: #64748b;
+    }
+
+    .regional-cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
     }
 
-    .enquiry-card-navy {
-      background: #002b73;
-      border-radius: 12px;
-      padding: 20px 24px;
+    .state-contact-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 24px rgba(0, 43, 115, 0.05);
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 16px;
-      color: #FFFFFF;
+      transition: all 0.25s ease;
     }
 
-    .enquiry-card-icon {
+    .state-contact-card:hover {
+      border-color: #1c7a01;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(28, 122, 1, 0.12);
+    }
+
+    .state-info h4 {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 1.1rem !important;
+      font-weight: 800 !important;
+      color: #002b73 !important;
+      margin-bottom: 4px !important;
+    }
+
+    .state-info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1c7a01;
+      margin: 0;
+    }
+
+    .state-call-pill {
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: #FFFFFF;
-      color: #002b73;
+      background: #e6f7e8;
+      color: #1c7a01;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
       flex-shrink: 0;
     }
 
-    .enquiry-card-info h5 {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.85);
-      margin-bottom: 2px;
-    }
-
-    .enquiry-card-info p {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: #FFFFFF;
-      margin: 0;
+    .state-contact-card:hover .state-call-pill {
+      background: #1c7a01;
+      color: #ffffff;
+      transform: scale(1.1);
     }
 
     /* Map Section */
-    .map-section {
-      max-width: 1200px;
-      margin: 60px auto 80px;
+    .map-section-wrap {
+      max-width: 1240px;
+      margin: 0 auto 90px;
       padding: 0 24px;
     }
 
-    .map-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #002b73;
-      text-align: center;
-      margin-bottom: 32px;
+    .map-card-frame {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 16px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 12px 36px rgba(0, 43, 115, 0.08);
+      overflow: hidden;
     }
 
-    .map-iframe-wrap {
+    .map-iframe {
       width: 100%;
-      height: 450px;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      border: 1px solid #E2E8F0;
+      height: 440px;
+      border-radius: 14px;
+      border: none;
+      display: block;
     }
   </style>
 </head>
@@ -489,8 +867,8 @@
       </nav>
 
       <div class="header-actions">
-        <a href="index.html#stores" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
-        <a href="contact-us.html" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
+        <a href="dealers.html" class="btn-locate-store">Locate A Store</a>
+        <a href="contact-us.html" class="btn-contact-header">Contact us</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
           <span></span>
           <span></span>
@@ -502,124 +880,204 @@
 
   <!-- ================= HERO BANNER ================= -->
   <section class="contact-hero-banner">
-    <h1>Contact Us</h1>
+    <div class="contact-hero-inner">
+      <div class="contact-hero-badge">
+        <i class="fa-solid fa-headset"></i> Get In Touch With Us
+      </div>
+      <h1 class="contact-hero-title">Contact Indofrench Specialists</h1>
+      <p class="contact-hero-sub">
+        Have questions about 100% natural latex mattresses, pillows, or custom sizes? Reach out to our expert team for fast, personal assistance.
+      </p>
+      <div class="contact-hero-features">
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> Toll-Free Support</div>
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> Mon-Sat 9AM-7PM</div>
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> Puducherry Factory Office</div>
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> Pan-India Distribution</div>
+      </div>
+    </div>
   </section>
 
   <!-- ================= MAIN CONTACT SECTION ================= -->
-  <section class="contact-main-wrap">
-    <div class="contact-grid">
+  <section class="contact-page-wrap">
+    <div class="contact-grid-container">
       
-      <!-- Left Column Info -->
-      <div>
-        <span class="tag-green-small">GET IN TOUCH</span>
-        <h2 class="contact-left-title">Have Anything To Ask ?<br>Feel Free To Ask Us</h2>
+      <!-- Left Column: Contact Details Cards -->
+      <div class="contact-left-card">
+        <span class="tag-green-small">DIRECT ASSISTANCE</span>
+        <h2 class="contact-left-title">Have Anything To Ask ?<br>Feel Free To Reach Out</h2>
 
-        <div class="contact-info-list">
-          <!-- Item 1: Phone -->
-          <div class="info-item-block">
-            <div class="info-icon-btn"><i class="fa-solid fa-phone"></i></div>
-            <div class="info-item-content">
-              <h4>Corporate Office</h4>
-              <p>+91 63691 80612</p>
+        <div class="contact-cards-list">
+          
+          <!-- Corporate Office Phone -->
+          <div class="info-card-item">
+            <div class="info-icon-box">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="info-card-content">
+              <h4>Corporate Helpline</h4>
+              <p><a href="tel:+916369180612">+91 63691 80612</a></p>
+              <p style="font-size: 0.8rem; color: #64748b; margin-top: 2px;">Mon - Sat (9:00 AM - 7:00 PM)</p>
             </div>
           </div>
 
-          <!-- Item 2: Toll Free -->
-          <div class="info-item-block">
-            <div class="info-icon-btn"><i class="fa-solid fa-headset"></i></div>
-            <div class="info-item-content">
-              <h4>Toll Free Number</h4>
-              <p>1800 258 2534</p>
+          <!-- Toll Free Number -->
+          <div class="info-card-item">
+            <div class="info-icon-box">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="info-card-content">
+              <h4>Toll-Free Number</h4>
+              <p><a href="tel:18002582534">1800 258 2534</a></p>
+              <p style="font-size: 0.8rem; color: #64748b; margin-top: 2px;">Zero charge pan-India call center</p>
             </div>
           </div>
 
-          <!-- Item 3: Email -->
-          <div class="info-item-block">
-            <div class="info-icon-btn"><i class="fa-solid fa-envelope"></i></div>
-            <div class="info-item-content">
-              <h4>Email</h4>
-              <p>info@indofrench.in<br>support@indofrench.in</p>
+          <!-- Email -->
+          <div class="info-card-item">
+            <div class="info-icon-box">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="info-card-content">
+              <h4>Email Support</h4>
+              <p><a href="mailto:info@indofrench.in">info@indofrench.in</a> &nbsp;|&nbsp; <a href="mailto:support@indofrench.in">support@indofrench.in</a></p>
+              <p style="font-size: 0.8rem; color: #64748b; margin-top: 2px;">We reply within 24 business hours</p>
             </div>
           </div>
 
-          <!-- Item 4: Head Office Pin -->
-          <div class="info-item-block">
-            <div class="info-icon-btn"><i class="fa-solid fa-location-dot"></i></div>
-            <div class="info-item-content">
-              <h4>Head Office</h4>
-              <p>INDOFRENCH AGROTECH<br>PIPDIC Industrial Esate, Mettupalayam,<br>Pondicherry 605 009</p>
+          <!-- Head Office Address -->
+          <div class="info-card-item">
+            <div class="info-icon-box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="info-card-content">
+              <h4>Head Office & Factory</h4>
+              <p style="font-weight: 700; color: #002b73;">IF Agrotech Pvt. Ltd. (Since 1979)</p>
+              <p>PIPDIC Industrial Estate, Mettupalayam,<br>Puducherry - 605 009, India</p>
             </div>
           </div>
+
+        </div>
+
+        <!-- Toll-Free Helpline Box -->
+        <div class="tollfree-highlight-card">
+          <div class="tollfree-info">
+            <div class="tollfree-icon"><i class="fa-solid fa-phone-volume"></i></div>
+            <div class="tollfree-text">
+              <h5>Toll-Free Helpline</h5>
+              <p>Call us anytime during business hours</p>
+            </div>
+          </div>
+          <a href="tel:18002582534" class="tollfree-call-btn">
+            <i class="fa-solid fa-phone"></i> 1800 258 2534
+          </a>
         </div>
       </div>
 
-      <!-- Right Column: Dark Navy Form Box -->
-      <div class="contact-navy-card">
-        <form id="contactForm" onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will contact you shortly.');">
+      <!-- Right Column: Contact & Product Enquiry Form -->
+      <div class="contact-form-card">
+        <div class="contact-form-header">
+          <div class="contact-header-icon">
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+          <h2 class="contact-form-title">Send An Enquiry</h2>
+          <p class="contact-form-sub">Fill out the form below and our sleep expert will get back to you.</p>
+        </div>
+
+        <form id="contactEnquiryForm" novalidate>
           
-          <div class="navy-form-grid-2">
-            <div class="navy-field">
-              <label for="firstName">First name</label>
-              <input type="text" id="firstName" required placeholder="First name">
-            </div>
-            <div class="navy-field">
-              <label for="lastName">Last name</label>
-              <input type="text" id="lastName" placeholder="Last name">
-            </div>
-          </div>
-
-          <div class="navy-field">
-            <label for="mobile">Mobile *</label>
-            <div class="navy-phone-wrap">
-              <div class="navy-flag-tag">
-                <span>🇮🇳</span> <i class="fa-solid fa-chevron-down" style="font-size: 0.6rem;"></i>
+          <div class="form-row-2">
+            <div class="form-group-field">
+              <label for="firstName"><i class="fa-solid fa-user"></i> First Name <span class="required-star">*</span></label>
+              <div class="input-with-icon">
+                <input type="text" id="firstName" required placeholder="Enter first name">
+                <i class="fa-solid fa-user field-icon"></i>
               </div>
-              <input type="tel" id="mobile" required placeholder="Enter your Mobile number">
+              <span class="field-error-msg" id="firstNameError"></span>
+            </div>
+            <div class="form-group-field">
+              <label for="lastName"><i class="fa-solid fa-user"></i> Last Name <span class="required-star">*</span></label>
+              <div class="input-with-icon">
+                <input type="text" id="lastName" required placeholder="Enter last name">
+                <i class="fa-solid fa-user field-icon"></i>
+              </div>
+              <span class="field-error-msg" id="lastNameError"></span>
             </div>
           </div>
 
-          <div class="navy-field">
-            <label for="email">Email *</label>
-            <input type="email" id="email" required placeholder="Enter your email address">
+          <div class="form-group-field">
+            <label for="mobile"><i class="fa-solid fa-phone"></i> Mobile Number <span class="required-star">*</span></label>
+            <div class="phone-input-wrap" id="mobileInputGroup">
+              <div class="phone-flag-select">
+                <span>🇮🇳</span> <span class="phone-country-code">+91</span>
+              </div>
+              <input type="tel" id="mobile" required placeholder="10 digit mobile number" maxlength="10" inputmode="numeric">
+            </div>
+            <span class="field-error-msg" id="mobileError"></span>
           </div>
 
-          <div class="navy-form-grid-2">
-            <div class="navy-field">
-              <label for="city">City *</label>
-              <input type="text" id="city" required placeholder="Enter your city name">
+          <div class="form-group-field">
+            <label for="email"><i class="fa-solid fa-envelope"></i> Email Address <span class="required-star">*</span></label>
+            <div class="input-with-icon">
+              <input type="email" id="email" required placeholder="Enter your email address">
+              <i class="fa-solid fa-envelope field-icon"></i>
             </div>
-            <div class="navy-field">
-              <label for="state">State *</label>
-              <select id="state" required>
-                <option value="">Choose one</option>
-                <option value="Tamil Nadu">Tamil Nadu</option>
-                <option value="Puducherry">Puducherry</option>
-                <option value="Kerala">Kerala</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <option value="Telangana">Telangana</option>
-                <option value="Other">Other</option>
+            <span class="field-error-msg" id="emailError"></span>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group-field">
+              <label for="city"><i class="fa-solid fa-city"></i> City <span class="required-star">*</span></label>
+              <div class="input-with-icon">
+                <input type="text" id="city" required placeholder="Enter city name">
+                <i class="fa-solid fa-city field-icon"></i>
+              </div>
+              <span class="field-error-msg" id="cityError"></span>
+            </div>
+            <div class="form-group-field">
+              <label for="state"><i class="fa-solid fa-map-location-dot"></i> State <span class="required-star">*</span></label>
+              <div class="input-with-icon">
+                <select id="state" required>
+                  <option value="">Choose State</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Puducherry">Puducherry</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Other">Other State</option>
+                </select>
+                <i class="fa-solid fa-map-location-dot field-icon"></i>
+              </div>
+              <span class="field-error-msg" id="stateError"></span>
+            </div>
+          </div>
+
+          <div class="form-group-field">
+            <label for="chooseProduct"><i class="fa-solid fa-bed"></i> Product of Interest <span class="required-star">*</span></label>
+            <div class="input-with-icon">
+              <select id="chooseProduct" required>
+                <option value="">Select Product</option>
+                <option value="Natural Latex Mattress">100% Natural Latex Mattress</option>
+                <option value="Natural Latex Pillow">Natural Latex Contour Pillow</option>
+                <option value="Natural Latex Cushion">Natural Latex Cushion</option>
+                <option value="Natural Latex Mattress Topper">Natural Latex Mattress Topper</option>
               </select>
+              <i class="fa-solid fa-bed field-icon"></i>
             </div>
+            <span class="field-error-msg" id="chooseProductError"></span>
           </div>
 
-          <div class="navy-field">
-            <label for="chooseProduct">Choose Product *</label>
-            <select id="chooseProduct" required>
-              <option value="">Choose one</option>
-              <option value="Natural Latex Mattress">Natural Latex Mattress</option>
-              <option value="Natural Latex Pillow">Natural Latex Pillow</option>
-              <option value="Natural Latex Cushion">Natural Latex Cushion</option>
-              <option value="Natural Latex Mattress Topper">Natural Latex Mattress Topper</option>
-            </select>
+          <div class="terms-card-box">
+            <div class="terms-check-row">
+              <input type="checkbox" id="terms" required>
+              <label for="terms">I accept the <a href="index.html#terms" style="color: #002b73; text-decoration: underline;">Terms and Conditions</a> <span class="required-star">*</span></label>
+            </div>
+            <span class="field-error-msg" id="termsError"></span>
           </div>
 
-          <div class="navy-terms-check">
-            <input type="checkbox" id="terms" required>
-            <label for="terms">I accept the <a href="index.html#terms">Terms and Conditions</a> *</label>
-          </div>
-
-          <button type="submit" class="btn-contact-submit">Submit</button>
+          <button type="submit" class="btn-submit-green">
+            <span>Submit Enquiry</span> <i class="fa-solid fa-paper-plane"></i>
+          </button>
 
         </form>
       </div>
@@ -627,54 +1085,71 @@
     </div>
   </section>
 
-  <!-- ================= ENQUIRY CALL SECTION ================= -->
-  <section class="enquiry-section">
-    <h3 class="enquiry-section-title">For Enquiry call</h3>
+  <!-- ================= REGIONAL STATE ENQUIRY SECTION ================= -->
+  <section class="regional-enquiry-wrap">
+    <div class="section-header-center">
+      <span class="tag-green-small">PAN-INDIA NETWORK</span>
+      <h2 class="regional-title">Regional State Enquiry Numbers</h2>
+      <p class="regional-sub">Direct phone numbers for quick assistance in your state</p>
+    </div>
 
-    <div class="enquiry-cards-grid">
-      <div class="enquiry-card-navy">
-        <div class="enquiry-card-icon"><i class="fa-solid fa-phone"></i></div>
-        <div class="enquiry-card-info">
-          <h5>Karnataka</h5>
-          <p>96296 15212</p>
+    <div class="regional-cards-grid">
+      
+      <div class="state-contact-card">
+        <div class="state-info">
+          <h4>Karnataka</h4>
+          <p>+91 96296 15212</p>
         </div>
+        <a href="tel:+919629615212" class="state-call-pill" aria-label="Call Karnataka Enquiry">
+          <i class="fa-solid fa-phone"></i>
+        </a>
       </div>
 
-      <div class="enquiry-card-navy">
-        <div class="enquiry-card-icon"><i class="fa-solid fa-phone"></i></div>
-        <div class="enquiry-card-info">
-          <h5>Kerala</h5>
-          <p>80753 08415</p>
+      <div class="state-contact-card">
+        <div class="state-info">
+          <h4>Kerala</h4>
+          <p>+91 80753 08415</p>
         </div>
+        <a href="tel:+918075308415" class="state-call-pill" aria-label="Call Kerala Enquiry">
+          <i class="fa-solid fa-phone"></i>
+        </a>
       </div>
 
-      <div class="enquiry-card-navy">
-        <div class="enquiry-card-icon"><i class="fa-solid fa-phone"></i></div>
-        <div class="enquiry-card-info">
-          <h5>Telengana, Andhra</h5>
-          <p>93406 29276</p>
+      <div class="state-contact-card">
+        <div class="state-info">
+          <h4>Telangana & Andhra</h4>
+          <p>+91 93406 29276</p>
         </div>
+        <a href="tel:+919340629276" class="state-call-pill" aria-label="Call Telangana & Andhra Enquiry">
+          <i class="fa-solid fa-phone"></i>
+        </a>
       </div>
 
-      <div class="enquiry-card-navy">
-        <div class="enquiry-card-icon"><i class="fa-solid fa-phone"></i></div>
-        <div class="enquiry-card-info">
-          <h5>Other States</h5>
-          <p>63691 80612</p>
+      <div class="state-contact-card">
+        <div class="state-info">
+          <h4>Other States</h4>
+          <p>+91 63691 80612</p>
         </div>
+        <a href="tel:+916369180612" class="state-call-pill" aria-label="Call Other States Enquiry">
+          <i class="fa-solid fa-phone"></i>
+        </a>
       </div>
+
     </div>
   </section>
 
-  <!-- ================= LOCATE US MAP ================= -->
-  <section class="map-section">
-    <h2 class="map-title">Locate Us</h2>
-    <div class="map-iframe-wrap">
+  <!-- ================= MAP SECTION ================= -->
+  <section class="map-section-wrap">
+    <div class="section-header-center">
+      <span class="tag-green-small">VISIT OUR HEADQUARTERS</span>
+      <h2 class="regional-title">Locate Us On Map</h2>
+      <p class="regional-sub">PIPDIC Industrial Estate, Mettupalayam, Puducherry 605 009</p>
+    </div>
+
+    <div class="map-card-frame">
       <iframe 
+        class="map-iframe"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.3243178523356!2d79.7909063!3d11.9520864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5363e7c858593d%3A0x6d11a1964f4347fb!2sIndofrench%20corporate%20office!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-        width="100%" 
-        height="100%" 
-        style="border:0;" 
         allowfullscreen="" 
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade">
@@ -683,24 +1158,27 @@
   </section>
 
   <!-- ================= FOOTER ================= -->
-    <footer class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="footer-main-grid">
-        <!-- Col 1: Logo + Head Office -->
+        <!-- Col 1: Brand Logo & Head Office Details -->
         <div class="footer-office-col">
-          <div class="footer-brand-logo" style="margin-bottom: 24px;">
+          <div class="footer-brand-logo" style="margin-bottom: 20px;">
             <a href="index.html" aria-label="Indofrench Home">
-              <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 66px; width: auto; object-fit: contain; display: block;">
+              <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 60px; width: auto; object-fit: contain; display: block;">
             </a>
           </div>
-          <p class="footer-office-label">Head office:</p>
-          <p class="footer-office-company">IF Agrotech Pvt, Ltd.</p>
-          <p class="footer-office-since">Since 1979.</p>
-          <p class="footer-office-line">PIPDIC Industrial Estate ,</p>
-          <p class="footer-office-line">Mettupalayam, Puducherry-605009.</p>
-          <p class="footer-office-line">Toll- Free : <a href="tel:+91636980612">+91 636980612</a></p>
-          <p class="footer-office-label">Working hours:</p>
-          <p class="footer-office-line">Mon to Saturday : 9:00 a.m. - 7: 00 p.m.</p>
+          <p class="footer-office-company">IF Agrotech Pvt. Ltd. <span style="font-weight: 600; color: #1c7a01; font-size: 0.88rem;">(Since 1979)</span></p>
+          <p class="footer-office-address"><i class="fa-solid fa-location-dot" style="color: #1c7a01; margin-right: 6px;"></i> PIPDIC Industrial Estate, Mettupalayam, Puducherry - 605009.</p>
+          <p class="footer-contact-item"><i class="fa-solid fa-phone" style="color: #1c7a01; margin-right: 6px;"></i> Toll-Free: <a href="tel:+91636980612" style="font-weight: 700; color: #002b73; text-decoration: none;">+91 636980612</a></p>
+          <p class="footer-contact-item"><i class="fa-solid fa-envelope" style="color: #1c7a01; margin-right: 6px;"></i> Email: <a href="mailto:info@indofrench.in" style="color: #002b73; text-decoration: none;">info@indofrench.in</a></p>
+          
+          <div class="footer-social-links" style="margin-top: 14px; display: flex; gap: 10px;">
+            <a href="#" aria-label="Facebook" style="width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; display: inline-flex; align-items: center; justify-content: center; color: #002b73; text-decoration: none; transition: all 0.2s ease;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; display: inline-flex; align-items: center; justify-content: center; color: #002b73; text-decoration: none; transition: all 0.2s ease;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; display: inline-flex; align-items: center; justify-content: center; color: #002b73; text-decoration: none; transition: all 0.2s ease;"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; display: inline-flex; align-items: center; justify-content: center; color: #002b73; text-decoration: none; transition: all 0.2s ease;"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
 
         <!-- Col 2: Main Pages -->
@@ -742,11 +1220,15 @@
         <div>
           <h4 class="footer-col-title">Support</h4>
           <ul class="footer-links-list">
-            <li><a href="index.html#stores">Locate a Store</a></li>
+            <li><a href="dealers.html">Locate a Store</a></li>
             <li><a href="testimonials.html">Review</a></li>
             <li><a href="faqs.html">FAQS</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid #f1f5f9;">
+            <p style="color: #002b73; font-weight: 700; font-size: 0.92rem; margin: 0 0 4px 0; font-family: 'Outfit', sans-serif;">Working hours:</p>
+            <p style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.88rem; color: #475569; margin: 0; line-height: 1.45;">Mon to Saturday : 9:00 a.m. - 7:00 p.m.</p>
+          </div>
         </div>
       </div>
     </div>

@@ -391,7 +391,7 @@
       </nav>
 
       <div class="header-actions">
-        <a href="index.html#stores" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
+        <a href="dealers.html" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
         <a href="contact-us.html" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
           <span></span>
@@ -413,17 +413,19 @@
       <h1 class="page-main-title">Registration form for guarantee</h1>
       <p class="page-sub-title">For any help during registering contact Toll Free Number: <strong>1800 258 2534</strong></p>
 
-      <form id="guaranteeForm" onsubmit="event.preventDefault(); alert('Thank you! Your Guarantee Registration has been submitted successfully.');">
+      <form id="guaranteeForm" novalidate>
         
         <!-- Row 1: First name, Last name -->
         <div class="form-row-2">
           <div class="form-group-field">
             <label for="firstName">First name *</label>
             <input type="text" id="firstName" required placeholder="Your First Name">
+            <span class="field-error-msg" id="firstNameError"></span>
           </div>
           <div class="form-group-field">
             <label for="lastName">Last name</label>
             <input type="text" id="lastName" placeholder="Last name">
+            <span class="field-error-msg" id="lastNameError"></span>
           </div>
         </div>
 
@@ -431,16 +433,18 @@
         <div class="form-row-2">
           <div class="form-group-field">
             <label for="mobile">Mobile *</label>
-            <div class="phone-input-wrap">
+            <div class="phone-input-wrap" id="mobileInputWrap">
               <div class="phone-flag-select">
-                <span>🇮🇳</span> <i class="fa-solid fa-chevron-down" style="font-size: 0.65rem;"></i>
+                <span>🇮🇳</span> <span class="phone-country-code">+91</span>
               </div>
-              <input type="tel" id="mobile" required placeholder="Mobile Number with country code">
+              <input type="tel" id="mobile" required placeholder="10 digit mobile number" maxlength="10" inputmode="numeric">
             </div>
+            <span class="field-error-msg" id="mobileError"></span>
           </div>
           <div class="form-group-field">
             <label for="email">Email *</label>
             <input type="email" id="email" required placeholder="Your email address">
+            <span class="field-error-msg" id="emailError"></span>
           </div>
         </div>
 
@@ -455,6 +459,7 @@
               <option value="Natural Latex Cushion">Natural Latex Cushion</option>
               <option value="Natural Latex Mattress Topper">Natural Latex Mattress Topper</option>
             </select>
+            <span class="field-error-msg" id="productNameError"></span>
           </div>
           <div class="form-group-field">
             <label for="firmness">Firmness *</label>
@@ -465,6 +470,7 @@
               <option value="Hard">Hard</option>
               <option value="Extra Hard">Extra Hard</option>
             </select>
+            <span class="field-error-msg" id="firmnessError"></span>
           </div>
         </div>
 
@@ -473,10 +479,12 @@
           <div class="form-group-field">
             <label for="purchaseDate">Purchase Date *</label>
             <input type="date" id="purchaseDate" required placeholder="Choose a date">
+            <span class="field-error-msg" id="purchaseDateError"></span>
           </div>
           <div class="form-group-field">
             <label for="quantity">Quantity *</label>
-            <input type="text" id="quantity" required placeholder="Quantity of Product">
+            <input type="text" id="quantity" required placeholder="Quantity of Product (e.g. 1)" maxlength="3" inputmode="numeric">
+            <span class="field-error-msg" id="quantityError"></span>
           </div>
         </div>
 
@@ -484,6 +492,7 @@
         <div class="form-group-field" style="margin-bottom: 24px;">
           <label for="dealerName">Dealer Name *</label>
           <input type="text" id="dealerName" required placeholder="Enter purchase dealer name">
+          <span class="field-error-msg" id="dealerNameError"></span>
         </div>
 
         <!-- Row 6: Dealer State, Purchase Bill Upload -->
@@ -502,23 +511,29 @@
               <option value="Delhi">Delhi</option>
               <option value="Other">Other</option>
             </select>
+            <span class="field-error-msg" id="dealerStateError"></span>
           </div>
 
           <div class="form-group-field">
             <label>Purchase Bill</label>
-            <div>
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
               <label for="billUpload" class="upload-btn-navy">
                 <i class="fa-solid fa-plus"></i> Upload File
               </label>
               <input type="file" id="billUpload" accept="image/*,.pdf" style="display: none;">
+              <span id="billFileName" class="file-name-tag" style="display: none;">No file selected</span>
             </div>
+            <span class="field-error-msg" id="billUploadError"></span>
           </div>
         </div>
 
         <!-- Terms Checkbox -->
-        <div class="terms-check-row">
-          <input type="checkbox" id="terms" required>
-          <label for="terms">I accept the <a href="index.html#terms">Terms and Conditions</a> *</label>
+        <div class="terms-check-row" style="flex-direction: column; align-items: flex-start; gap: 4px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I accept the <a href="index.html#terms">Terms and Conditions</a> *</label>
+          </div>
+          <span class="field-error-msg" id="termsError"></span>
         </div>
 
         <!-- Submit Button -->
@@ -529,24 +544,27 @@
   </section>
 
   <!-- ================= FOOTER ================= -->
-    <footer class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="footer-main-grid">
-        <!-- Col 1: Logo + Head Office -->
+        <!-- Col 1: Brand Logo & Head Office Details -->
         <div class="footer-office-col">
-          <div class="footer-brand-logo" style="margin-bottom: 24px;">
+          <div class="footer-brand-logo" style="margin-bottom: 20px;">
             <a href="index.html" aria-label="Indofrench Home">
-              <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 66px; width: auto; object-fit: contain; display: block;">
+              <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 60px; width: auto; object-fit: contain; display: block;">
             </a>
           </div>
-          <p class="footer-office-label">Head office:</p>
-          <p class="footer-office-company">IF Agrotech Pvt, Ltd.</p>
-          <p class="footer-office-since">Since 1979.</p>
-          <p class="footer-office-line">PIPDIC Industrial Estate ,</p>
-          <p class="footer-office-line">Mettupalayam, Puducherry-605009.</p>
-          <p class="footer-office-line">Toll- Free : <a href="tel:+91636980612">+91 636980612</a></p>
-          <p class="footer-office-label">Working hours:</p>
-          <p class="footer-office-line">Mon to Saturday : 9:00 a.m. - 7: 00 p.m.</p>
+          <p class="footer-office-company">IF Agrotech Pvt. Ltd. <span style="font-weight: 600; color: #1c7a01; font-size: 0.88rem;">(Since 1979)</span></p>
+          <p class="footer-office-address"><i class="fa-solid fa-location-dot" style="color: #1c7a01; margin-right: 6px;"></i> PIPDIC Industrial Estate, Mettupalayam, Puducherry - 605009.</p>
+          <p class="footer-contact-item"><i class="fa-solid fa-phone" style="color: #1c7a01; margin-right: 6px;"></i> Toll-Free: <a href="tel:+91636980612" style="font-weight: 700; color: #002b73; text-decoration: none;">+91 636980612</a></p>
+          <p class="footer-contact-item"><i class="fa-solid fa-envelope" style="color: #1c7a01; margin-right: 6px;"></i> Email: <a href="mailto:info@indofrench.in" style="color: #002b73; text-decoration: none;">info@indofrench.in</a></p>
+          
+          <div class="footer-social-links" style="margin-top: 14px; display: flex; gap: 10px;">
+            <a href="#" aria-label="Facebook" style="width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; display: inline-flex; align-items: center; justify-content: center; color: #002b73; text-decoration: none; transition: all 0.2s ease;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; display: inline-flex; align-items: center; justify-content: center; color: #002b73; text-decoration: none; transition: all 0.2s ease;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; display: inline-flex; align-items: center; justify-content: center; color: #002b73; text-decoration: none; transition: all 0.2s ease;"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; display: inline-flex; align-items: center; justify-content: center; color: #002b73; text-decoration: none; transition: all 0.2s ease;"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
 
         <!-- Col 2: Main Pages -->
@@ -588,11 +606,15 @@
         <div>
           <h4 class="footer-col-title">Support</h4>
           <ul class="footer-links-list">
-            <li><a href="index.html#stores">Locate a Store</a></li>
+            <li><a href="dealers.html">Locate a Store</a></li>
             <li><a href="testimonials.html">Review</a></li>
             <li><a href="faqs.html">FAQS</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid #f1f5f9;">
+            <p style="color: #002b73; font-weight: 700; font-size: 0.92rem; margin: 0 0 4px 0; font-family: 'Outfit', sans-serif;">Working hours:</p>
+            <p style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.88rem; color: #475569; margin: 0; line-height: 1.45;">Mon to Saturday : 9:00 a.m. - 7:00 p.m.</p>
+          </div>
         </div>
       </div>
     </div>

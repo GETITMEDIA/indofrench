@@ -285,7 +285,7 @@
     }
     .card-overlay-box {
       position: absolute;
-      background-color: #1c407c;
+      background-color: #002b73;
       border-radius: 16px;
       padding: 24px 28px 20px;
       color: #ffffff;
@@ -296,10 +296,14 @@
       display: flex;
       flex-direction: column;
       z-index: 2;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
       transition: background-color 0.25s ease, transform 0.25s ease;
     }
     .popular-prod-card:hover .card-overlay-box {
       background-color: #16366b;
+      transform: translateY(-4px) !important;
     }
     .box-pos-left {
       bottom: 24px;
@@ -489,7 +493,7 @@
       </nav>
 
       <div class="header-actions">
-        <a href="index.html#stores" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
+        <a href="dealers.html" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
         <a href="contact-us.html" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
           <span></span>
@@ -512,13 +516,15 @@
         <!-- Card 1: Mattress -->
         <div class="popular-prod-card">
           <div class="card-img-holder">
-            <img src="assets/prod-mattress.webp" alt="Natural Latex Mattress" loading="eager">
+            <a href="mattresses.html">
+              <img src="assets/prod-mattress.webp" alt="Natural Latex Mattress" loading="eager">
+            </a>
           </div>
           <div class="card-overlay-box box-pos-left">
             <h3 class="card-box-title">Mattress</h3>
             <p class="card-box-desc">Experience the ultimate in sleep luxury with our Latex Mattress.</p>
             <div class="card-box-action">
-              <a href="index.html#popular-products" class="card-shop-now-btn">
+              <a href="mattresses.html" class="card-shop-now-btn">
                 Shop Now <span class="shop-arrow">&gt;&gt;</span>
               </a>
             </div>
@@ -528,13 +534,15 @@
         <!-- Card 2: Pillows -->
         <div class="popular-prod-card">
           <div class="card-img-holder">
-            <img src="assets/prod-pillows.webp" alt="Natural Latex Pillows" loading="eager">
+            <a href="pillows.html">
+              <img src="assets/prod-pillows.webp" alt="Natural Latex Pillows" loading="eager">
+            </a>
           </div>
           <div class="card-overlay-box box-pos-right">
             <h3 class="card-box-title">Pillows</h3>
             <p class="card-box-desc">"Sleep on the Clouds" - Embrace Comfort with our Latex Pillow</p>
             <div class="card-box-action">
-              <a href="index.html#popular-products" class="card-shop-now-btn">
+              <a href="pillows.html" class="card-shop-now-btn">
                 Shop Now <span class="shop-arrow">&gt;&gt;</span>
               </a>
             </div>
@@ -544,29 +552,33 @@
         <!-- Card 3: Cushions -->
         <div class="popular-prod-card">
           <div class="card-img-holder">
-            <img src="assets/prod-cushions.webp" alt="Natural Latex Cushions" loading="lazy">
+            <a href="cushions.html">
+              <img src="assets/prod-cushions.webp" alt="Natural Latex Cushions" loading="lazy">
+            </a>
           </div>
           <div class="card-overlay-box box-pos-left">
             <h3 class="card-box-title">Cushions</h3>
             <p class="card-box-desc">Float on comfort with our latex cushion Where Support Meets luxury</p>
             <div class="card-box-action">
-              <a href="index.html#popular-products" class="card-shop-now-btn">
+              <a href="cushions.html" class="card-shop-now-btn">
                 Shop Now <span class="shop-arrow">&gt;&gt;</span>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Card 4: Mattress Toppers -->
+        <!-- Card 4: Mattress Topper -->
         <div class="popular-prod-card">
           <div class="card-img-holder">
-            <img src="assets/prod-toppers.webp" alt="Natural Latex Mattress Toppers" loading="lazy">
+            <a href="mattress-topper.html">
+              <img src="assets/prod-toppers.webp" alt="Natural Latex Mattress Toppers" loading="lazy">
+            </a>
           </div>
           <div class="card-overlay-box box-pos-right">
-            <h3 class="card-box-title">Mattress Toppers</h3>
-            <p class="card-box-desc">Float on comfort with our latex cushion Where Support Meets luxury</p>
+            <h3 class="card-box-title">Mattress Topper</h3>
+            <p class="card-box-desc">Upgrade your sleep quality instantly with our 100% organic natural pincore latex mattress toppers.</p>
             <div class="card-box-action">
-              <a href="index.html#popular-products" class="card-shop-now-btn">
+              <a href="mattress-topper.html" class="card-shop-now-btn">
                 Shop Now <span class="shop-arrow">&gt;&gt;</span>
               </a>
             </div>
@@ -581,21 +593,24 @@
     <footer class="footer">
     <div class="container">
       <div class="footer-main-grid">
-        <!-- Col 1: Logo + Head Office -->
+        <!-- Col 1: Brand Logo & Head Office Details -->
         <div class="footer-office-col">
-          <div class="footer-brand-logo" style="margin-bottom: 24px;">
+          <div class="footer-brand-logo" style="margin-bottom: 20px;">
             <a href="index.html" aria-label="Indofrench Home">
-              <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 66px; width: auto; object-fit: contain; display: block;">
+              <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 60px; width: auto; object-fit: contain; display: block;">
             </a>
           </div>
-          <p class="footer-office-label">Head office:</p>
-          <p class="footer-office-company">IF Agrotech Pvt, Ltd.</p>
-          <p class="footer-office-since">Since 1979.</p>
-          <p class="footer-office-line">PIPDIC Industrial Estate ,</p>
-          <p class="footer-office-line">Mettupalayam, Puducherry-605009.</p>
-          <p class="footer-office-line">Toll- Free : <a href="tel:+91636980612">+91 636980612</a></p>
-          <p class="footer-office-label">Working hours:</p>
-          <p class="footer-office-line">Mon to Saturday : 9:00 a.m. - 7: 00 p.m.</p>
+          <p class="footer-office-company">IF Agrotech Pvt. Ltd. <span style="font-weight: 600; color: #1c7a01; font-size: 0.88rem;">(Since 1979)</span></p>
+          <p class="footer-office-address"><i class="fa-solid fa-location-dot" style="color: #1c7a01; margin-right: 6px;"></i> PIPDIC Industrial Estate, Mettupalayam, Puducherry - 605009.</p>
+          <p class="footer-contact-item"><i class="fa-solid fa-phone" style="color: #1c7a01; margin-right: 6px;"></i> Toll-Free: <a href="tel:+91636980612" style="font-weight: 700; color: #002b73; text-decoration: none;">+91 636980612</a></p>
+          <p class="footer-contact-item"><i class="fa-solid fa-envelope" style="color: #1c7a01; margin-right: 6px;"></i> Email: <a href="mailto:info@indofrench.in" style="color: #002b73; text-decoration: none;">info@indofrench.in</a></p>
+          
+          <div class="footer-social-links" style="margin-top: 14px; display: flex; gap: 10px;">
+            <a href="#" aria-label="Facebook" style="width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; display: inline-flex; align-items: center; justify-content: center; color: #002b73; text-decoration: none; transition: all 0.2s ease;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; display: inline-flex; align-items: center; justify-content: center; color: #002b73; text-decoration: none; transition: all 0.2s ease;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; display: inline-flex; align-items: center; justify-content: center; color: #002b73; text-decoration: none; transition: all 0.2s ease;"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; display: inline-flex; align-items: center; justify-content: center; color: #002b73; text-decoration: none; transition: all 0.2s ease;"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
 
         <!-- Col 2: Main Pages -->
@@ -637,11 +652,15 @@
         <div>
           <h4 class="footer-col-title">Support</h4>
           <ul class="footer-links-list">
-            <li><a href="index.html#stores">Locate a Store</a></li>
+            <li><a href="dealers.html">Locate a Store</a></li>
             <li><a href="testimonials.html">Review</a></li>
             <li><a href="faqs.html">FAQS</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid #f1f5f9;">
+            <p style="color: #002b73; font-weight: 700; font-size: 0.92rem; margin: 0 0 4px 0; font-family: 'Outfit', sans-serif;">Working hours:</p>
+            <p style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.88rem; color: #475569; margin: 0; line-height: 1.45;">Mon to Saturday : 9:00 a.m. - 7:00 p.m.</p>
+          </div>
         </div>
       </div>
     </div>
