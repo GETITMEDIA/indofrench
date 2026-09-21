@@ -561,25 +561,72 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 8. Contact & Enquiry Forms Validation Integrations
+  // 8. Contact & Enquiry Forms Validation Integrations (#contactEnquiryForm)
   const enquiryForm = document.getElementById('contactEnquiryForm');
   if (enquiryForm) {
+    const cFN = document.getElementById('firstName');
+    const cLN = document.getElementById('lastName');
+    const cMob = document.getElementById('mobile');
+    const cEm = document.getElementById('email');
+    const cCity = document.getElementById('city');
+    const cState = document.getElementById('state');
+    const cProd = document.getElementById('chooseProduct');
+    const cTerms = document.getElementById('terms');
+
+    if (cFN) {
+      cFN.addEventListener('blur', () => validateNameOnly('firstName', 'firstNameError', 'First name', true));
+      cFN.addEventListener('input', () => { if (cFN.classList.contains('is-invalid')) validateNameOnly('firstName', 'firstNameError', 'First name', true); });
+    }
+    if (cLN) {
+      cLN.addEventListener('blur', () => validateNameOnly('lastName', 'lastNameError', 'Last name', true));
+      cLN.addEventListener('input', () => { if (cLN.classList.contains('is-invalid')) validateNameOnly('lastName', 'lastNameError', 'Last name', true); });
+    }
+    if (cMob) {
+      cMob.addEventListener('blur', () => validateMobileField('mobile', 'mobileError', 'mobileInputGroup'));
+      cMob.addEventListener('input', () => { if (cMob.classList.contains('is-invalid') || cMob.value.length === 10) validateMobileField('mobile', 'mobileError', 'mobileInputGroup'); });
+    }
+    if (cEm) {
+      cEm.addEventListener('blur', () => validateEmailField('email', 'emailError'));
+      cEm.addEventListener('input', () => { if (cEm.classList.contains('is-invalid')) validateEmailField('email', 'emailError'); });
+    }
+    if (cCity) {
+      cCity.addEventListener('blur', () => validateFieldText('city', 'cityError', 'City name', 2));
+      cCity.addEventListener('input', () => { if (cCity.classList.contains('is-invalid')) validateFieldText('city', 'cityError', 'City name', 2); });
+    }
+    if (cState) {
+      cState.addEventListener('change', () => validateSelectField('state', 'stateError', 'your state'));
+    }
+    if (cProd) {
+      cProd.addEventListener('change', () => validateSelectField('chooseProduct', 'chooseProductError', 'a product'));
+    }
+    if (cTerms) {
+      cTerms.addEventListener('change', () => validateCheckboxField('terms', 'termsError', 'You must accept the terms and conditions'));
+    }
+
     enquiryForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const vFN = validateNameOnly('firstName', 'firstNameError', 'First name', true);
-      const vLN = validateNameOnly('lastName', 'lastNameError', 'Last name', true);
-      const vMob = validateMobileField('mobile', 'mobileError', 'mobileInputGroup');
-      const vEm = validateEmailField('email', 'emailError');
+      const v1 = validateNameOnly('firstName', 'firstNameError', 'First name', true);
+      const v2 = validateNameOnly('lastName', 'lastNameError', 'Last name', true);
+      const v3 = validateMobileField('mobile', 'mobileError', 'mobileInputGroup');
+      const v4 = validateEmailField('email', 'emailError');
+      const v5 = validateFieldText('city', 'cityError', 'City name', 2);
+      const v6 = validateSelectField('state', 'stateError', 'your state');
+      const v7 = validateSelectField('chooseProduct', 'chooseProductError', 'a product');
+      const v8 = validateCheckboxField('terms', 'termsError', 'You must accept the terms and conditions');
 
-      if (vFN && vLN && vMob && vEm) {
+      if (v1 && v2 && v3 && v4 && v5 && v6 && v7 && v8) {
         const name = document.getElementById('firstName').value.trim();
         const mob = document.getElementById('mobile').value.trim();
-        alert(`Thank you, ${name}!\nYour enquiry has been received.\nMobile: +91 ${mob}\nOur Indofrench sleep specialist will contact you shortly.`);
+        const prod = document.getElementById('chooseProduct').value;
+        alert(`Thank you, ${name}! 🎉\n\nYour enquiry for "${prod}" has been received.\nMobile: +91 ${mob}\n\nOur Indofrench sleep specialist will contact you within 24 hours.`);
         enquiryForm.reset();
         document.querySelectorAll('#contactEnquiryForm .is-valid').forEach(el => el.classList.remove('is-valid'));
       } else {
         const invalidEl = enquiryForm.querySelector('.is-invalid');
-        if (invalidEl) invalidEl.focus();
+        if (invalidEl) {
+          invalidEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          invalidEl.focus();
+        }
       }
     });
   }
