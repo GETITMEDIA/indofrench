@@ -9,6 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.getElementById('navMenu');
 
   if (hamburgerBtn && navMenu) {
+    // Inject "Locate A Store" button inside the mobile drawer menu
+    if (!navMenu.querySelector('.mobile-drawer-locate-btn')) {
+      const locateBtn = document.createElement('a');
+      locateBtn.href = 'dealers.html';
+      locateBtn.className = 'mobile-drawer-locate-btn';
+      locateBtn.innerHTML = 'Locate A Store <i class="fa-solid fa-location-dot" style="margin-left: 6px;"></i>';
+      navMenu.appendChild(locateBtn);
+    }
+
     hamburgerBtn.addEventListener('click', () => {
       navMenu.classList.toggle('open');
       const isOpen = navMenu.classList.contains('open');

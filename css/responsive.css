@@ -1,0 +1,574 @@
+/* ===================================================================
+   INDOFRENCH — PAGE-LEVEL RESPONSIVE OVERRIDES
+   Linked on every page AFTER the page's inline <style> block, so rules
+   here win over page-specific CSS at equal specificity.
+   (Shared components are handled in styles.css "GLOBAL RESPONSIVE LAYER".)
+
+   Large Tablet  769–1024px : 2-column grids
+   Small Tablet  481–768px  : 1 column
+   Mobile        320–480px  : 1 column, tighter spacing
+   =================================================================== */
+
+/* ---------- All sizes: overflow safety ---------- */
+.pdetail-grid > *,
+.contact-grid-container > *,
+.dealer-grid-container > *,
+.adv-top-grid > *,
+.feature-row-card > *,
+.form-row-2 > * {
+  min-width: 0;
+}
+
+.pdetail-price-box,
+.pdetail-actions,
+.faq-help-buttons,
+.mattress-card-footer,
+.pillow-card-footer,
+.cushion-card-footer,
+.prod-card-foot,
+.blog-stats-bar,
+.dealer-help-box,
+.tollfree-highlight-card {
+  flex-wrap: wrap;
+}
+
+.spec-row { gap: 12px; }
+
+/* Footer contact rows are flex: restore the collapsed label/link space */
+.footer-office-col .footer-contact-item { column-gap: 6px; }
+.spec-val { text-align: right; }
+
+/* ===================================================================
+   MOBILE / TABLET NAV DRAWER (< 992px)
+   Several pages force `.nav-menu { display:flex !important }` inline;
+   the header-scoped selectors below out-rank that on every page.
+   =================================================================== */
+@media (max-width: 991px) {
+  .header .nav-menu {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-height: calc(100vh - 70px) !important;
+    overflow-y: auto !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    background: #ffffff !important;
+    padding: 10px 20px 20px !important;
+    gap: 0 !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18) !important;
+    border-bottom: 3px solid #002b73 !important;
+    z-index: 1000 !important;
+  }
+  .header .nav-menu.open { display: flex !important; }
+  .header .hamburger-btn { display: flex !important; }
+
+  .header .nav-menu > .nav-link,
+  .header .nav-item-dropdown > .nav-link {
+    width: 100% !important;
+    padding: 10px 0 !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #1c407c !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+  }
+
+  .header .nav-item-dropdown { width: 100% !important; }
+
+  .header .nav-menu .dropdown-menu {
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 4px 0 6px 14px !important;
+    background: transparent !important;
+  }
+
+  .header .dropdown-link {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 32px !important;
+    padding: 5px 10px !important;
+    font-size: 0.88rem !important;
+    color: #475569 !important;
+    white-space: normal !important;
+    border-bottom: none !important;
+  }
+  
+  /* Hide top header action buttons on Mobile view (moved inside drawer) */
+  .header-actions .btn-locate-store,
+  .header-actions .btn-contact-header,
+  .header .btn-locate-store,
+  .header .btn-contact-header,
+  .btn-locate-store,
+  .btn-contact-header {
+    display: none !important;
+  }
+}
+
+/* Styled Locate A Store button inside mobile drawer */
+.mobile-drawer-locate-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background-color: #002b73 !important;
+  color: #ffffff !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  padding: 12px 20px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  margin: 14px 0 8px 0 !important;
+  width: 100% !important;
+  box-shadow: 0 4px 12px rgba(0, 43, 115, 0.2) !important;
+  text-align: center !important;
+}
+
+.mobile-drawer-locate-btn:hover {
+  background-color: #1c7a01 !important;
+  color: #ffffff !important;
+}
+
+/* ===================================================================
+   LAPTOP / DESKTOP HEADER NAV (>= 992px)
+   =================================================================== */
+@media (min-width: 992px) {
+  .header .hamburger-btn {
+    display: none !important;
+  }
+  .header .nav-menu {
+    display: flex !important;
+    position: static !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-bottom: none !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .header .btn-locate-store {
+    display: inline-flex !important;
+  }
+  .header .btn-contact-header {
+    display: none !important;
+  }
+  .mobile-drawer-locate-btn {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .header .nav-menu {
+    gap: 16px !important;
+  }
+  .header .nav-link {
+    font-size: 0.88rem !important;
+  }
+  .header .btn-locate-store {
+    padding: 8px 14px !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+/* ===================================================================
+   LARGE TABLET (768px – 1024px)
+   =================================================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Card grids -> 2 columns */
+  .mattress-grid,
+  .pillow-grid,
+  .cushion-grid,
+  .reviews-grid,
+  .regional-cards-grid,
+  .gallery-grid,
+  .cert-grid,
+  .grid-3-col,
+  .grid-2-col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* Topper listing: flex row of fixed cards -> 2-column grid */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .product-card { width: 100%; }
+
+  /* Two-panel page layouts -> balanced 2 columns */
+  .pdetail-grid,
+  .contact-grid-container,
+  .dealer-grid-container,
+  .adv-top-grid,
+  .feature-row-card {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  /* Form rows inside a half-width panel are too narrow for 2 fields */
+  .contact-grid-container .form-row-2,
+  .dealer-grid-container .form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact-left-card,
+  .dealer-left-card,
+  .adv-content-card { padding: 28px 24px; }
+  .contact-form-card,
+  .dealer-form-card { padding: 32px 24px; }
+  .feature-row-card { padding: 24px; }
+
+  .pdetail-main-img { height: 320px; }
+  .pdetail-title { font-size: 2rem; }
+  .pdetail-actions > a { flex: 1 1 auto; justify-content: center; }
+
+  .contact-hero-title,
+  .dealer-hero-title,
+  .faqs-hero-title,
+  .adv-hero-title { font-size: 2.3rem !important; }
+
+  .contact-left-title,
+  .contact-form-title,
+  .dealer-card-title,
+  .adv-section-title,
+  .regional-title { font-size: 1.8rem !important; }
+
+  .feature-row-content h3 { font-size: 1.45rem !important; }
+  .feature-row-img-frame { height: 260px; }
+
+  /* Footer: 2 columns, brand block full width */
+  .footer-main-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 28px 24px; }
+  .footer-office-col { grid-column: 1 / -1; }
+}
+
+/* ===================================================================
+   SMALL TABLET + MOBILE (< 768px)
+   =================================================================== */
+@media (max-width: 767px) {
+
+  /* ---------- Grids -> 1 column ---------- */
+  .mattress-grid,
+  .pillow-grid,
+  .cushion-grid,
+  .reviews-grid,
+  .regional-cards-grid,
+  .gallery-grid,
+  .cert-grid,
+  .grid-3-col,
+  .grid-2-col,
+  .pdetail-grid,
+  .contact-grid-container,
+  .dealer-grid-container,
+  .adv-top-grid,
+  .feature-row-card,
+  .feature-grid-box,
+  .form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .form-row-2 { gap: 0; margin-bottom: 0; }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .product-card { width: 100%; }
+
+  /* ---------- Section spacing ---------- */
+  .contact-hero-banner,
+  .dealer-hero-banner,
+  .faqs-hero-banner,
+  .adv-hero-banner,
+  .dealers-hero-wrap { padding: 44px 16px 48px; }
+
+  .mattress-hero-section,
+  .pillow-hero-section,
+  .cushion-hero-section,
+  .cat-hero,
+  .page-hero { padding: 44px 16px 40px; }
+
+  .contact-page-wrap,
+  .dealer-page-wrap,
+  .faqs-page-wrap,
+  .adv-page-wrap,
+  .guarantee-page-wrap { padding: 32px 16px 48px; }
+
+  .mattress-grid-wrap,
+  .pillow-grid-wrap,
+  .cushion-grid-wrap,
+  .prod-grid-wrap,
+  .pdetail-wrap { padding: 32px 0 48px; }
+
+  .testimonials-section { padding: 40px 0 56px !important; }
+  .cert-section-wrap { padding: 40px 16px 48px; }
+  .tech-rows-wrap { padding: 0 16px 40px; }
+  .regional-enquiry-wrap { margin: 40px auto 48px; padding: 0 16px; }
+  .map-section-wrap { margin-bottom: 48px; padding: 0 16px; }
+  .dealers-main-container,
+  .blog-article-wrapper { padding: 0 16px; }
+
+  /* ---------- Cards ---------- */
+  .contact-left-card,
+  .contact-form-card,
+  .dealer-left-card,
+  .dealer-form-card,
+  .adv-content-card { padding: 24px 18px; border-radius: 16px; }
+  .dealer-left-card,
+  .sidebar-sticky-wrap { position: static; }
+  .sidebar-widget-card,
+  .cta-navy-card { padding: 22px 18px; }
+  .feature-row-card { padding: 20px 18px; }
+  .faq-search-card { padding: 18px; }
+  .faq-help-cta-card { padding: 24px 18px; flex-direction: column; align-items: flex-start; }
+  .review-card { padding: 22px 18px; }
+  .mattress-card-body,
+  .pillow-card-body,
+  .cushion-card-body,
+  .prod-card-body { padding: 20px 18px; }
+  .pdetail-gallery { padding: 14px; border-radius: 18px; }
+  .pdetail-specs-table { padding: 12px 16px; }
+  .state-contact-card { padding: 18px; }
+  .satisfaction-box { padding: 18px; }
+  .info-card-item { padding: 16px; gap: 12px; }
+  .benefit-item { padding: 14px; }
+  .dealer-help-box,
+  .tollfree-highlight-card { padding: 18px; }
+  .map-card-frame { padding: 10px; }
+  .no-faq-results { padding: 24px 16px; }
+
+  /* ---------- Images ---------- */
+  .pdetail-main-img { height: 260px; }
+  .pdetail-thumbs { flex-wrap: wrap; gap: 10px; }
+  .pdetail-thumb { width: 64px; height: 64px; }
+  .mattress-card-img-wrap,
+  .pillow-card-img-wrap,
+  .cushion-card-img-wrap,
+  .prod-img-box { height: 220px; }
+  .feature-row-img-frame { height: 220px; }
+  .city-card-img { height: 200px; }
+  .grid-1-col .city-card-img { height: 220px; }
+  .map-iframe { height: 300px; }
+  .leaf-bg-left,
+  .leaf-bg-right { display: none; }
+
+  /* ---------- Typography: page titles (h1) ---------- */
+  .contact-hero-title,
+  .dealer-hero-title,
+  .faqs-hero-title,
+  .adv-hero-title,
+  .mattress-hero-title,
+  .pillow-hero-title,
+  .cushion-hero-title,
+  .cat-hero-title,
+  .page-hero-title,
+  .dealers-hero-wrap h1,
+  .pdetail-title,
+  .blog-article-title,
+  .page-main-title {
+    font-size: clamp(1.6rem, 6.2vw, 1.8rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Section titles (h2) */
+  .contact-left-title,
+  .contact-form-title,
+  .regional-title,
+  .dealer-card-title,
+  .adv-section-title,
+  .cert-title,
+  .gallery-title,
+  .state-title-blue,
+  .state-title-green,
+  .section-divider-banner h2,
+  .cta-widget-title,
+  .faq-help-content h3 {
+    font-size: clamp(1.5rem, 5.6vw, 1.7rem) !important;
+    line-height: 1.3 !important;
+  }
+  .contact-left-title { margin-bottom: 20px !important; }
+
+  /* Card titles (h3) */
+  .feature-row-content h3 { font-size: 1.3rem !important; }
+  .mattress-card-title,
+  .pillow-card-title,
+  .cushion-card-title,
+  .prod-title { font-size: 1.3rem; }
+  .pdetail-price { font-size: 1.8rem; }
+  .benefits-heading,
+  .widget-header-title,
+  .pdetail-highlights h3 { font-size: 1.15rem !important; }
+  .faq-question-title { font-size: 0.98rem !important; gap: 10px; }
+  .city-bar-green,
+  .city-bar-blue { font-size: 18px !important; padding: 14px 16px !important; }
+
+  /* Body copy */
+  .contact-hero-sub,
+  .dealer-hero-sub,
+  .faqs-hero-sub,
+  .adv-hero-sub,
+  .mattress-hero-desc,
+  .pillow-hero-desc,
+  .cushion-hero-desc,
+  .cat-hero-desc,
+  .page-hero-desc,
+  .pdetail-desc,
+  .adv-body-text,
+  .feature-row-content p,
+  .review-text,
+  .faq-item-body,
+  .blog-article-content,
+  .cert-sub,
+  .regional-sub,
+  .mattress-card-text,
+  .pillow-card-text,
+  .cushion-card-text,
+  .prod-desc,
+  .highlight-list li,
+  .page-sub-title,
+  .faq-help-content p,
+  .cta-widget-sub {
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
+
+  /* Hero feature pills wrap neatly */
+  .contact-hero-features,
+  .dealer-hero-features,
+  .faqs-hero-features,
+  .adv-hero-features { gap: 8px; }
+  .feature-pill { padding: 7px 14px; font-size: 0.82rem; }
+
+  /* FAQ accordion */
+  .faq-item-header { padding: 16px; gap: 10px; }
+  .faq-item-body { padding: 0 16px 18px !important; }
+  .faq-item-card.active .faq-item-body { padding: 0 16px 18px !important; }
+  .faq-num-badge { width: 28px; height: 28px; flex-shrink: 0; }
+
+  /* ---------- Buttons & touch targets ---------- */
+  .pdetail-actions { gap: 12px; }
+  .pdetail-actions > a,
+  .faq-help-buttons > a,
+  .tollfree-call-btn,
+  .helpline-call-btn,
+  .btn-side-review {
+    flex: 1 1 100%;
+    width: 100%;
+    justify-content: center;
+  }
+  .btn-buy-now,
+  .btn-enquire,
+  .btn-more-details,
+  .btn-help-call,
+  .btn-help-enquire,
+  .btn-side-review,
+  .tollfree-call-btn,
+  .helpline-call-btn,
+  .upload-btn-navy,
+  .btn-hero-review,
+  .btn-submit-green,
+  .btn-submit-navy,
+  .state-call-pill {
+    min-height: 44px;
+  }
+  .btn-buy-now,
+  .btn-enquire { padding: 12px 20px; font-size: 1rem; }
+  .upload-btn-navy { width: 100%; justify-content: center; }
+
+  .info-card-content a,
+  .terms-check-row label a,
+  .page-sub-title a,
+  .prod-title a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  /* ---------- Forms: full width, 44px+ targets ---------- */
+  .form-group-field input,
+  .form-group-field select,
+  .form-group-field textarea,
+  .blog-comment-input,
+  .faq-search-input,
+  .search-input-box {
+    width: 100%;
+    max-width: none;
+    min-height: 46px;
+    font-size: 16px; /* stops iOS zoom-on-focus */
+  }
+  .phone-input-wrap { min-height: 48px; }
+  .terms-check-row { align-items: flex-start; }
+  .terms-check-row input[type="checkbox"] { width: 22px; height: 22px; margin-top: 1px; }
+  .btn-submit-green,
+  .btn-submit-navy { width: 100%; }
+
+  /* ---------- Footer: 1 column ---------- */
+  .footer-main-grid { grid-template-columns: 1fr !important; gap: 24px; }
+  .footer-office-col { grid-column: auto; }
+}
+
+/* ===================================================================
+   MOBILE (<= 480px)
+   =================================================================== */
+@media (max-width: 480px) {
+  .pdetail-main-img { height: 220px; }
+  .mattress-card-img-wrap,
+  .pillow-card-img-wrap,
+  .cushion-card-img-wrap,
+  .prod-img-box { height: 200px; }
+  .spec-row { font-size: 0.88rem; }
+  .info-icon-box { width: 42px; height: 42px; font-size: 1.05rem; }
+  .contact-header-icon,
+  .dealer-header-badge { width: 52px; height: 52px; font-size: 1.4rem; }
+}
+
+/* ===================================================================
+   SHARED: headings capped at 1.8rem on mobile (spec 1.5–1.8rem)
+   =================================================================== */
+@media (max-width: 767px) {
+  .section-title,
+  .why-header-box h2,
+  .guarantee-banner-card h2,
+  .split-product-text h2,
+  .testimonial-right-content h2,
+  .process-col h2,
+  .blog-featured-body h2,
+  .locator-green-box h2,
+  .locate-title,
+  .about-text h2,
+  .natural-latex-highlight-banner h2,
+  .popular-products-heading h1,
+  .about-cta-text h2,
+  .popular-header h2,
+  .benefits-section .good-mattress-title,
+  .about-hero-title {
+    font-size: clamp(1.5rem, 6vw, 1.8rem) !important;
+  }
+
+  /* Footer icon rows: icon beside label, text baselines aligned */
+  .footer-office-col .footer-office-address {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px;
+  }
+  .footer-office-col .footer-contact-item {
+    display: flex !important;
+    align-items: baseline !important;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+  }
+  .footer-office-col .footer-office-address i,
+  .footer-office-col .footer-contact-item i { margin-right: 0 !important; }
+}

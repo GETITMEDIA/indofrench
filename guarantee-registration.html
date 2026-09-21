@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Stylesheet with Cache Buster -->
-  <link rel="stylesheet" href="css/styles.css?v=20260918_18">
+  <link rel="stylesheet" href="css/styles.css?v=20260921_4">
 
   <style>
     :root {
@@ -247,25 +247,35 @@
     }
 
     .upload-btn-navy {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: #002b73;
-      color: #FFFFFF;
-      padding: 10px 20px;
-      border-radius: 24px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      cursor: pointer;
-      border: none;
-      height: 44px;
-      width: fit-content;
-      transition: background 0.2s;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      background: #002b73 !important;
+      color: #FFFFFF !important;
+      padding: 10px 24px !important;
+      border-radius: 24px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 700 !important;
+      font-size: 0.92rem !important;
+      cursor: pointer !important;
+      border: none !important;
+      height: 44px !important;
+      width: fit-content !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 3px 10px rgba(0, 43, 115, 0.2) !important;
+    }
+
+    .upload-btn-navy i {
+      color: #4ade80 !important;
+      font-size: 1rem !important;
     }
 
     .upload-btn-navy:hover {
-      background: #153466;
+      background: #1c7a01 !important;
+      color: #FFFFFF !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 4px 14px rgba(28, 122, 1, 0.3) !important;
     }
 
     .terms-check-row {
@@ -314,6 +324,7 @@
       transform: translateY(-1px);
     }
   </style>
+  <link rel="stylesheet" href="css/responsive.css?v=20260921_4">
 </head>
 <body>
 
@@ -391,8 +402,8 @@
       </nav>
 
       <div class="header-actions">
-        <a href="dealers.html" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
-        <a href="contact-us.html" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
+        <a href="dealers.html" class="btn-locate-store">Locate A Store</a>
+        <a href="contact-us.html" class="btn-contact-header">Contact us</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
           <span></span>
           <span></span>
