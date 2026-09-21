@@ -18,7 +18,15 @@
   <style>
     :root {
       --brand-navy: #002b73;
+      --brand-navy-light: #1c407c;
       --brand-green: #1c7a01;
+      --brand-green-hover: #156201;
+      --slate-50: #f8fafc;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-600: #475569;
+      --slate-700: #334155;
+      --slate-800: #1e293b;
     }
 
     /* Top Marquee Ticker Bar */
@@ -103,18 +111,162 @@
       color: #1c7a01 !important;
     }
 
-    /* Main Container Layout */
+    .header-actions {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+    }
+
+    .btn-locate-store {
+      background-color: #1c407c !important;
+      color: #FFFFFF !important;
+      padding: 10px 22px !important;
+      border-radius: 6px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 700 !important;
+      font-size: 15px !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(28, 64, 124, 0.2) !important;
+    }
+
+    .btn-locate-store:hover {
+      background-color: #002b73 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    .btn-contact-header {
+      background-color: #1c7a01 !important;
+      color: #FFFFFF !important;
+      padding: 10px 22px !important;
+      border-radius: 6px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 700 !important;
+      font-size: 15px !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(28, 122, 1, 0.2) !important;
+    }
+
+    .btn-contact-header:hover {
+      background-color: #156201 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* Hero Banner */
+    .dealer-hero-banner {
+      background: linear-gradient(135deg, #001944 0%, #002b73 55%, #1c407c 100%);
+      position: relative;
+      padding: 68px 24px 74px;
+      color: #FFFFFF;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .dealer-hero-banner::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: -10%;
+      width: 120%;
+      height: 180%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .dealer-hero-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .dealer-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #4ade80;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 800;
+      padding: 8px 20px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .dealer-hero-title {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 3rem !important;
+      font-weight: 800 !important;
+      color: #FFFFFF !important;
+      margin-bottom: 16px !important;
+      letter-spacing: -0.5px !important;
+      line-height: 1.2 !important;
+    }
+
+    .dealer-hero-sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.1rem;
+      color: #e2e8f0;
+      max-width: 760px;
+      margin: 0 auto 30px;
+      line-height: 1.65;
+    }
+
+    .dealer-hero-features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .feature-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: rgba(255, 255, 255, 0.09);
+      padding: 9px 20px;
+      border-radius: 30px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      transition: all 0.2s ease;
+    }
+
+    .feature-pill:hover {
+      background: rgba(255, 255, 255, 0.16);
+      transform: translateY(-2px);
+    }
+
+    .feature-pill i {
+      color: #4ade80;
+    }
+
+    /* Page Layout Container */
     .dealer-page-wrap {
-      background: #FFFFFF;
-      padding: 60px 24px 80px;
+      background: #f8fafc;
+      padding: 60px 24px 90px;
     }
 
     .dealer-grid-container {
-      max-width: 1140px;
+      max-width: 1240px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 0.85fr 1.15fr;
-      gap: 50px;
+      gap: 40px;
       align-items: start;
     }
 
@@ -122,193 +274,512 @@
       .dealer-grid-container {
         grid-template-columns: 1fr;
       }
+      .dealer-hero-title {
+        font-size: 2.2rem;
+      }
     }
 
-    .dealer-left-img-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-top: 40px;
+    /* Left Side Showcase */
+    .dealer-left-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 36px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 30px rgba(0, 43, 115, 0.05);
+      position: sticky;
+      top: 100px;
     }
 
-    .dealer-left-img-wrap img {
+    .dealer-left-img-frame {
+      border-radius: 16px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 100%);
+      padding: 24px;
+      text-align: center;
+      margin-bottom: 28px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .dealer-left-img-frame img {
       max-width: 100%;
       height: auto;
+      max-height: 280px;
       object-fit: contain;
-      max-height: 480px;
+      transition: transform 0.35s ease;
     }
 
-    .dealer-form-card {
-      background: #FFFFFF;
-      border: 1px solid #E2E8F0;
+    .dealer-left-img-frame:hover img {
+      transform: scale(1.04);
+    }
+
+    .benefits-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #002b73;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .benefits-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: #f8fafc;
+      padding: 16px 18px;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.25s ease;
+    }
+
+    .benefit-item:hover {
+      background: #ffffff;
+      border-color: #1c7a01;
+      transform: translateX(4px);
+      box-shadow: 0 6px 16px rgba(28, 122, 1, 0.08);
+    }
+
+    .benefit-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: #e6f7e8;
+      color: #1c7a01;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .benefit-content h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .benefit-content p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.86rem;
+      color: #64748b;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .dealer-help-box {
+      margin-top: 26px;
+      background: linear-gradient(135deg, #002b73 0%, #1c407c 100%);
       border-radius: 16px;
-      padding: 40px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      padding: 20px 24px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 8px 24px rgba(0, 43, 115, 0.15);
+      flex-wrap: wrap;
+    }
+
+    .dealer-help-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .dealer-help-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .dealer-help-text h5 {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 1.05rem !important;
+      font-weight: 800 !important;
+      color: #FFFFFF !important;
+      margin-bottom: 2px !important;
+    }
+
+    .dealer-help-text p {
+      font-size: 0.85rem !important;
+      color: #cbd5e1 !important;
+      margin: 0 !important;
+    }
+
+    .helpline-call-btn {
+      background: #1c7a01;
+      color: #ffffff;
+      padding: 9px 18px;
+      border-radius: 30px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(28, 122, 1, 0.3);
+    }
+
+    .helpline-call-btn:hover {
+      background: #156201;
+      color: #ffffff;
+      transform: scale(1.03);
+    }
+
+    /* Right Side: Form Card */
+    .dealer-form-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 44px 40px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 14px 45px rgba(0, 43, 115, 0.08);
+      position: relative;
+    }
+
+    @media (max-width: 640px) {
+      .dealer-form-card {
+        padding: 28px 20px;
+      }
+    }
+
+    .dealer-form-header {
+      text-align: center;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 2px dashed #e2e8f0;
+    }
+
+    .dealer-header-badge {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #002b73 0%, #1c7a01 100%);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      margin-bottom: 14px;
+      box-shadow: 0 6px 18px rgba(0, 43, 115, 0.22);
     }
 
     .dealer-card-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 2rem;
+      font-size: 2.1rem;
       font-weight: 800;
       color: #002b73;
-      text-align: center;
-      text-decoration: underline;
-      margin-bottom: 32px;
+      margin-bottom: 6px;
     }
 
-    .dealer-section-title {
+    .dealer-card-sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.94rem;
+      color: #64748b;
+      margin: 0;
+    }
+
+    /* Form Step Headers */
+    .dealer-step-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(90deg, #eef2ff 0%, #f8fafc 100%);
+      padding: 10px 18px;
+      border-radius: 10px;
+      margin: 28px 0 20px;
+      border-left: 4px solid #002b73;
+    }
+
+    .dealer-step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #002b73;
+      color: #ffffff;
       font-family: 'Outfit', sans-serif;
-      font-size: 1.1rem;
       font-weight: 800;
-      color: #000000;
-      margin: 28px 0 16px;
-      letter-spacing: 0.5px;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
 
+    .dealer-step-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    /* Form Layout & Fields */
     .form-row-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     @media (max-width: 640px) {
       .form-row-2 {
         grid-template-columns: 1fr;
-        gap: 16px;
-        margin-bottom: 16px;
+        gap: 14px;
+        margin-bottom: 14px;
       }
     }
 
     .form-group-field {
       display: flex;
       flex-direction: column;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .form-group-field label {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 700;
       color: #002b73;
-      margin-bottom: 6px;
+      margin-bottom: 7px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .form-group-field label i {
+      color: #1c7a01;
+      font-size: 0.85rem;
+    }
+
+    .required-star {
+      color: #dc2626;
+      font-weight: 800;
+      margin-left: 2px;
+    }
+
+    .input-with-icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .input-with-icon i.field-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #94a3b8;
+      font-size: 0.95rem;
+      pointer-events: none;
+      transition: color 0.2s;
+    }
+
+    .input-with-icon input,
+    .input-with-icon select {
+      padding-left: 44px !important;
     }
 
     .form-group-field input,
     .form-group-field select {
       width: 100%;
-      height: 44px;
-      padding: 0 14px;
-      border: 1px solid #CBD5E1;
-      border-radius: 6px;
+      height: 48px;
+      padding: 0 16px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.92rem;
+      font-size: 0.93rem;
       color: #0f172a;
-      background: #FFFFFF;
+      background: #ffffff;
       outline: none;
-      transition: border-color 0.2s;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
     }
 
     .form-group-field input:focus,
     .form-group-field select:focus {
       border-color: #002b73;
+      box-shadow: 0 0 0 4px rgba(0, 43, 115, 0.1);
     }
 
-    .sub-helper-text {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.78rem;
-      color: #64748B;
-      margin-top: 4px;
+    .input-with-icon input:focus ~ i.field-icon,
+    .input-with-icon select:focus ~ i.field-icon {
+      color: #002b73;
     }
 
+    /* Mobile Phone Prefix Box */
     .phone-input-wrap {
       display: flex;
       align-items: center;
-      border: 1px solid #CBD5E1;
-      border-radius: 6px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
       overflow: hidden;
-      background: #FFFFFF;
-      height: 44px;
+      background: #ffffff;
+      height: 48px;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    .phone-input-wrap:focus-within {
+      border-color: #002b73;
+      box-shadow: 0 0 0 4px rgba(0, 43, 115, 0.1);
     }
 
     .phone-flag-select {
       display: flex;
       align-items: center;
       gap: 6px;
-      padding: 0 10px;
-      border-right: 1px solid #CBD5E1;
-      background: #F8FAFC;
-      font-size: 0.85rem;
+      padding: 0 14px;
+      border-right: 1.5px solid #e2e8f0;
+      background: #f8fafc;
+      font-size: 0.9rem;
+      font-weight: 700;
       color: #334155;
       height: 100%;
+      flex-shrink: 0;
     }
 
     .phone-input-wrap input {
       border: none !important;
       border-radius: 0 !important;
       height: 100% !important;
+      box-shadow: none !important;
+      padding-left: 14px !important;
+      font-weight: 600 !important;
+    }
+
+    .sub-helper-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.78rem;
+      color: #64748b;
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* File Upload Box */
+    .upload-box-wrap {
+      background: #f8fafc;
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .upload-box-wrap:hover {
+      border-color: #1c7a01;
+      background: #f0fbf2;
     }
 
     .upload-btn-navy {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: #002b73;
-      color: #FFFFFF;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-weight: 700;
-      font-size: 0.88rem;
-      cursor: pointer;
-      border: none;
-      height: 40px;
-      width: fit-content;
-      transition: background 0.2s;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      background: #002b73 !important;
+      color: #FFFFFF !important;
+      padding: 12px 28px !important;
+      border-radius: 30px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 800 !important;
+      font-size: 0.95rem !important;
+      cursor: pointer !important;
+      border: none !important;
+      height: 44px !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 4px 14px rgba(0, 43, 115, 0.3) !important;
+    }
+
+    .upload-btn-navy i {
+      color: #4ade80 !important;
+      font-size: 1.1rem !important;
     }
 
     .upload-btn-navy:hover {
-      background: #153466;
+      background: #1c7a01 !important;
+      color: #FFFFFF !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 18px rgba(28, 122, 1, 0.35) !important;
+    }
+
+    /* Terms Card Box */
+    .terms-card-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 28px 0;
     }
 
     .terms-check-row {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin: 24px 0;
+      gap: 12px;
     }
 
     .terms-check-row input[type="checkbox"] {
-      width: 18px;
-      height: 18px;
-      accent-color: #002b73;
+      width: 20px;
+      height: 20px;
+      accent-color: #1c7a01;
       cursor: pointer;
+      flex-shrink: 0;
     }
 
     .terms-check-row label {
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.9rem;
       color: #334155;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 0;
     }
 
+    /* Primary Submit Button */
     .btn-submit-navy {
       width: 100%;
-      background: #002b73;
-      color: #FFFFFF;
+      background: #1c7a01;
+      color: #ffffff;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      padding: 14px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 16px 24px;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
-      transition: background 0.2s ease, transform 0.15s ease;
-      box-shadow: 0 4px 12px rgba(0, 43, 115, 0.25);
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 18px rgba(28, 122, 1, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      letter-spacing: 0.3px;
     }
 
     .btn-submit-navy:hover {
-      background: #153466;
-      transform: translateY(-1px);
+      background: #002b73;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(0, 43, 115, 0.32);
     }
   </style>
 </head>
@@ -388,8 +859,8 @@
       </nav>
 
       <div class="header-actions">
-        <a href="dealers.html" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
-        <a href="contact-us.html" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
+        <a href="dealers.html" class="btn-locate-store">Locate A Store</a>
+        <a href="contact-us.html" class="btn-contact-header">Contact us</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
           <span></span>
           <span></span>
@@ -399,118 +870,257 @@
     </div>
   </header>
 
+  <!-- ================= HERO BANNER ================= -->
+  <section class="dealer-hero-banner">
+    <div class="dealer-hero-inner">
+      <div class="dealer-hero-badge">
+        <i class="fa-solid fa-crown"></i> Partner With Indofrench
+      </div>
+      <h1 class="dealer-hero-title">Become An Authorized Dealer</h1>
+      <p class="dealer-hero-sub">
+        Join India's premier 100% Natural Latex sleep brand since 1979. Expand your business with world-class Dunlop process mattresses, pillows & organic toppers.
+      </p>
+      <div class="dealer-hero-features">
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> 45+ Years Legacy</div>
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> 100% Organic Dunlop Latex</div>
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> High Profit Margins</div>
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> Pan-India Logistics</div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= DEALER REGISTRATION SECTION ================= -->
   <section class="dealer-page-wrap">
     <div class="dealer-grid-container">
       
-      <!-- Left Column: Businessmen Illustration -->
-      <div class="dealer-left-img-wrap">
-        <img src="assets/download_from_wix/become a dealer.png" alt="Dealer Registration Indofrench">
+      <!-- Left Column: Business Benefits Showcase -->
+      <div class="dealer-left-card">
+        <div class="dealer-left-img-frame">
+          <img src="assets/download_from_wix/become a dealer.png" alt="Dealer Registration Indofrench">
+        </div>
+
+        <h3 class="benefits-heading">
+          <i class="fa-solid fa-chart-line" style="color: #1c7a01;"></i> Why Partner With Us?
+        </h3>
+
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+            <div class="benefit-content">
+              <h4>Attractive Profit Margins</h4>
+              <p>Maximize showroom revenue with industry-leading dealer margins & performance incentives.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <div class="benefit-content">
+              <h4>Pan-India Express Supply</h4>
+              <p>Prompt dispatch from state warehouses ensuring fast order fulfillment for your customers.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fa-solid fa-bullhorn"></i></div>
+            <div class="benefit-content">
+              <h4>Store Marketing Support</h4>
+              <p>Free physical sample swatches, standees, brochures & digital lead routing to your store.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="benefit-content">
+              <h4>10-Year Warranty Guarantee</h4>
+              <p>Complete peace of mind for your customers backed by official factory guarantee replacement.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dealer-help-box">
+          <div class="dealer-help-info">
+            <div class="dealer-help-icon"><i class="fa-solid fa-headset"></i></div>
+            <div class="dealer-help-text">
+              <h5>Dealer Support Helpline</h5>
+              <p>Mon - Sat : 9:00 AM - 7:00 PM</p>
+            </div>
+          </div>
+          <a href="tel:18002582534" class="helpline-call-btn">
+            <i class="fa-solid fa-phone"></i> 1800 258 2534
+          </a>
+        </div>
       </div>
 
       <!-- Right Column: Dealer Registration Form Card -->
       <div class="dealer-form-card">
-        <h1 class="dealer-card-title">Dealer Registration form</h1>
+        <div class="dealer-form-header">
+          <div class="dealer-header-badge">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h2 class="dealer-card-title">Dealer Registration Form</h2>
+          <p class="dealer-card-sub">Please fill in your business and bank details below for dealer onboarding.</p>
+        </div>
 
-        <form id="dealerForm" onsubmit="event.preventDefault(); alert('Thank you! Your Dealer Application has been submitted.');">
+        <form id="dealerForm" novalidate>
           
+          <!-- STEP 1: PERSONAL DETAILS -->
+          <div class="dealer-step-header">
+            <div class="dealer-step-num">1</div>
+            <div class="dealer-step-title">Personal & Contact Details</div>
+          </div>
+
           <!-- First name, Last name -->
           <div class="form-row-2">
-            <div class="form-group-field" style="margin-bottom:0;">
-              <label for="firstName">* First name</label>
-              <input type="text" id="firstName" required placeholder="Enter your first name">
+            <div class="form-group-field">
+              <label for="firstName"><i class="fa-solid fa-user"></i> First Name <span class="required-star">*</span></label>
+              <div class="input-with-icon">
+                <input type="text" id="firstName" required placeholder="Enter your first name">
+                <i class="fa-solid fa-user field-icon"></i>
+              </div>
+              <span class="field-error-msg" id="firstNameError"></span>
             </div>
-            <div class="form-group-field" style="margin-bottom:0;">
-              <label for="lastName">* Last name</label>
-              <input type="text" id="lastName" required placeholder="Enter your last name">
+            <div class="form-group-field">
+              <label for="lastName"><i class="fa-solid fa-user"></i> Last Name <span class="required-star">*</span></label>
+              <div class="input-with-icon">
+                <input type="text" id="lastName" required placeholder="Enter your last name">
+                <i class="fa-solid fa-user field-icon"></i>
+              </div>
+              <span class="field-error-msg" id="lastNameError"></span>
             </div>
           </div>
 
           <!-- Position, Mobile -->
           <div class="form-row-2">
-            <div class="form-group-field" style="margin-bottom:0;">
-              <label for="position">* Position</label>
-              <input type="text" id="position" required placeholder="Enter a position or job title">
+            <div class="form-group-field">
+              <label for="position"><i class="fa-solid fa-id-card"></i> Position / Designation <span class="required-star">*</span></label>
+              <div class="input-with-icon">
+                <input type="text" id="position" required placeholder="e.g. Owner, Managing Director">
+                <i class="fa-solid fa-briefcase field-icon"></i>
+              </div>
+              <span class="field-error-msg" id="positionError"></span>
             </div>
-            <div class="form-group-field" style="margin-bottom:0;">
-              <label for="mobile">* Mobile</label>
-              <div class="phone-input-wrap">
+            <div class="form-group-field">
+              <label for="mobile"><i class="fa-solid fa-phone"></i> Mobile Number <span class="required-star">*</span></label>
+              <div class="phone-input-wrap" id="dealerMobileWrap">
                 <div class="phone-flag-select">
                   <span>🇮🇳</span> <span class="phone-country-code">+91</span>
                 </div>
                 <input type="tel" id="mobile" required placeholder="10 digit mobile number" maxlength="10" inputmode="numeric">
               </div>
+              <span class="field-error-msg" id="mobileError"></span>
             </div>
           </div>
 
           <!-- Email -->
           <div class="form-group-field">
-            <label for="email">* Email</label>
-            <input type="email" id="email" required placeholder="Enter business email">
+            <label for="email"><i class="fa-solid fa-envelope"></i> Business Email <span class="required-star">*</span></label>
+            <div class="input-with-icon">
+              <input type="email" id="email" required placeholder="e.g. contact@yourcompany.com">
+              <i class="fa-solid fa-envelope field-icon"></i>
+            </div>
+            <span class="field-error-msg" id="emailError"></span>
           </div>
 
-          <!-- COMPANY DETAILS -->
-          <div class="dealer-section-title">COMPANY DETAILS</div>
-
-          <div class="form-group-field">
-            <label for="companyName">* Company name</label>
-            <input type="text" id="companyName" required placeholder="Enter a company name">
-            <span class="sub-helper-text">As per GST certificate</span>
-          </div>
-
-          <!-- BANK DETAILS -->
-          <div class="dealer-section-title">BANK DETAILS</div>
-
-          <div class="form-group-field">
-            <label for="accountNumber">* Account number</label>
-            <input type="text" id="accountNumber" required placeholder="Enter your bank A/C number">
+          <!-- STEP 2: COMPANY DETAILS -->
+          <div class="dealer-step-header">
+            <div class="dealer-step-num">2</div>
+            <div class="dealer-step-title">Company & Showroom Details</div>
           </div>
 
           <div class="form-group-field">
-            <label for="bankName">* Bank Name</label>
-            <select id="bankName" required>
-              <option value="">Choose one</option>
-              <option value="State Bank of India">State Bank of India</option>
-              <option value="HDFC Bank">HDFC Bank</option>
-              <option value="ICICI Bank">ICICI Bank</option>
-              <option value="Axis Bank">Axis Bank</option>
-              <option value="Canara Bank">Canara Bank</option>
-              <option value="Other">Other Bank</option>
-            </select>
-            <span class="sub-helper-text">Select your bank</span>
+            <label for="companyName"><i class="fa-solid fa-building"></i> Company / Firm Name <span class="required-star">*</span></label>
+            <div class="input-with-icon">
+              <input type="text" id="companyName" required placeholder="Enter your registered company name">
+              <i class="fa-solid fa-building field-icon"></i>
+            </div>
+            <span class="sub-helper-text"><i class="fa-solid fa-circle-info"></i> As mentioned on your GST certificate</span>
+            <span class="field-error-msg" id="companyNameError"></span>
+          </div>
+
+          <!-- STEP 3: BANK DETAILS -->
+          <div class="dealer-step-header">
+            <div class="dealer-step-num">3</div>
+            <div class="dealer-step-title">Bank Details & Verification</div>
+          </div>
+
+          <div class="form-group-field">
+            <label for="accountNumber"><i class="fa-solid fa-credit-card"></i> Bank Account Number <span class="required-star">*</span></label>
+            <div class="input-with-icon">
+              <input type="text" id="accountNumber" required placeholder="Enter your bank A/C number" inputmode="numeric">
+              <i class="fa-solid fa-credit-card field-icon"></i>
+            </div>
+            <span class="field-error-msg" id="accountNumberError"></span>
+          </div>
+
+          <div class="form-group-field">
+            <label for="bankName"><i class="fa-solid fa-landmark"></i> Bank Name <span class="required-star">*</span></label>
+            <div class="input-with-icon">
+              <select id="bankName" required>
+                <option value="">Choose your bank</option>
+                <option value="State Bank of India">State Bank of India</option>
+                <option value="HDFC Bank">HDFC Bank</option>
+                <option value="ICICI Bank">ICICI Bank</option>
+                <option value="Axis Bank">Axis Bank</option>
+                <option value="Canara Bank">Canara Bank</option>
+                <option value="Punjab National Bank">Punjab National Bank</option>
+                <option value="Bank of Baroda">Bank of Baroda</option>
+                <option value="Other">Other Bank</option>
+              </select>
+              <i class="fa-solid fa-landmark field-icon"></i>
+            </div>
+            <span class="field-error-msg" id="bankNameError"></span>
           </div>
 
           <div class="form-row-2">
-            <div class="form-group-field" style="margin-bottom:0;">
-              <label for="branch">* Branch</label>
-              <input type="text" id="branch" required placeholder="Enter your bank branch">
+            <div class="form-group-field">
+              <label for="branch"><i class="fa-solid fa-location-dot"></i> Bank Branch <span class="required-star">*</span></label>
+              <div class="input-with-icon">
+                <input type="text" id="branch" required placeholder="Enter bank branch name">
+                <i class="fa-solid fa-location-dot field-icon"></i>
+              </div>
+              <span class="field-error-msg" id="branchError"></span>
             </div>
-            <div class="form-group-field" style="margin-bottom:0;">
-              <label for="ifscCode">* IFSC code</label>
-              <input type="text" id="ifscCode" required placeholder="Bank IFSC code">
+            <div class="form-group-field">
+              <label for="ifscCode"><i class="fa-solid fa-barcode"></i> IFSC Code <span class="required-star">*</span></label>
+              <div class="input-with-icon">
+                <input type="text" id="ifscCode" required placeholder="e.g. SBIN0001234" maxlength="11" style="text-transform: uppercase;">
+                <i class="fa-solid fa-barcode field-icon"></i>
+              </div>
+              <span class="field-error-msg" id="ifscCodeError"></span>
             </div>
           </div>
 
+          <!-- Document Upload Box -->
           <div class="form-group-field">
-            <label>* Bank Passbook or Cancelled cheque</label>
-            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-              <label for="chequeUpload" class="upload-btn-navy">
-                <i class="fa-solid fa-plus"></i> Upload File
-              </label>
-              <input type="file" id="chequeUpload" accept="image/*,.pdf" style="display: none;">
-              <span id="chequeFileName" class="file-name-tag" style="display: none;">No file selected</span>
+            <label><i class="fa-solid fa-file-invoice"></i> Bank Passbook or Cancelled Cheque <span class="required-star">*</span></label>
+            <div class="upload-box-wrap">
+              <div style="display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                <label for="chequeUpload" class="upload-btn-navy">
+                  <i class="fa-solid fa-cloud-arrow-up"></i> Upload Document
+                </label>
+                <input type="file" id="chequeUpload" accept="image/*,.pdf" style="display: none;">
+                <span id="chequeFileName" class="file-name-tag" style="display: none;">No file selected</span>
+              </div>
+              <span class="sub-helper-text" style="justify-content: center; margin-top: 10px;">
+                <i class="fa-solid fa-shield-halved"></i> Company name must be visible on passbook or cancelled cheque (PDF, JPG, PNG)
+              </span>
             </div>
-            <span class="sub-helper-text">The company name must be mentioned in the bank passbook or cancelled cheque</span>
+            <span class="field-error-msg" id="chequeUploadError"></span>
           </div>
 
-          <!-- Terms Checkbox -->
-          <div class="terms-check-row">
-            <input type="checkbox" id="terms" required>
-            <label for="terms">* I agree to the terms and conditions.</label>
+          <!-- Terms Checkbox Card -->
+          <div class="terms-card-box">
+            <div class="terms-check-row">
+              <input type="checkbox" id="terms" required>
+              <label for="terms">I agree to the <a href="index.html#terms" style="color: #002b73; text-decoration: underline;">Dealer Terms & Conditions</a> <span class="required-star">*</span></label>
+            </div>
+            <span class="field-error-msg" id="termsError"></span>
           </div>
 
           <!-- Submit Button -->
-          <button type="submit" class="btn-submit-navy">Submit</button>
+          <button type="submit" class="btn-submit-navy">
+            <span>Submit Dealer Application</span> <i class="fa-solid fa-paper-plane"></i>
+          </button>
 
         </form>
       </div>
@@ -519,7 +1129,7 @@
   </section>
 
   <!-- ================= FOOTER ================= -->
-    <footer class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="footer-main-grid">
         <!-- Col 1: Logo + Head Office -->

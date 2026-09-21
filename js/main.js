@@ -432,7 +432,136 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Contact & Dealer Forms Validation Integrations
+  // 7. Dealer Registration Form Engine (#dealerForm)
+  const dealerForm = document.getElementById('dealerForm');
+  if (dealerForm) {
+    const dFN = document.getElementById('firstName');
+    const dLN = document.getElementById('lastName');
+    const dPos = document.getElementById('position');
+    const dMob = document.getElementById('mobile');
+    const dEm = document.getElementById('email');
+    const dComp = document.getElementById('companyName');
+    const dAcc = document.getElementById('accountNumber');
+    const dBank = document.getElementById('bankName');
+    const dBranch = document.getElementById('branch');
+    const dIFSC = document.getElementById('ifscCode');
+    const dTerms = document.getElementById('terms');
+    const chequeFileTag = document.getElementById('chequeFileName');
+
+    if (dFN) {
+      dFN.addEventListener('blur', () => validateNameOnly('firstName', 'firstNameError', 'First name', true));
+      dFN.addEventListener('input', () => {
+        if (dFN.classList.contains('is-invalid')) validateNameOnly('firstName', 'firstNameError', 'First name', true);
+      });
+    }
+
+    if (dLN) {
+      dLN.addEventListener('blur', () => validateNameOnly('lastName', 'lastNameError', 'Last name', true));
+      dLN.addEventListener('input', () => {
+        if (dLN.classList.contains('is-invalid')) validateNameOnly('lastName', 'lastNameError', 'Last name', true);
+      });
+    }
+
+    if (dPos) {
+      dPos.addEventListener('blur', () => validateFieldText('position', 'positionError', 'Position', 2));
+      dPos.addEventListener('input', () => {
+        if (dPos.classList.contains('is-invalid')) validateFieldText('position', 'positionError', 'Position', 2);
+      });
+    }
+
+    if (dMob) {
+      dMob.addEventListener('blur', () => validateMobileField('mobile', 'mobileError', 'dealerMobileWrap'));
+      dMob.addEventListener('input', () => {
+        if (dMob.classList.contains('is-invalid') || dMob.value.length === 10) {
+          validateMobileField('mobile', 'mobileError', 'dealerMobileWrap');
+        }
+      });
+    }
+
+    if (dEm) {
+      dEm.addEventListener('blur', () => validateEmailField('email', 'emailError'));
+      dEm.addEventListener('input', () => {
+        if (dEm.classList.contains('is-invalid')) validateEmailField('email', 'emailError');
+      });
+    }
+
+    if (dComp) {
+      dComp.addEventListener('blur', () => validateFieldText('companyName', 'companyNameError', 'Company name', 2));
+      dComp.addEventListener('input', () => {
+        if (dComp.classList.contains('is-invalid')) validateFieldText('companyName', 'companyNameError', 'Company name', 2);
+      });
+    }
+
+    if (dAcc) {
+      dAcc.addEventListener('blur', () => validateFieldText('accountNumber', 'accountNumberError', 'Account number', 6));
+      dAcc.addEventListener('input', () => {
+        if (dAcc.classList.contains('is-invalid')) validateFieldText('accountNumber', 'accountNumberError', 'Account number', 6);
+      });
+    }
+
+    if (dBank) {
+      dBank.addEventListener('change', () => validateSelectField('bankName', 'bankNameError', 'your bank'));
+    }
+
+    if (dBranch) {
+      dBranch.addEventListener('blur', () => validateFieldText('branch', 'branchError', 'Branch name', 2));
+      dBranch.addEventListener('input', () => {
+        if (dBranch.classList.contains('is-invalid')) validateFieldText('branch', 'branchError', 'Branch name', 2);
+      });
+    }
+
+    if (dIFSC) {
+      dIFSC.addEventListener('blur', () => validateFieldText('ifscCode', 'ifscCodeError', 'IFSC Code', 11));
+      dIFSC.addEventListener('input', () => {
+        dIFSC.value = dIFSC.value.toUpperCase();
+        if (dIFSC.classList.contains('is-invalid')) validateFieldText('ifscCode', 'ifscCodeError', 'IFSC Code', 11);
+      });
+    }
+
+    if (dTerms) {
+      dTerms.addEventListener('change', () => validateCheckboxField('terms', 'termsError', 'You must agree to dealer terms & conditions'));
+    }
+
+    dealerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const v1 = validateNameOnly('firstName', 'firstNameError', 'First name', true);
+      const v2 = validateNameOnly('lastName', 'lastNameError', 'Last name', true);
+      const v3 = validateFieldText('position', 'positionError', 'Position', 2);
+      const v4 = validateMobileField('mobile', 'mobileError', 'dealerMobileWrap');
+      const v5 = validateEmailField('email', 'emailError');
+      const v6 = validateFieldText('companyName', 'companyNameError', 'Company name', 2);
+      const v7 = validateFieldText('accountNumber', 'accountNumberError', 'Account number', 6);
+      const v8 = validateSelectField('bankName', 'bankNameError', 'your bank');
+      const v9 = validateFieldText('branch', 'branchError', 'Branch name', 2);
+      const v10 = validateFieldText('ifscCode', 'ifscCodeError', 'IFSC Code', 11);
+      const v11 = validateCheckboxField('terms', 'termsError', 'You must agree to dealer terms & conditions');
+
+      if (v1 && v2 && v3 && v4 && v5 && v6 && v7 && v8 && v9 && v10 && v11) {
+        const name = document.getElementById('firstName').value.trim();
+        const comp = document.getElementById('companyName').value.trim();
+        const mob = document.getElementById('mobile').value.trim();
+
+        alert(`Application Submitted Successfully! 🤝\n\nThank you ${name}.\nYour dealer onboarding application for "${comp}" has been logged.\nMobile: +91 ${mob}\n\nOur Indofrench Business Development Team will reach out to you within 24 hours.`);
+        dealerForm.reset();
+
+        if (chequeFileTag) {
+          chequeFileTag.textContent = 'No file selected';
+          chequeFileTag.style.display = 'none';
+        }
+
+        document.querySelectorAll('#dealerForm .is-valid').forEach(el => el.classList.remove('is-valid'));
+      } else {
+        const firstInvalid = dealerForm.querySelector('.is-invalid');
+        if (firstInvalid) {
+          firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          firstInvalid.focus();
+        }
+      }
+    });
+  }
+
+  // 8. Contact & Enquiry Forms Validation Integrations
   const enquiryForm = document.getElementById('contactEnquiryForm');
   if (enquiryForm) {
     enquiryForm.addEventListener('submit', (e) => {
