@@ -6,257 +6,653 @@
   <title>Advantages | Indofrench Natural Latex</title>
   <meta name="description" content="Why Choose Indofrench? Explore our Dunlop Technology, Pincore Technology, Three-Time Purification (TTP), and chemical-free orthopedic support.">
   
+  <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet with Cache Buster -->
   <link rel="stylesheet" href="css/styles.css?v=20260918_23">
 
   <style>
-    /* Hero Banner */
-    .adv-hero {
-      position: relative;
-      background: linear-gradient(rgba(11, 37, 69, 0.85), rgba(11, 37, 69, 0.85)), url('assets/download_from_wix/the-stylish-composition-at-living-room-interior-2022-12-07-04-27-48-utc.jpg') center/cover no-repeat;
-      padding: 90px 0 80px;
-      text-align: center;
-      color: #ffffff;
-    }
-    .adv-hero h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 3.2rem;
-      font-weight: 800;
-      color: #ffffff !important;
-      margin: 0;
-      letter-spacing: 1px;
+    :root {
+      --brand-navy: #002b73;
+      --brand-navy-light: #1c407c;
+      --brand-green: #1c7a01;
+      --brand-green-hover: #156201;
+      --slate-50: #f8fafc;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-600: #475569;
+      --slate-700: #334155;
+      --slate-800: #1e293b;
     }
 
-    /* Main Section 1: Intro Grid */
-    .adv-section-1 {
-      padding: 70px 0;
-      background: #ffffff;
+    /* Top Marquee Ticker Bar */
+    .topbar-ticker {
+      background-color: #002b73 !important;
+      color: #FFFFFF !important;
+      height: 42px !important;
+      overflow: hidden !important;
+      position: relative !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      align-items: center !important;
+      width: 100% !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
     }
+
+    .topbar-marquee-track {
+      display: inline-flex !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      gap: 36px !important;
+      width: max-content !important;
+      will-change: transform !important;
+      animation: tickerAutoScroll 30s linear infinite !important;
+    }
+
+    @keyframes tickerAutoScroll {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    .ticker-phrase {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 14px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      color: #FFFFFF !important;
+      letter-spacing: 0.3px !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* Header & Nav */
+    .header {
+      background: #FFFFFF !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      position: sticky !important;
+      top: 0 !important;
+      left: 0 !important;
+      z-index: 999 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      height: 84px !important;
+      max-width: 1320px !important;
+      margin: 0 auto !important;
+      padding: 0 24px !important;
+    }
+
+    .nav-menu {
+      display: flex !important;
+      align-items: center !important;
+      gap: 32px !important;
+    }
+
+    .nav-link {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      color: #1c407c !important;
+      text-decoration: none !important;
+      padding: 6px 0 !important;
+      transition: color 0.2s ease !important;
+    }
+
+    .nav-link:hover {
+      color: #1c7a01 !important;
+    }
+
+    .header-actions {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+    }
+
+    .btn-locate-store {
+      background-color: #1c407c !important;
+      color: #FFFFFF !important;
+      padding: 10px 22px !important;
+      border-radius: 6px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 700 !important;
+      font-size: 15px !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(28, 64, 124, 0.2) !important;
+    }
+
+    .btn-locate-store:hover {
+      background-color: #002b73 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    .btn-contact-header {
+      background-color: #1c7a01 !important;
+      color: #FFFFFF !important;
+      padding: 10px 22px !important;
+      border-radius: 6px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 700 !important;
+      font-size: 15px !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(28, 122, 1, 0.2) !important;
+    }
+
+    .btn-contact-header:hover {
+      background-color: #156201 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* Hero Banner */
+    .adv-hero-banner {
+      background: linear-gradient(135deg, #001944 0%, #002b73 55%, #1c407c 100%);
+      position: relative;
+      padding: 68px 24px 74px;
+      color: #FFFFFF;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .adv-hero-banner::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: -10%;
+      width: 120%;
+      height: 180%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .adv-hero-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .adv-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #4ade80;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 800;
+      padding: 8px 20px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .adv-hero-title {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 3rem !important;
+      font-weight: 800 !important;
+      color: #FFFFFF !important;
+      margin-bottom: 16px !important;
+      letter-spacing: -0.5px !important;
+      line-height: 1.2 !important;
+    }
+
+    .adv-hero-sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.1rem;
+      color: #e2e8f0;
+      max-width: 760px;
+      margin: 0 auto 28px;
+      line-height: 1.65;
+    }
+
+    .adv-hero-features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .feature-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.09);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .feature-pill i {
+      color: #4ade80;
+    }
+
+    /* Main Container Section 1 */
+    .adv-page-wrap {
+      background: #f8fafc;
+      padding: 60px 24px 80px;
+    }
+
     .adv-top-grid {
+      max-width: 1240px;
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: 1.4fr 0.8fr;
+      grid-template-columns: 1.35fr 0.85fr;
       gap: 40px;
       align-items: start;
     }
+
     @media (max-width: 991px) {
-      .adv-top-grid { grid-template-columns: 1fr; }
+      .adv-top-grid {
+        grid-template-columns: 1fr;
+      }
+      .adv-hero-title {
+        font-size: 2.2rem !important;
+      }
     }
 
-    .adv-content-col h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.8rem;
+    /* Left Story Column */
+    .adv-content-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 36px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 30px rgba(0, 43, 115, 0.05);
+    }
+
+    .tag-green-small {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.85rem;
       font-weight: 800;
       color: #1c7a01;
-      margin-bottom: 14px;
-    }
-    .adv-content-col p {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.98rem;
-      color: #334155;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-    .adv-main-img {
-      width: 100%;
-      border-radius: 16px;
-      margin: 16px 0 28px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      object-fit: cover;
-      max-height: 380px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-bottom: 8px;
     }
 
-    /* Sidebar Widgets */
-    .sidebar-widget {
-      background: #0b2545;
-      border-radius: 16px;
-      padding: 28px 24px;
-      color: #ffffff;
-      margin-bottom: 24px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    .adv-section-title {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 2.2rem !important;
+      font-weight: 800 !important;
+      color: #002b73 !important;
+      line-height: 1.25 !important;
+      margin-bottom: 18px !important;
     }
-    .sidebar-widget h3 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #ffffff;
+
+    .adv-body-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1rem;
+      color: #334155;
+      line-height: 1.75;
       margin-bottom: 18px;
     }
+
+    .adv-img-frame {
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 24px 0 28px;
+      box-shadow: 0 10px 28px rgba(0, 43, 115, 0.08);
+      border: 1px solid #e2e8f0;
+    }
+
+    .adv-main-img {
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .adv-img-frame:hover .adv-main-img {
+      transform: scale(1.03);
+    }
+
+    .satisfaction-box {
+      background: linear-gradient(135deg, #f0fbf2 0%, #e6f7e8 100%);
+      border: 1px solid #bbf7d0;
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+
+    .satisfaction-box h4 {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 1.25rem !important;
+      font-weight: 800 !important;
+      color: #1c7a01 !important;
+      margin-bottom: 8px !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Right Sidebar Widgets */
+    .sidebar-sticky-wrap {
+      position: sticky;
+      top: 100px;
+    }
+
+    .sidebar-widget-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 30px rgba(0, 43, 115, 0.05);
+      margin-bottom: 24px;
+    }
+
+    .widget-header-title {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 1.3rem !important;
+      font-weight: 800 !important;
+      color: #002b73 !important;
+      margin-bottom: 18px !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     .tech-pill-list {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
+
     .tech-pill-item {
-      background: #1c7a01;
-      color: #ffffff;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      color: #002b73;
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 700;
       font-size: 0.92rem;
       padding: 12px 18px;
-      border-radius: 24px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      gap: 12px;
+      transition: all 0.25s ease;
     }
+
+    .tech-pill-item:hover {
+      background: #ffffff;
+      border-color: #1c7a01;
+      color: #1c7a01;
+      transform: translateX(4px);
+      box-shadow: 0 4px 14px rgba(28, 122, 1, 0.1);
+    }
+
     .tech-pill-item i {
-      font-size: 0.8rem;
+      color: #1c7a01;
+      font-size: 1.1rem;
+    }
+
+    .cta-navy-card {
+      background: linear-gradient(135deg, #001944 0%, #002b73 60%, #1c407c 100%);
+      border-radius: 20px;
+      padding: 30px;
+      color: #ffffff;
+      box-shadow: 0 10px 30px rgba(0, 43, 115, 0.18);
     }
 
     .cta-widget-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 6px;
-      line-height: 1.3;
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 1.5rem !important;
+      font-weight: 800 !important;
+      color: #ffffff !important;
+      margin-bottom: 6px !important;
     }
+
     .cta-widget-sub {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #ffffff;
+      font-size: 0.95rem;
+      color: #cbd5e1;
       margin-bottom: 20px;
+      line-height: 1.5;
     }
+
     .btn-side-review {
       background: #1c7a01;
-      color: #ffffff;
+      color: #ffffff !important;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 700;
-      font-size: 0.92rem;
-      padding: 10px 22px;
-      border-radius: 6px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 12px 24px;
+      border-radius: 30px;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 8px;
       transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(28, 122, 1, 0.3);
     }
+
     .btn-side-review:hover {
       background: #156201;
-      color: #ffffff;
+      transform: translateY(-2px);
     }
 
-    /* Section Divider Banners */
+    /* Section Banner Dividers */
     .section-divider-banner {
-      background: #1c407c;
+      background: linear-gradient(90deg, #001944 0%, #002b73 50%, #1c407c 100%);
       color: #ffffff;
-      padding: 18px 0;
+      padding: 24px 24px;
       text-align: center;
-      margin: 40px 0;
-    }
-    .section-divider-banner h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: #ffffff !important;
-      letter-spacing: 2px;
-      margin: 0;
-      text-transform: uppercase;
+      margin: 20px 0 50px;
+      box-shadow: 0 4px 20px rgba(0, 43, 115, 0.15);
     }
 
-    /* Alternating 2-Column Rows */
-    .feature-row {
+    .section-divider-banner h2 {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 1.8rem !important;
+      font-weight: 800 !important;
+      color: #ffffff !important;
+      letter-spacing: 2px !important;
+      margin: 0 !important;
+      text-transform: uppercase !important;
+    }
+
+    /* Alternating 2-Column Tech Rows */
+    .tech-rows-wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    .feature-row-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 36px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 30px rgba(0, 43, 115, 0.05);
+      margin-bottom: 36px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 48px;
+      gap: 40px;
       align-items: center;
-      margin-bottom: 60px;
+      transition: all 0.25s ease;
     }
+
+    .feature-row-card:hover {
+      box-shadow: 0 14px 40px rgba(0, 43, 115, 0.1);
+      border-color: #cbd5e1;
+    }
+
     @media (max-width: 991px) {
-      .feature-row { grid-template-columns: 1fr; gap: 24px; }
+      .feature-row-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 28px;
+      }
     }
+
+    .feature-row-img-frame {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 300px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+    }
+
     .feature-row-img {
       width: 100%;
-      height: 320px;
+      height: 100%;
       object-fit: cover;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      background: #f1f5f9;
+      display: block;
+      transition: transform 0.4s ease;
     }
+
+    .feature-row-card:hover .feature-row-img {
+      transform: scale(1.04);
+    }
+
     .feature-row-content h3 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: #1c7a01;
-      margin-bottom: 16px;
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 1.8rem !important;
+      font-weight: 800 !important;
+      color: #002b73 !important;
+      margin-bottom: 14px !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
+
     .feature-row-content p {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.02rem;
+      font-size: 1rem;
       color: #475569;
       line-height: 1.75;
       margin: 0;
     }
 
     /* Certifications Section */
-    .cert-section {
-      padding: 60px 0;
+    .cert-section-wrap {
       background: #ffffff;
+      padding: 70px 24px 80px;
       text-align: center;
     }
+
     .cert-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #1c407c;
-      margin-bottom: 40px;
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 2.3rem !important;
+      font-weight: 800 !important;
+      color: #002b73 !important;
+      margin-bottom: 10px !important;
     }
+
+    .cert-sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      color: #64748b;
+      margin-bottom: 44px;
+    }
+
     .cert-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 36px;
-      max-width: 900px;
+      max-width: 940px;
       margin: 0 auto;
     }
+
     @media (max-width: 768px) {
-      .cert-grid { grid-template-columns: 1fr; }
-    }
-    .cert-img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      border: 1px solid #e2e8f0;
-      transition: transform 0.3s ease;
-    }
-    .cert-img:hover {
-      transform: scale(1.02);
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
-    /* Gallery Section */
-    .gallery-section {
-      padding: 60px 0 90px;
+    .cert-card {
       background: #f8fafc;
+      border-radius: 16px;
+      padding: 16px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 24px rgba(0, 43, 115, 0.06);
+      transition: all 0.3s ease;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 36px rgba(0, 43, 115, 0.12);
+      border-color: #1c7a01;
+    }
+
+    .cert-img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .cert-caption {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #002b73;
+      margin-top: 14px;
+    }
+
+    /* Expanded Photo Gallery */
+    .gallery-section-wrap {
+      background: #f8fafc;
+      padding: 70px 24px 90px;
       text-align: center;
     }
+
     .gallery-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #1c407c;
-      margin-bottom: 40px;
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 2.3rem !important;
+      font-weight: 800 !important;
+      color: #002b73 !important;
+      margin-bottom: 8px !important;
     }
+
     .gallery-grid {
+      max-width: 1240px;
+      margin: 40px auto 0;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 20px;
     }
+
     .gallery-item {
-      height: 220px;
-      border-radius: 14px;
+      height: 230px;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      box-shadow: 0 6px 18px rgba(0, 43, 115, 0.08);
       position: relative;
+      cursor: pointer;
+      border: 1px solid #e2e8f0;
     }
+
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.4s ease;
     }
+
     .gallery-item:hover img {
       transform: scale(1.08);
     }
@@ -275,6 +671,14 @@
         <i class="fa-solid fa-bed"></i>
         <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
       </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
+      <div class="ticker-phrase">
+        <i class="fa-solid fa-bed"></i>
+        <span>Register Your Guarantee Now! | Enjoy Exclusive Benefits | Protect Your Purchase Today</span>
+      </div>
     </div>
   </div>
 
@@ -282,7 +686,7 @@
   <header class="header">
     <div class="header-inner">
       <a href="index.html" class="brand-logo" aria-label="Indofrench Home">
-        <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" class="header-logo-img" style="height: 54px; width: auto; object-fit: contain; display: block;">
+        <img src="assets/download_from_wix/logo/LOGO-FINAL png.png" alt="INDOFRENCH Natural Latex Mattress" style="height: 54px; width: auto; object-fit: contain; display: block;">
       </a>
 
       <nav class="nav-menu" id="navMenu">
@@ -304,7 +708,7 @@
 
         <!-- Why Indofrench Dropdown -->
         <div class="nav-item-dropdown">
-          <a href="advantages.html" class="nav-link active">
+          <a href="advantages.html" class="nav-link active" style="color: #1c7a01;">
             Why Indofrench <i class="fa-solid fa-chevron-down" style="font-size: 0.68rem; margin-left: 3px;"></i>
           </a>
           <div class="dropdown-menu">
@@ -330,8 +734,8 @@
       </nav>
 
       <div class="header-actions">
-        <a href="dealers.html" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
-        <a href="contact-us.html" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
+        <a href="dealers.html" class="btn-locate-store">Locate A Store</a>
+        <a href="contact-us.html" class="btn-contact-header">Contact us</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
           <span></span>
           <span></span>
@@ -342,187 +746,211 @@
   </header>
 
   <!-- ================= HERO BANNER ================= -->
-  <section class="adv-hero">
-    <div class="container">
-      <h1>Why Choose Indofrench ?</h1>
+  <section class="adv-hero-banner">
+    <div class="adv-hero-inner">
+      <div class="adv-hero-badge">
+        <i class="fa-solid fa-award"></i> The Indofrench Advantage
+      </div>
+      <h1 class="adv-hero-title">Why Choose Indofrench Natural Latex?</h1>
+      <p class="adv-hero-sub">
+        Discover how our 45+ years legacy, Dunlop pincore process, Three-Time Purification (TTP), and chemical-free orthopedic support deliver the ultimate restorative sleep.
+      </p>
+      <div class="adv-hero-features">
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> 100% Organic Dunlop Latex</div>
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> 3000+ Pincore Air Holes</div>
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> TTP Purification</div>
+        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> Zero Carcinogenic VOCs</div>
+      </div>
     </div>
   </section>
 
   <!-- ================= SECTION 1: INTRO + SIDEBAR ================= -->
-  <section class="adv-section-1">
-    <div class="container">
-      <div class="adv-top-grid">
+  <section class="adv-page-wrap">
+    <div class="adv-top-grid">
 
-        <!-- Left Main Content Column -->
-        <div class="adv-content-col">
-          <h2>Why Indofrench?</h2>
-          <p>
-            When it comes to choosing a mattress, there are several reasons why you should consider Indofrench. Firstly, Indofrench prioritizes the use of advanced technologies such as Dunlop, Pincore and Three Time Purification (TTP), ensuring superior quality and comfort. These technologies contribute to better spinal alignment and shape retention, crucial for a restful sleep.
-          </p>
-          <p>
-            Secondly, Indofrench understands the importance of a good night's sleep in today's sedentary lifestyle, and our mattresses are designed to promote overall health and well-being. Lastly, by avoiding the use of carcinogenic chemicals found in many conventional mattresses, Indofrench offers a safer and healthier sleep environment.
-          </p>
+      <!-- Left Main Content Column -->
+      <div class="adv-content-card">
+        <span class="tag-green-small">SINCE 1979 LEGACY</span>
+        <h2 class="adv-section-title">Engineering Pure Natural Sleep For Your Health</h2>
+        
+        <p class="adv-body-text">
+          When it comes to choosing a mattress, there are several reasons why you should consider Indofrench. Firstly, Indofrench prioritizes the use of advanced technologies such as Dunlop, Pincore and Three-Time Purification (TTP), ensuring superior quality and comfort. These technologies contribute to better spinal alignment and shape retention, crucial for a restful sleep.
+        </p>
+        <p class="adv-body-text">
+          Secondly, Indofrench understands the importance of a good night's sleep in today's sedentary lifestyle, and our mattresses are designed to promote overall health and well-being. Lastly, by avoiding the use of carcinogenic chemicals found in many conventional mattresses, Indofrench offers a safer and healthier sleep environment.
+        </p>
 
-          <!-- Main Customer Photo -->
+        <!-- Featured Photo Frame -->
+        <div class="adv-img-frame">
           <img src="assets/download_from_wix/indofrench home customer photo (1).png" alt="Indofrench Natural Latex Mattress Bedroom Setting" class="adv-main-img">
-
-          <h2>Customer Satisfaction</h2>
-          <p>
-            Indofrench has a proven track record of customer satisfaction. Users consistently report improved sleep quality, reduced pain, and overall contentment with our mattresses. With advanced technologies and thoughtful design, Indofrench provides a restful and rejuvenating sleep experience, leading to refreshed mornings and enhanced well-being.
-          </p>
         </div>
 
-        <!-- Right Sidebar Widgets Column -->
-        <div>
-          <!-- Widget 1: Technologies -->
-          <div class="sidebar-widget">
-            <h3>Technologies:</h3>
-            <div class="tech-pill-list">
-              <div class="tech-pill-item"><i class="fa-solid fa-square-check"></i> Dunlop Technology</div>
-              <div class="tech-pill-item"><i class="fa-solid fa-square-check"></i> Pincore Technology</div>
-              <div class="tech-pill-item"><i class="fa-solid fa-square-check"></i> Purification Technology</div>
-              <div class="tech-pill-item"><i class="fa-solid fa-square-check"></i> Optimal Spinal Alignment</div>
-              <div class="tech-pill-item"><i class="fa-solid fa-square-check"></i> TTP Technology</div>
-              <div class="tech-pill-item"><i class="fa-solid fa-square-check"></i> Dust Free Mattress.</div>
-            </div>
-          </div>
+        <div class="satisfaction-box">
+          <h4><i class="fa-solid fa-face-smile" style="color: #1c7a01;"></i> Proven Customer Satisfaction</h4>
+          <p class="adv-body-text" style="margin: 0; font-size: 0.95rem;">
+            Indofrench has a proven track record of customer satisfaction across India. Users consistently report improved sleep quality, reduced joint pain, and overall contentment with our 100% natural latex mattresses and pillows.
+          </p>
+        </div>
+      </div>
 
-          <!-- Widget 2: Crafting Spaces CTA -->
-          <div class="sidebar-widget">
-            <div class="cta-widget-title">Crafting Spaces</div>
-            <div class="cta-widget-sub">Share your experience</div>
-            <a href="testimonials.html" class="btn-side-review">
-              Write a Review <i class="fa-solid fa-pen-to-square"></i>
-            </a>
+      <!-- Right Sidebar Column -->
+      <div class="sidebar-sticky-wrap">
+        
+        <!-- Widget 1: Technologies -->
+        <div class="sidebar-widget-card">
+          <h3 class="widget-header-title">
+            <i class="fa-solid fa-microchip" style="color: #1c7a01;"></i> Sleep Technologies
+          </h3>
+          <div class="tech-pill-list">
+            <div class="tech-pill-item"><i class="fa-solid fa-circle-check"></i> Dunlop Technology</div>
+            <div class="tech-pill-item"><i class="fa-solid fa-circle-check"></i> Pincore Airflow Structure</div>
+            <div class="tech-pill-item"><i class="fa-solid fa-circle-check"></i> TTP Three-Time Purification</div>
+            <div class="tech-pill-item"><i class="fa-solid fa-circle-check"></i> Optimal Spinal Alignment</div>
+            <div class="tech-pill-item"><i class="fa-solid fa-circle-check"></i> Dust-Free & Hypoallergenic</div>
+            <div class="tech-pill-item"><i class="fa-solid fa-circle-check"></i> Zero Motion Transfer</div>
           </div>
         </div>
 
+        <!-- Widget 2: Testimonial CTA -->
+        <div class="cta-navy-card">
+          <div class="cta-widget-title">Crafting Spaces</div>
+          <div class="cta-widget-sub">Share your Indofrench natural sleep experience with us!</div>
+          <a href="testimonials.html" class="btn-side-review">
+            Write a Review <i class="fa-solid fa-pen-to-square"></i>
+          </a>
+        </div>
+
       </div>
+
     </div>
   </section>
 
-  <!-- ================= BANNER DIVIDER 1 ================= -->
+  <!-- ================= SECTION BANNER 1 ================= -->
   <div class="section-divider-banner">
     <div class="container">
-      <h2>TECHNOLOGIES WE ARE PROVIDING</h2>
+      <h2>PROPRIETARY TECHNOLOGIES WE PROVIDE</h2>
     </div>
   </div>
 
-  <!-- ================= SECTION 3: TECHNOLOGIES ROWS ================= -->
-  <section style="padding: 40px 0; background: #ffffff;">
-    <div class="container">
+  <!-- ================= SECTION 2: TECHNOLOGIES ROWS ================= -->
+  <section class="tech-rows-wrap">
 
-      <!-- Row 1: Dunlop Technology -->
-      <div class="feature-row">
-        <div>
-          <img src="assets/download_from_wix/fs1.webp" alt="Dunlop Technology Latex Core Cutout" class="feature-row-img">
-        </div>
-        <div class="feature-row-content">
-          <h3>Dunlop Technology</h3>
-          <p>
-            Indofrench mattresses feature the cutting-edge Dunlop technology, renowned for its ability to create exceptionally durable and supportive mattresses. Through a unique manufacturing process, Dunlop ensures consistent density across the entire mattress, resulting in optimal body support. This technology effectively reduces pressure points, relieving discomfort and promoting better spinal alignment. With Indofrench's implementation of Dunlop Technology, you can enjoy a truly restful sleep experience, waking up rejuvenated and ready to tackle the day.
-          </p>
-        </div>
+    <!-- Row 1: Dunlop Technology -->
+    <div class="feature-row-card">
+      <div class="feature-row-img-frame">
+        <img src="assets/download_from_wix/fs1.webp" alt="Dunlop Technology Latex Core Cutout" class="feature-row-img">
       </div>
-
-      <!-- Row 2: Pincore Technology -->
-      <div class="feature-row">
-        <div class="feature-row-content">
-          <h3>Pincore Technology.</h3>
-          <p>
-            Indofrench mattresses are equipped with the innovative Pincore technology, which sets them apart from the rest. This technology incorporates evenly spaced pinholes throughout the mattress, facilitating superior air circulation. The pinholes promote enhanced breathability, allowing for efficient heat dissipation and moisture evaporation. As a result, you can enjoy a consistently cool and comfortable sleep environment, ensuring a refreshing and uninterrupted night's rest. Indofrench's integration of Pincore Technology guarantees an optimal sleep climate for a truly rejuvenating experience.
-          </p>
-        </div>
-        <div>
-          <img src="assets/download_from_wix/iStock-160058881.jpg" alt="Pincore Technology Breathable Comfort" class="feature-row-img">
-        </div>
+      <div class="feature-row-content">
+        <h3><i class="fa-solid fa-layer-group" style="color: #1c7a01;"></i> Dunlop Technology</h3>
+        <p>
+          Indofrench mattresses feature cutting-edge Dunlop technology, renowned for creating exceptionally durable and supportive mattresses. Through a unique manufacturing process, Dunlop ensures consistent density across the entire mattress, resulting in optimal body support. This technology effectively reduces pressure points, relieving discomfort and promoting better spinal alignment. With Dunlop Technology, you wake up rejuvenated and ready for the day.
+        </p>
       </div>
-
-      <!-- Row 3: Three Time Purification -->
-      <div class="feature-row">
-        <div>
-          <img src="assets/download_from_wix/iStock-688848404.jpg" alt="Three Time Purification Clean Sleeping Environment" class="feature-row-img">
-        </div>
-        <div class="feature-row-content">
-          <h3>Three Time Purification Technology.</h3>
-          <p>
-            In addition to advanced technologies, Indofrench mattresses incorporate a unique Three-Time Purification (TTP) technology. This technology removes allergens, dust mites, and other microscopic impurities that can accumulate over time. By providing a cleaner sleep surface, this purification process contributes to a healthier sleep environment, particularly for individuals with allergies or respiratory sensitivities.
-          </p>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Row 2: Pincore Technology -->
+    <div class="feature-row-card">
+      <div class="feature-row-content">
+        <h3><i class="fa-solid fa-wind" style="color: #1c7a01;"></i> Pincore Technology</h3>
+        <p>
+          Indofrench mattresses are equipped with innovative Pincore technology featuring 3000+ evenly spaced pinholes throughout the mattress core. The pinholes promote enhanced breathability, allowing for efficient heat dissipation and moisture evaporation. As a result, you enjoy a consistently cool and comfortable sleep environment in all Indian climate seasons.
+        </p>
+      </div>
+      <div class="feature-row-img-frame">
+        <img src="assets/download_from_wix/iStock-160058881.jpg" alt="Pincore Technology Breathable Comfort" class="feature-row-img">
+      </div>
+    </div>
+
+    <!-- Row 3: Three Time Purification -->
+    <div class="feature-row-card">
+      <div class="feature-row-img-frame">
+        <img src="assets/download_from_wix/iStock-688848404.jpg" alt="Three Time Purification Clean Sleeping Environment" class="feature-row-img">
+      </div>
+      <div class="feature-row-content">
+        <h3><i class="fa-solid fa-wand-magic-sparkles" style="color: #1c7a01;"></i> Three-Time Purification (TTP)</h3>
+        <p>
+          In addition to advanced core molds, Indofrench mattresses incorporate a unique Three-Time Purification (TTP) process. This multi-stage washing removes rubber proteins, allergens, dust mites, and microscopic impurities. By providing a clean sleep surface, TTP contributes to a healthier sleep environment, particularly for individuals with asthma or allergies.
+        </p>
+      </div>
+    </div>
+
   </section>
 
-  <!-- ================= BANNER DIVIDER 2 ================= -->
+  <!-- ================= SECTION BANNER 2 ================= -->
   <div class="section-divider-banner">
     <div class="container">
-      <h2>HEALTH AND WELL-BEING.</h2>
+      <h2>HEALTH AND WELL-BEING BENEFITS</h2>
     </div>
   </div>
 
-  <!-- ================= SECTION 5: HEALTH & WELL-BEING ROWS ================= -->
-  <section style="padding: 40px 0 60px; background: #ffffff;">
-    <div class="container">
+  <!-- ================= SECTION 3: HEALTH & WELL-BEING ROWS ================= -->
+  <section class="tech-rows-wrap">
 
-      <!-- Row 1: Optimal Spinal Alignment -->
-      <div class="feature-row">
-        <div class="feature-row-content">
-          <h3>Optimal Spinal Alignment.</h3>
-          <p>
-            Indofrench mattresses are carefully engineered with your spinal health in mind. By utilizing advanced technologies such as Dunlop and Pincore, these mattresses provide optimal spinal alignment while you sleep. The Dunlop technology ensures consistent density throughout the mattress, offering optimal support for your body. Combined with Pincore technology, which enhances air circulation, these mattresses alleviate pressure points and contribute to better spinal alignment. This helps reduce back and neck pain, minimize the risk of sleep-related issues, and ultimately improves your overall sleep quality.
-          </p>
-        </div>
-        <div>
-          <img src="assets/download_from_wix/19.webp" alt="Optimal Spinal Alignment Latex Support" class="feature-row-img">
-        </div>
+    <!-- Row 1: Optimal Spinal Alignment -->
+    <div class="feature-row-card">
+      <div class="feature-row-content">
+        <h3><i class="fa-solid fa-bone" style="color: #1c7a01;"></i> Optimal Spinal Alignment</h3>
+        <p>
+          Indofrench mattresses are engineered with your spinal health in mind. By combining Dunlop density with 7-zone pincore support, these mattresses keep your spine in a natural ergonomic alignment while sleeping. This alleviates lower back pressure, reduces neck strain, and prevents morning stiffness.
+        </p>
       </div>
-
-      <!-- Row 2: Restorative Sleep -->
-      <div class="feature-row">
-        <div>
-          <img src="assets/download_from_wix/18.webp" alt="Restorative Sleep Natural Latex Pillow and Mattress" class="feature-row-img">
-        </div>
-        <div class="feature-row-content">
-          <h3>Restorative Sleep.</h3>
-          <p>
-            Indofrench recognizes the vital role of quality sleep in rejuvenating both your body and mind. Our mattresses are designed to promote deep and restorative sleep, enabling you to wake up feeling refreshed and energized. Indofrench mattresses minimize disturbances and provide superior comfort, allowing you to achieve a deeper sleep state. By supporting uninterrupted and restful sleep, these mattresses enhance your overall well-being, improving cognitive function, mood, and overall productivity throughout the day.
-          </p>
-        </div>
+      <div class="feature-row-img-frame">
+        <img src="assets/download_from_wix/19.webp" alt="Optimal Spinal Alignment Latex Support" class="feature-row-img">
       </div>
-
-      <!-- Row 3: Dust Free Mattress -->
-      <div class="feature-row">
-        <div class="feature-row-content">
-          <h3>Dust Free Mattress.</h3>
-          <p>
-            Creating a safe and healthy sleep environment is a priority when choosing a mattress. Indofrench takes this aspect seriously and ensures our mattresses are free from carcinogenic chemicals commonly found in conventional mattresses. Indofrench utilizes high-quality materials that are free from harmful chemicals, ensuring a safer sleeping experience. Many traditional mattresses contain chemicals such as formaldehyde, flame retardants, and volatile organic compounds (VOCs), which can be detrimental to your health. By avoiding the use of these chemicals, Indofrench mattresses provide a healthier alternative, reducing the risk of allergic reactions and respiratory issues.
-          </p>
-        </div>
-        <div>
-          <img src="assets/download_from_wix/30.webp" alt="Dust Free Chemical Free Organic Latex" class="feature-row-img">
-        </div>
-      </div>
-
     </div>
+
+    <!-- Row 2: Restorative Sleep -->
+    <div class="feature-row-card">
+      <div class="feature-row-img-frame">
+        <img src="assets/download_from_wix/18.webp" alt="Restorative Sleep Natural Latex Pillow and Mattress" class="feature-row-img">
+      </div>
+      <div class="feature-row-content">
+        <h3><i class="fa-solid fa-bed" style="color: #1c7a01;"></i> Restorative Deep Sleep</h3>
+        <p>
+          Quality sleep is essential for restoring both body and mind. Indofrench mattresses minimize toss-and-turn disturbances with superior motion isolation, enabling you to achieve deeper REM sleep states. You wake up energized, with improved mood, focus, and productivity throughout the day.
+        </p>
+      </div>
+    </div>
+
+    <!-- Row 3: Chemical Free Dust Free -->
+    <div class="feature-row-card">
+      <div class="feature-row-content">
+        <h3><i class="fa-solid fa-shield-virus" style="color: #1c7a01;"></i> Dust-Free & Chemical-Free</h3>
+        <p>
+          Conventional synthetic foam mattresses often contain harmful VOCs, formaldehyde, and chemical flame retardants. Indofrench utilizes 100% organic rubber sap with zero carcinogenic chemicals, providing a completely safe, non-toxic, and hypoallergenic sleep surface for your family.
+        </p>
+      </div>
+      <div class="feature-row-img-frame">
+        <img src="assets/download_from_wix/30.webp" alt="Dust Free Chemical Free Organic Latex" class="feature-row-img">
+      </div>
+    </div>
+
   </section>
 
-  <!-- ================= SECTION 6: CERTIFICATIONS ================= -->
-  <section class="cert-section">
+  <!-- ================= SECTION 4: CERTIFICATIONS ================= -->
+  <section class="cert-section-wrap">
     <div class="container">
-      <h2 class="cert-title">Indofrench Certification</h2>
+      <h2 class="cert-title">Official Factory Certifications</h2>
+      <p class="cert-sub">Tested and verified by Rubber Board India and international quality standards</p>
+      
       <div class="cert-grid">
-        <img src="assets/download_from_wix/Certification 2007 (1)_page-0001.jpg" alt="Indofrench Quality Certificate 2007" class="cert-img">
-        <img src="assets/download_from_wix/RB test Report (1)_page-0001.jpg" alt="Indofrench Rubber Board Test Report" class="cert-img">
+        <div class="cert-card">
+          <img src="assets/download_from_wix/Certification 2007 (1)_page-0001.jpg" alt="Indofrench Quality Certificate 2007" class="cert-img">
+          <div class="cert-caption">Indofrench Quality Certification</div>
+        </div>
+        <div class="cert-card">
+          <img src="assets/download_from_wix/RB test Report (1)_page-0001.jpg" alt="Indofrench Rubber Board Test Report" class="cert-img">
+          <div class="cert-caption">Rubber Board India Test Report</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= SECTION 7: EXPANDED GALLERY ================= -->
-  <section class="gallery-section">
+  <!-- ================= SECTION 5: EXPANDED PHOTO GALLERY ================= -->
+  <section class="gallery-section-wrap">
     <div class="container">
-      <h2 class="gallery-title">Indofrench's Gallery</h2>
-      <p style="font-family: 'Plus Jakarta Sans', sans-serif; color: #64748b; font-size: 1.05rem; margin-top: -24px; margin-bottom: 40px; text-align: center;">
+      <h2 class="gallery-title">Indofrench Factory & Product Gallery</h2>
+      <p style="font-family: 'Plus Jakarta Sans', sans-serif; color: #64748b; font-size: 1.02rem; margin-bottom: 30px;">
         Click any photo to open full-screen interactive view <i class="fa-solid fa-up-right-and-down-left-from-center" style="font-size: 0.85rem; color: #1c7a01; margin-left: 4px;"></i>
       </p>
 
@@ -552,7 +980,7 @@
   </section>
 
   <!-- ================= FOOTER ================= -->
-    <footer class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="footer-main-grid">
         <!-- Col 1: Logo + Head Office -->
@@ -621,6 +1049,12 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919840012345?text=Hello%20Indofrench!%20I%20want%20to%20know%20more%20about%20your%20advantages." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with Indofrench on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Script -->
+  <script src="js/main.js?v=20260918_12"></script>
 </body>
 </html>
