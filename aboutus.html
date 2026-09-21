@@ -905,8 +905,9 @@
       const getCardWidth = () => {
         const card = track.querySelector('.about-testimonial-card');
         if (!card) return 380;
-        const style = window.getComputedStyle(card);
-        return card.offsetWidth + parseInt(style.marginRight || 0, 10);
+        const gapStyle = window.getComputedStyle(track).gap || '24px';
+        const gap = parseInt(gapStyle, 10) || 24;
+        return card.offsetWidth + gap;
       };
 
       const updateSlider = () => {
