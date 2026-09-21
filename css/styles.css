@@ -909,8 +909,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem;
     flex-shrink: 0;
   }
-    height: 20px;
-  }
   .hero-cta-row {
     flex-direction: column;
     align-items: stretch;
@@ -4065,3 +4063,468 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+
+/* ===================================================================
+   GLOBAL RESPONSIVE LAYER
+   Desktop  > 1024px  : original layouts
+   Tablet   768-1024px: balanced 2-column grids
+   Mobile   < 768px   : single column (small tablet 481-767, phone 320-480)
+   Loaded last on purpose; !important only where an inline <style>
+   block or style="" attribute in the HTML would otherwise win.
+   =================================================================== */
+
+/* ---------- Base safety (all sizes) ---------- */
+img, video, iframe, svg {
+  max-width: 100%;
+}
+video { height: auto; }
+
+h1, h2, h3, h4 {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+p { overflow-wrap: break-word; }
+
+.nav-link.active { color: #1c7a01 !important; }
+
+.hamburger-btn {
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===================================================================
+   TABLET  (768px - 1024px)
+   =================================================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Section rhythm */
+  .guarantee-section,
+  .commercial-sections-wrapper,
+  .trust-brand-section,
+  .about-section,
+  .benefits-section,
+  .popular-products-section,
+  .testimonials-section,
+  .blog-section,
+  .store-locator-section,
+  .process-contact-section,
+  .faq-section,
+  .locate-section,
+  .why-choose-section {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+
+  /* Balanced 2-column splits */
+  .split-product-row,
+  .about-grid,
+  .benefits-grid,
+  .testimonials-grid,
+  .blog-featured-card,
+  .process-contact-grid,
+  .faq-grid,
+  .guarantee-banner-card,
+  .about-unlock-grid,
+  .about-why-grid,
+  .about-manufacture-grid,
+  .about-qa-block {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .split-product-row.reverse { direction: rtl; }
+  .split-product-row { margin-bottom: 48px; }
+
+  /* Card grids -> 2 columns */
+  .why-icons-grid,
+  .why-features-grid,
+  .trust-stats-grid,
+  .about-stats-grid,
+  .about-mv-grid,
+  .popular-products-grid,
+  .arch-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .popular-products-grid { max-width: 100%; }
+
+  /* Odd last card spans the full row, centred */
+  .arch-cards-row > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 12px);
+    justify-self: center;
+    width: 100%;
+  }
+
+  .locate-grid { grid-template-columns: repeat(2, 1fr); }
+  .locate-main-card { grid-column: span 2; grid-row: span 1; min-height: 240px; }
+
+  /* Inner grids that get too tight inside a half-width column */
+  .guarantee-points-grid,
+  .form-row,
+  .benefits-section .good-mattress-points { grid-template-columns: 1fr !important; }
+
+  .guarantee-banner-card { padding: 40px 32px; }
+  .blog-featured-body { padding: 40px 32px; }
+  .enquiry-form-card { padding: 32px 28px; }
+
+  .benefits-section .good-mattress-gallery { height: 400px !important; }
+  .benefits-section .good-mattress-gallery .card-tall { height: 380px !important; }
+  .benefits-section .good-mattress-gallery .card-top { height: 180px !important; }
+  .benefits-section .good-mattress-gallery .card-bottom { height: 190px !important; }
+
+  .split-product-img img { height: 300px; }
+  .testimonial-left-image img,
+  .faq-image-side img { height: 400px; }
+
+  .card-overlay-box { min-width: 0; }
+  .box-pos-left, .box-pos-right {
+    left: 16px; right: 16px; bottom: 16px;
+    width: auto; max-width: none;
+  }
+  .popular-prod-card { height: 320px; }
+
+  /* Footer: brand row full width, 4 link columns below */
+  .footer-main-grid { grid-template-columns: repeat(4, 1fr); gap: 32px 24px; }
+  .footer-office-col { grid-column: 1 / -1; }
+}
+
+/* ===================================================================
+   MOBILE NAV (hamburger range, < 992px)
+   =================================================================== */
+@media (max-width: 991px) {
+  .header .nav-menu {
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+    gap: 0 !important;
+    padding: 8px 20px 16px !important;
+  }
+  .header .nav-menu > .nav-link,
+  .header .nav-item-dropdown > .nav-link {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .header .nav-item-dropdown { width: 100%; }
+  .header .nav-menu .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 0 0 6px 14px;
+  }
+  .header .dropdown-link {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 10px;
+    white-space: normal !important;
+  }
+}
+
+/* ===================================================================
+   MOBILE  (< 768px)
+   =================================================================== */
+@media (max-width: 767px) {
+
+  /* ---------- Header ---------- */
+  .header .header-inner { height: 64px !important; padding: 0 16px !important; }
+  .header-logo-img { height: 42px !important; }
+  .header .btn-locate-store { display: none !important; }
+  .header .btn-contact-header {
+    min-height: 40px;
+    padding: 8px 14px !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* ---------- Section rhythm ---------- */
+  .container { padding-left: 16px; padding-right: 16px; }
+
+  .guarantee-section,
+  .commercial-sections-wrapper,
+  .trust-brand-section,
+  .about-section,
+  .benefits-section,
+  .popular-products-section,
+  .testimonials-section,
+  .blog-section,
+  .store-locator-section,
+  .process-contact-section,
+  .faq-section,
+  .locate-section,
+  .why-choose-section,
+  .about-stats,
+  .about-cta-band {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+  .video-showcase-section { padding: 32px 0 28px !important; }
+  .products-page-wrap { padding: 32px 0 48px; }
+  .footer { padding: 40px 0 32px; }
+
+  /* ---------- All multi-column grids -> 1 column ---------- */
+  .split-product-row,
+  .about-grid,
+  .benefits-grid,
+  .testimonials-grid,
+  .blog-featured-card,
+  .locator-wrapper,
+  .process-contact-grid,
+  .faq-grid,
+  .guarantee-banner-card,
+  .guarantee-points-grid,
+  .form-row,
+  .why-icons-grid,
+  .why-features-grid,
+  .trust-stats-grid,
+  .arch-cards-row,
+  .locate-grid,
+  .about-unlock-grid,
+  .about-why-grid,
+  .about-mv-grid,
+  .about-manufacture-grid,
+  .about-qa-block,
+  .popular-products-grid,
+  .benefits-section .good-mattress-points {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .split-product-row { gap: 24px; margin-bottom: 40px; }
+  .split-product-row.reverse { direction: ltr; }
+  .locate-main-card { grid-column: auto; grid-row: auto; min-height: 0; }
+  .locate-city-card { min-height: 190px; }
+  .popular-products-grid { max-width: 100%; }
+
+  /* Small numeric stat tiles stay 2-up: 1 column wastes the screen */
+  .about-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+  /* ---------- Typography ---------- */
+  .section-title,
+  .why-header-box h2,
+  .guarantee-banner-card h2,
+  .split-product-text h2,
+  .testimonial-right-content h2,
+  .process-col h2,
+  .blog-featured-body h2,
+  .locator-green-box h2,
+  .locate-title,
+  .about-text h2,
+  .natural-latex-highlight-banner h2,
+  .popular-products-heading h1,
+  .about-cta-text h2,
+  .popular-header h2,
+  .benefits-section .good-mattress-title {
+    font-size: clamp(1.6rem, 6vw, 1.85rem) !important;
+    line-height: 1.25 !important;
+  }
+  .about-hero-title { font-size: clamp(1.9rem, 8vw, 2.4rem); }
+  .hero-main-title .title-line-navy,
+  .hero-main-title .title-line-green {
+    font-size: clamp(1.75rem, 7.5vw, 2.2rem);
+    line-height: 1.16;
+  }
+  .enquiry-form-card h2 { font-size: 1.35rem; }
+  .why-card h4,
+  .about-mv-card h3,
+  .step-body h3,
+  .about-qa-content h3 { font-size: 1.12rem; }
+  .arch-product-body h3 { font-size: 1.4rem !important; }
+  .card-box-title { font-size: 1.3rem; }
+  .locate-city-card .city-name { font-size: 1.25rem; }
+  .why-header-box .section-tag { font-size: 1rem !important; }
+
+  .hero-main-desc,
+  .why-header-box p,
+  .split-product-text p,
+  .benefits-section .good-mattress-desc,
+  .t-card-item p,
+  .blog-featured-body p,
+  .trust-lead-quote p,
+  .about-text p,
+  .locate-desc,
+  .step-body p,
+  .why-card p,
+  .about-hero-subtitle,
+  .about-unlock-desc,
+  .about-why-desc,
+  .about-manufacture-desc,
+  .about-mv-card p,
+  .about-vision-list li,
+  .about-qa-content p,
+  .about-cta-text p,
+  .faq-body-content p,
+  .section-subtitle {
+    font-size: 0.94rem !important;
+    line-height: 1.6 !important;
+  }
+  .benefits-section .point-item { font-size: 0.98rem !important; }
+  .locate-desc br { display: none; }
+  .why-header-box { margin-bottom: 24px !important; }
+
+  /* ---------- Cards ---------- */
+  .why-card,
+  .why-card-item { padding: 28px 20px; width: 100%; }
+  .guarantee-banner-card { padding: 28px 20px; border-radius: 18px; gap: 24px; }
+  .blog-featured-body { padding: 28px 20px; }
+  .enquiry-form-card { padding: 24px 18px; border-radius: 18px; }
+  .locate-main-card { padding: 28px 22px; }
+  .locate-title br { display: none; }
+  .about-mv-card { padding: 26px 20px; }
+  .about-qa-block { padding: 22px 18px; }
+  .about-qa-content { gap: 14px; }
+  .about-testimonial-card { padding: 24px 20px; }
+  .arch-product-body { padding: 24px 20px; }
+  .t-card-item { padding: 18px; }
+  .stat-box { padding: 22px 16px; }
+  .about-stat-item { padding: 18px 10px; }
+  .modal-box { padding: 26px 18px; }
+  .banner-content-box { margin: 0 16px; padding: 22px; max-width: none; }
+  .process-steps-list { gap: 22px; }
+  .step-number { width: 40px; height: 40px; font-size: 1.15rem; }
+  .process-step-box { gap: 14px; }
+
+  /* ---------- Images inside cards ---------- */
+  .guarantee-image-wrap img { height: 220px; }
+  .split-product-img img { height: 240px; }
+  .testimonial-left-image img { height: 300px; }
+  .faq-image-side { position: static; }
+  .faq-image-side img { height: 240px; }
+  .about-image-card img { height: 280px; }
+  .about-qa-image img { height: 200px; }
+  .blog-featured-img img { height: 220px; }
+  .arch-img-wrap { height: 240px; }
+  .testimonial-client-badge { padding: 14px 12px; }
+  .testimonial-client-badge h4 { font-size: 1.3rem; }
+  .about-why-img-badge { width: 76px; height: 76px; right: 8px; bottom: -8px; }
+
+  /* Products page cards */
+  .popular-prod-card { height: 300px; border-radius: 20px; }
+  .card-overlay-box { min-width: 0; padding: 16px 18px 14px; }
+  .box-pos-left, .box-pos-right {
+    left: 12px; right: 12px; bottom: 12px;
+    width: auto; max-width: none;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero-arrow-btn { display: none; }
+  .carousel-dot-btn { padding: 18px 6px; }
+  .hero-features-strip { max-width: 100%; }
+
+  /* ---------- Buttons & touch targets (min 44px) ---------- */
+  .btn,
+  .btn-hero-explore,
+  .benefits-section .btn-enquire-pill,
+  .btn-locate,
+  .card-shop-now-btn,
+  .about-testimonial-prev,
+  .about-testimonial-next {
+    min-height: 44px;
+  }
+  .btn {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .benefits-section .btn-enquire-pill { padding: 12px 32px !important; }
+  .about-why-ctas .btn,
+  .split-product-text .btn,
+  .guarantee-banner-card .btn { width: 100%; }
+  .faq-header-trigger { min-height: 48px; padding: 14px 16px; font-size: 0.95rem; }
+  .faq-accordion-item.active .faq-body-content { max-height: 600px; padding: 0 16px 16px; }
+  .form-input, .form-select, .form-textarea, .mobile-prefix { min-height: 46px; font-size: 16px; }
+
+  /* Icon + text rows */
+  .guarantee-point-item,
+  .about-unlock-point,
+  .about-vision-list li,
+  .contact-line,
+  .footer-office-address,
+  .footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* ---------- Footer ---------- */
+  .footer-main-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 28px 20px;
+  }
+  .footer-office-col { grid-column: 1 / -1; min-width: 0; }
+  .footer-office-col p { white-space: normal; }
+  .footer-col-title { margin-bottom: 8px; font-size: 1.05rem; }
+  .footer-links-list { gap: 0; }
+  .footer-links-list a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 0.92rem;
+  }
+  .footer-social-links a { width: 44px !important; height: 44px !important; }
+
+  /* ---------- Floating / overlays ---------- */
+  .whatsapp-float { width: 52px; height: 52px; right: 16px; bottom: 16px; font-size: 1.65rem; }
+  .lightbox-nav { width: 44px; height: 44px; }
+  .lightbox-nav.prev { left: 8px; }
+  .lightbox-nav.next { right: 8px; }
+  .lightbox-close { top: 12px; right: 12px; width: 44px; height: 44px; }
+
+  .also-available-in { flex-wrap: wrap; }
+
+  /* Remaining small tap targets */
+  .btn-hero-watch,
+  .brand-logo { min-height: 44px; }
+  .footer-office-col p a,
+  .about-breadcrumb a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .footer-office-col .footer-contact-item {
+    align-items: center !important;
+    gap: 4px;
+    margin-bottom: 0 !important;
+  }
+  .footer-office-col .footer-contact-item i { margin-top: 0 !important; }
+}
+
+/* ===================================================================
+   SMALL PHONES  (<= 480px)
+   =================================================================== */
+@media (max-width: 480px) {
+  .hero-slide-container { padding: 24px 16px 32px; }
+  .hero-tag-text { font-size: 0.72rem; letter-spacing: 1.2px; }
+  .hero-tag-line { width: 24px; }
+
+  .benefits-section .good-mattress-gallery { height: 300px !important; }
+  .benefits-section .good-mattress-gallery .card-tall { height: 290px !important; }
+  .benefits-section .good-mattress-gallery .card-top { height: 135px !important; }
+  .benefits-section .good-mattress-gallery .card-bottom { height: 140px !important; }
+
+  .about-unlock-collage { height: 260px; }
+  .popular-prod-card { height: 280px; }
+  .testimonial-left-image img { height: 260px; }
+  .testimonial-client-badge p { font-size: 0.68rem; letter-spacing: 0.5px; }
+
+  .about-testimonial-author { gap: 10px; }
+  .about-cta-buttons .btn { width: 100%; }
+}
+
+/* ===================================================================
+   VERY NARROW  (<= 360px)
+   =================================================================== */
+@media (max-width: 360px) {
+  .header .btn-contact-header { padding: 8px 10px !important; font-size: 0.8rem !important; }
+  .header-logo-img { height: 38px !important; }
+  .footer-main-grid { grid-template-columns: 1fr !important; }
+  .hero-features-strip { grid-template-columns: 1fr; }
+  .also-available-text { font-size: 1rem; }
+  .myden-logo { width: 110px; }
+}

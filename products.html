@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Stylesheet with Cache Buster -->
-  <link rel="stylesheet" href="css/styles.css?v=20260918_18">
+  <link rel="stylesheet" href="css/styles.css?v=20260921_4">
 
   <!-- CRITICAL INLINE STYLES FOR GUARANTEED RENDERING -->
   <style>
@@ -228,178 +228,8 @@
       color: #4ADE80 !important;
     }
 
-    /* Popular Products Grid Styles */
-    .products-page-wrap {
-      padding: 56px 0 100px;
-      background-color: #ffffff;
-      min-height: calc(100vh - 480px);
-    }
-    .popular-products-heading {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-    .popular-products-heading h1 {
-      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
-      font-size: 2.75rem;
-      font-weight: 800;
-      color: #1c407c;
-      letter-spacing: -0.4px;
-      margin: 0;
-    }
-    .popular-products-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 36px 32px;
-      max-width: 1260px;
-      margin: 0 auto;
-    }
-    .popular-prod-card {
-      position: relative;
-      height: 380px;
-      border-radius: 28px;
-      overflow: hidden;
-      background-color: #f3f5f8;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
-    }
-    .popular-prod-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 16px 36px rgba(28, 64, 124, 0.16);
-    }
-    .card-img-holder {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-    }
-    .card-img-holder img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .popular-prod-card:hover .card-img-holder img {
-      transform: scale(1.04);
-    }
-    .card-overlay-box {
-      position: absolute;
-      background-color: #002b73;
-      border-radius: 16px;
-      padding: 24px 28px 20px;
-      color: #ffffff;
-      width: 65%;
-      max-width: 380px;
-      min-width: 290px;
-      box-shadow: 0 10px 28px rgba(10, 30, 60, 0.25);
-      display: flex;
-      flex-direction: column;
-      z-index: 2;
-      opacity: 1 !important;
-      visibility: visible !important;
-      transform: translateY(0) !important;
-      transition: background-color 0.25s ease, transform 0.25s ease;
-    }
-    .popular-prod-card:hover .card-overlay-box {
-      background-color: #16366b;
-      transform: translateY(-4px) !important;
-    }
-    .box-pos-left {
-      bottom: 24px;
-      left: 26px;
-    }
-    .box-pos-right {
-      bottom: 24px;
-      right: 26px;
-    }
-    .card-box-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.55rem;
-      font-weight: 700;
-      color: #ffffff;
-      margin: 0 0 8px 0;
-      line-height: 1.2;
-    }
-    .card-box-desc {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.88rem;
-      line-height: 1.45;
-      color: rgba(255, 255, 255, 0.9);
-      margin: 0 0 16px 0;
-    }
-    .card-box-action {
-      display: flex;
-      justify-content: flex-end;
-      margin-top: auto;
-    }
-    .card-shop-now-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: #38bdf8;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-    .card-shop-now-btn:hover {
-      color: #4ade80;
-      transform: translateX(4px);
-    }
-    .card-shop-now-btn .shop-arrow {
-      font-size: 0.95rem;
-      letter-spacing: -1px;
-    }
-    @media (max-width: 991px) {
-      .popular-products-heading h1 {
-        font-size: 2.2rem;
-      }
-      .popular-products-grid {
-        grid-template-columns: 1fr;
-        max-width: 600px;
-        gap: 24px;
-      }
-      .popular-prod-card {
-        height: 350px;
-        border-radius: 22px;
-      }
-      .box-pos-left,
-      .box-pos-right {
-        left: 20px;
-        right: 20px;
-        bottom: 20px;
-        width: auto;
-        max-width: 100%;
-      }
-    }
-    @media (max-width: 576px) {
-      .products-page-wrap {
-        padding: 36px 0 60px;
-      }
-      .popular-products-heading {
-        margin-bottom: 28px;
-      }
-      .popular-products-heading h1 {
-        font-size: 1.85rem;
-      }
-      .popular-prod-card {
-        height: 320px;
-      }
-      .card-overlay-box {
-        padding: 18px 20px 16px;
-        border-radius: 14px;
-      }
-      .card-box-title {
-        font-size: 1.35rem;
-      }
-      .card-box-desc {
-        font-size: 0.82rem;
-        margin-bottom: 10px;
-      }
-    }
   </style>
+  <link rel="stylesheet" href="css/responsive.css?v=20260921_4">
 </head>
 <body>
 
@@ -493,8 +323,8 @@
       </nav>
 
       <div class="header-actions">
-        <a href="dealers.html" class="btn-locate-store" style="background-color: #1c407c !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Locate A Store</a>
-        <a href="contact-us.html" class="btn-contact-header" style="background-color: #1c7a01 !important; color: #ffffff !important; padding: 10px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 15px !important; text-decoration: none !important; display: inline-flex !important;">Contact us</a>
+        <a href="dealers.html" class="btn-locate-store">Locate A Store</a>
+        <a href="contact-us.html" class="btn-contact-header">Contact us</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
           <span></span>
           <span></span>
