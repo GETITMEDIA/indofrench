@@ -4536,3 +4536,33 @@ p { overflow-wrap: break-word; }
 /* Product detail: Add to Cart (redirects to Myden store) */
 .btn-add-cart { background-color: #ffffff; color: #1c7a01; border: 2px solid #1c7a01; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1.05rem; padding: 12px 30px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.25s ease; }
 .btn-add-cart:hover { background-color: #1c7a01; color: #ffffff; transform: translateY(-2px); }
+
+/* ===== Product detail: Why Choose (pillow pages) ===== */
+.pdetail-myden { justify-content: flex-start; margin: 4px 0 8px; }
+.pdetail-myden .also-available-text { font-size: 1.1rem; }
+.pdetail-myden .myden-logo { width: 130px; }
+.pdetail-why { padding: 10px 0 70px; }
+.pdetail-why-title { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; color: #1c407c; text-align: center; margin: 0 0 36px; }
+.pdetail-why-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px; align-items: start; }
+.pdetail-why-imgs { display: flex; flex-direction: column; gap: 24px; position: sticky; top: 110px; }
+.pdetail-why-imgs img { width: 100%; height: auto; max-height: 340px; object-fit: cover; border-radius: 18px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); display: block; }
+.pdetail-why-item { padding: 0 0 22px; margin-bottom: 22px; border-bottom: 1px solid #e2e8f0; }
+.pdetail-why-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.pdetail-why-item h3 { font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 700; color: #1c407c; margin: 0 0 8px; display: flex; align-items: center; gap: 10px; }
+.pdetail-why-item h3 i { color: #1c7a01; font-size: 1.05rem; }
+.pdetail-why-item p { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; line-height: 1.7; color: #475569; margin: 0; }
+
+@media (max-width: 900px) {
+  .pdetail-why-grid { grid-template-columns: 1fr; gap: 28px; }
+  .pdetail-why-imgs { position: static; flex-direction: row; }
+  .pdetail-why-imgs img { height: auto; max-height: 220px; min-width: 0; flex: 1 1 0; align-self: flex-start; }
+}
+@media (max-width: 600px) {
+  .pdetail-why { padding-bottom: 48px; }
+  .pdetail-why-title { font-size: 1.5rem; margin-bottom: 24px; }
+  .pdetail-why-imgs img { max-height: 160px; }
+  .pdetail-why-item h3 { font-size: 1.12rem; }
+  .pdetail-why-item p { font-size: 0.95rem; }
+}
+.pdetail-custom-link { flex-basis: 100%; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.98rem; color: #1c7a01; text-decoration: underline; text-underline-offset: 3px; display: inline-flex; align-items: center; gap: 8px; }
+.pdetail-custom-link:hover { color: #156201; }
