@@ -4532,3 +4532,7 @@ p { overflow-wrap: break-word; }
   .also-available-text { font-size: 1rem; }
   .myden-logo { width: 110px; }
 }
+
+/* Product detail: Add to Cart (redirects to Myden store) */
+.btn-add-cart { background-color: #ffffff; color: #1c7a01; border: 2px solid #1c7a01; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1.05rem; padding: 12px 30px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.25s ease; }
+.btn-add-cart:hover { background-color: #1c7a01; color: #ffffff; transform: translateY(-2px); }
